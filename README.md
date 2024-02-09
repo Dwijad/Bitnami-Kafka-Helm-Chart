@@ -34,7 +34,7 @@ A Kafka cluster where a fresh zookeeper service is desired can be configured wit
           serverUsers: ""
           serverPasswords: ""
       persistence:
-        enabled: true <--- Enabled Persistence
+        enabled: true <--- Enabled Persistence for zookeeper metadata
         storageClass: ""
         accessModes:
           - ReadWriteOnce
@@ -411,8 +411,8 @@ Certificate creation procedure for above Kafka
         groups: []
     
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTQ1MTMzNDAxLDE5Nzc1MTM1MjEsLTE2MD
-YyOTk2NSw5NDMyMDI4ODQsLTYwNDcxMDIwMiwtOTAzMzE5OTE1
-LC00MDUxMDQ5MjksLTIwODg3NDY2MTIsLTc5NzA5NjIwOSwtMz
-MyNDU1MzYzXX0=
+eyJoaXN0b3J5IjpbNDQ1NTI3OTA1LDk0NTEzMzQwMSwxOTc3NT
+EzNTIxLC0xNjA2Mjk5NjUsOTQzMjAyODg0LC02MDQ3MTAyMDIs
+LTkwMzMxOTkxNSwtNDA1MTA0OTI5LC0yMDg4NzQ2NjEyLC03OT
+cwOTYyMDksLTMzMjQ1NTM2M119
 -->
