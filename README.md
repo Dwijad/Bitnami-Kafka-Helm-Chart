@@ -25,7 +25,7 @@ A Kafka cluster where a fresh zookeeper service is desired can be configured wit
     zookeeperChrootPath: ""
     zookeeper:
       enabled: true <--- Zookeeper enabled
-      replicaCount: 3 <--- Replica 
+      replicaCount: 3 <--- Replica count
       auth:
         client:
           enabled: false
@@ -34,7 +34,7 @@ A Kafka cluster where a fresh zookeeper service is desired can be configured wit
           serverUsers: ""
           serverPasswords: ""
       persistence:
-        enabled: true
+        enabled: true <--- Enabled Persistence
         storageClass: ""
         accessModes:
           - ReadWriteOnce
@@ -44,7 +44,7 @@ A Kafka cluster where a fresh zookeeper service is desired can be configured wit
       servers: []
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIyOTA1NzY5MywtOTAzMzE5OTE1LC00MD
+eyJoaXN0b3J5IjpbLTgzMjExNDc2OSwtOTAzMzE5OTE1LC00MD
 UxMDQ5MjksLTIwODg3NDY2MTIsLTc5NzA5NjIwOSwtMzMyNDU1
 MzYzXX0=
 -->
