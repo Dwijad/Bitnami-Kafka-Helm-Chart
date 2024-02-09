@@ -76,6 +76,7 @@ Configure listener properties for client, external, interbroker and controller. 
 SASL authentication for interbroker, client and controller communication can be controlled in SASL section.
 
     sasl:
+      enabledMechanisms: PLAIN,SCRAM-SHA-256,SCRAM-SHA-512
       interBrokerMechanism: PLAIN
       controllerMechanism: PLAIN
       interbroker:
@@ -89,8 +90,10 @@ SASL authentication for interbroker, client and controller communication can be 
         - user1
         passwords: "password"
 
+#### SSL
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTk4MzY1NjM5LDk0MzIwMjg4NCwtNjA0Nz
-EwMjAyLC05MDMzMTk5MTUsLTQwNTEwNDkyOSwtMjA4ODc0NjYx
-MiwtNzk3MDk2MjA5LC0zMzI0NTUzNjNdfQ==
+eyJoaXN0b3J5IjpbLTk1ODYzODE0MSw5NDMyMDI4ODQsLTYwND
+cxMDIwMiwtOTAzMzE5OTE1LC00MDUxMDQ5MjksLTIwODg3NDY2
+MTIsLTc5NzA5NjIwOSwtMzMyNDU1MzYzXX0=
 -->
