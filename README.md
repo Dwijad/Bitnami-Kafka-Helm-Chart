@@ -294,10 +294,20 @@ Service
         existingSecrets:
           - "kafka-jks"
         password: "password"
-##
+
+#### Service account
+
+    serviceAccount:
+      create: true
+      name: ""
+      automountServiceAccountToken: true
+      annotations: {}
+    rbac:
+      create: true 
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTE4MzQ4OTcsMTk3NzUxMzUyMSwtMTYwNj
-I5OTY1LDk0MzIwMjg4NCwtNjA0NzEwMjAyLC05MDMzMTk5MTUs
-LTQwNTEwNDkyOSwtMjA4ODc0NjYxMiwtNzk3MDk2MjA5LC0zMz
-I0NTUzNjNdfQ==
+eyJoaXN0b3J5IjpbMTkzNDg5MzU4OSwxOTc3NTEzNTIxLC0xNj
+A2Mjk5NjUsOTQzMjAyODg0LC02MDQ3MTAyMDIsLTkwMzMxOTkx
+NSwtNDA1MTA0OTI5LC0yMDg4NzQ2NjEyLC03OTcwOTYyMDksLT
+MzMjQ1NTM2M119
 -->
