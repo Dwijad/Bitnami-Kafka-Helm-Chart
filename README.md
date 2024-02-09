@@ -106,8 +106,10 @@ Make sure to create Kubernetes secret out of these JKS keystore and truststore c
 
     $ kubectl create secret generic kafka-jks --from-file=kafka-broker-0.keystore.jks=./kafka-broker-0.keystore.jks --from-file=kafka-broker-1.keystore.jks=./kafka-broker-1.keystore.jks   --from-file=kafka-broker-2.keystore.jks=./kafka-broker-2.keystore.jks   --from-file=kafka.truststore.jks=./kafka.truststore.jks
 
+#### Broker
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTQyNjYxMjcxLDk0MzIwMjg4NCwtNjA0Nz
+eyJoaXN0b3J5IjpbLTIyNTAzMjYwLDk0MzIwMjg4NCwtNjA0Nz
 EwMjAyLC05MDMzMTk5MTUsLTQwNTEwNDkyOSwtMjA4ODc0NjYx
 MiwtNzk3MDk2MjA5LC0zMzI0NTUzNjNdfQ==
 -->
