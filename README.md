@@ -92,6 +92,7 @@ SASL authentication for interbroker, client and controller communication can be 
 
 #### SSL
 
+Kafka broker with SSL supports can be configured in `tls` section.
 
     tls:
       type: JKS
@@ -102,7 +103,7 @@ SASL authentication for interbroker, client and controller communication can be 
       jksTruststoreKey: kafka.truststore.jks
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNzYyOTkxNzksOTQzMjAyODg0LC02MD
-Q3MTAyMDIsLTkwMzMxOTkxNSwtNDA1MTA0OTI5LC0yMDg4NzQ2
-NjEyLC03OTcwOTYyMDksLTMzMjQ1NTM2M119
+eyJoaXN0b3J5IjpbMTQ2NDM4MDM0MCw5NDMyMDI4ODQsLTYwND
+cxMDIwMiwtOTAzMzE5OTE1LC00MDUxMDQ5MjksLTIwODg3NDY2
+MTIsLTc5NzA5NjIwOSwtMzMyNDU1MzYzXX0=
 -->
