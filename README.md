@@ -72,9 +72,10 @@ Configure listener properties for client, external, interbroker and controller. 
         name: CONTROLLER
         sslClientAuth: ""
 
-
+#### SASL
+SASL authentication for interbroker, client and controller can be controlled 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwODE1MDk1MTgsOTQzMjAyODg0LC02MD
-Q3MTAyMDIsLTkwMzMxOTkxNSwtNDA1MTA0OTI5LC0yMDg4NzQ2
-NjEyLC03OTcwOTYyMDksLTMzMjQ1NTM2M119
+eyJoaXN0b3J5IjpbNjI3NTA4ODkzLDk0MzIwMjg4NCwtNjA0Nz
+EwMjAyLC05MDMzMTk5MTUsLTQwNTEwNDkyOSwtMjA4ODc0NjYx
+MiwtNzk3MDk2MjA5LC0zMzI0NTUzNjNdfQ==
 -->
