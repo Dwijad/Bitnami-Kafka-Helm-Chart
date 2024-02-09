@@ -294,10 +294,10 @@ Service
         existingSecrets:
           - "kafka-jks"
         password: "password"
-
+##
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk3NzUxMzUyMSwtMTYwNjI5OTY1LDk0Mz
-IwMjg4NCwtNjA0NzEwMjAyLC05MDMzMTk5MTUsLTQwNTEwNDky
-OSwtMjA4ODc0NjYxMiwtNzk3MDk2MjA5LC0zMzI0NTUzNjNdfQ
-==
+eyJoaXN0b3J5IjpbNTE4MzQ4OTcsMTk3NzUxMzUyMSwtMTYwNj
+I5OTY1LDk0MzIwMjg4NCwtNjA0NzEwMjAyLC05MDMzMTk5MTUs
+LTQwNTEwNDkyOSwtMjA4ODc0NjYxMiwtNzk3MDk2MjA5LC0zMz
+I0NTUzNjNdfQ==
 -->
