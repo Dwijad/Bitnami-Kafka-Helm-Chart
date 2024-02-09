@@ -108,7 +108,7 @@ Make sure to create Kubernetes secret out of these JKS keystore and truststore c
 
 #### Broker
 
-Broker configuration
+Broker only statefulset parameters 
 
     broker:
       replicaCount: 3 <--- Replica count
@@ -225,7 +225,8 @@ Broker configuration
         mountPath: /opt/bitnami/kafka/logs
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MDYyOTk2NSw5NDMyMDI4ODQsLTYwND
-cxMDIwMiwtOTAzMzE5OTE1LC00MDUxMDQ5MjksLTIwODg3NDY2
-MTIsLTc5NzA5NjIwOSwtMzMyNDU1MzYzXX0=
+eyJoaXN0b3J5IjpbMTM2NDEyNjQ1MSwtMTYwNjI5OTY1LDk0Mz
+IwMjg4NCwtNjA0NzEwMjAyLC05MDMzMTk5MTUsLTQwNTEwNDky
+OSwtMjA4ODc0NjYxMiwtNzk3MDk2MjA5LC0zMzI0NTUzNjNdfQ
+==
 -->
