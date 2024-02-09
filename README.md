@@ -72,8 +72,9 @@ Configure listener properties for client, external, interbroker and controller. 
         name: CONTROLLER
         sslClientAuth: ""
 
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTQzMjAyODg0LC02MDQ3MTAyMDIsLTkwMz
-MxOTkxNSwtNDA1MTA0OTI5LC0yMDg4NzQ2NjEyLC03OTcwOTYy
-MDksLTMzMjQ1NTM2M119
+eyJoaXN0b3J5IjpbLTIwODE1MDk1MTgsOTQzMjAyODg0LC02MD
+Q3MTAyMDIsLTkwMzMxOTkxNSwtNDA1MTA0OTI5LC0yMDg4NzQ2
+NjEyLC03OTcwOTYyMDksLTMzMjQ1NTM2M119
 -->
