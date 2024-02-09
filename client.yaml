@@ -1,0 +1,25 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  creationTimestamp: null
+  labels:
+    run: test-kafka-client
+  name: test-kafka-client
+  namespace: default
+spec:
+  containers:
+  - command:
+    - sleep
+    - infinity
+    image: docker.io/bitnami/kafka:3.6.1-debian-11-r0
+    name: test-kafka-client
+    resources:
+      requests:
+        memory: "512Mi"
+        cpu: "250m"
+      limits:
+        memory: "512Mi"
+        cpu: "500m"
+  dnsPolicy: ClusterFirst
+  restartPolicy: Never
+status: {}
