@@ -284,9 +284,19 @@ Service
         broker:
           annotations: {}
           labels: {}
+#### Auth
+
+    auth:
+      interBrokerProtocol: tls
+      clientProtocol: tls
+      tls:
+        type: jks
+        existingSecrets:
+          - "kafka-jks"
+        password: "password"
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUxMzc4MDk4MCwtMTYwNjI5OTY1LDk0Mz
+eyJoaXN0b3J5IjpbMTk3NzUxMzUyMSwtMTYwNjI5OTY1LDk0Mz
 IwMjg4NCwtNjA0NzEwMjAyLC05MDMzMTk5MTUsLTQwNTEwNDky
 OSwtMjA4ODc0NjYxMiwtNzk3MDk2MjA5LC0zMzI0NTUzNjNdfQ
 ==
