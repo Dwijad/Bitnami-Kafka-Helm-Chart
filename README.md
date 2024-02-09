@@ -43,8 +43,36 @@ A Kafka cluster where a fresh zookeeper service is desired can be configured wit
     externalZookeeper:
       servers: []
 
+#### Listener
+Conf
+
+    listeners:
+      client:
+        containerPort: 9092
+        protocol: SASL_SSL
+        name: CLIENT
+        sslClientAuth: "required"
+    
+      external:
+        containerPort: 9095
+        protocol: SASL_SSL
+        name: EXTERNAL
+        sslClientAuth: ""
+    
+      interbroker:
+        containerPort: 9093
+        protocol: PLAINTEXT
+        name: INTERNAL
+        sslClientAuth: ""
+    
+      controller:
+        containerPort: 9094
+        protocol: SASL_PLAINTEXT
+        name: CONTROLLER
+        sslClientAuth: ""
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYwNDcxMDIwMiwtOTAzMzE5OTE1LC00MD
-UxMDQ5MjksLTIwODg3NDY2MTIsLTc5NzA5NjIwOSwtMzMyNDU1
-MzYzXX0=
+eyJoaXN0b3J5IjpbMTgwNjU2MDU1NiwtNjA0NzEwMjAyLC05MD
+MzMTk5MTUsLTQwNTEwNDkyOSwtMjA4ODc0NjYxMiwtNzk3MDk2
+MjA5LC0zMzI0NTUzNjNdfQ==
 -->
