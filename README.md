@@ -102,9 +102,11 @@ Kafka broker with SSL supports can be configured in `tls` section.
       jksKeystoreKey: kafka.keystore.jks
       jksTruststoreKey: kafka.truststore.jks
 
-Make sure to create Kubernetes secret out of 
+Make sure to create Kubernetes secret out of these JKS keystore and truststore certificates.
+$ kubectl create secret generic kafka-jks --from-file=kafka-broker-0.keystore.jks=./kafka-broker-0.keystore.jks --from-file=kafka-broker-1.keystore.jks=./kafka-broker-1.keystore.jks   --from-file=kafka-broker-2.keystore.jks=./kafka-broker-2.keystore.jks   --from-file=kafka.truststore.jks=./kafka.truststore.jks
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg1NTA1NjA5LDk0MzIwMjg4NCwtNjA0Nz
-EwMjAyLC05MDMzMTk5MTUsLTQwNTEwNDkyOSwtMjA4ODc0NjYx
-MiwtNzk3MDk2MjA5LC0zMzI0NTUzNjNdfQ==
+eyJoaXN0b3J5IjpbMTQyNTM3MjUyNCw5NDMyMDI4ODQsLTYwND
+cxMDIwMiwtOTAzMzE5OTE1LC00MDUxMDQ5MjksLTIwODg3NDY2
+MTIsLTc5NzA5NjIwOSwtMzMyNDU1MzYzXX0=
 -->
