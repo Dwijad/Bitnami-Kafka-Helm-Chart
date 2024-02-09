@@ -102,8 +102,9 @@ Kafka broker with SSL supports can be configured in `tls` section.
       jksKeystoreKey: kafka.keystore.jks
       jksTruststoreKey: kafka.truststore.jks
 
+Make sure to create Kubernetes secret out of 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ2NDM4MDM0MCw5NDMyMDI4ODQsLTYwND
-cxMDIwMiwtOTAzMzE5OTE1LC00MDUxMDQ5MjksLTIwODg3NDY2
-MTIsLTc5NzA5NjIwOSwtMzMyNDU1MzYzXX0=
+eyJoaXN0b3J5IjpbMTg1NTA1NjA5LDk0MzIwMjg4NCwtNjA0Nz
+EwMjAyLC05MDMzMTk5MTUsLTQwNTEwNDkyOSwtMjA4ODc0NjYx
+MiwtNzk3MDk2MjA5LC0zMzI0NTUzNjNdfQ==
 -->
