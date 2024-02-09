@@ -342,9 +342,77 @@ Certificate creation procedure for above Kafka
     # Create secret
     # kubectl create secret generic kafka-exporter --from-file=ca-cert=kafka-broker-0-cert.pem --from-file=ca-key=kafka-broker-0-key.pem --from-file=tls-ca-cert=kafka-broker-0-ca-cert.pem
 
+#### JMX
+
+    jmx:
+        enabled: false
+        kafkaJmxPort: 5555
+        image:
+          registry: docker.io
+          repository: bitnami/jmx-exporter
+          tag: 0.20.0-debian-11-r2
+          digest: ""
+          pullPolicy: IfNotPresent
+          pullSecrets: []
+        containerSecurityContext:
+          enabled: true
+          runAsUser: 1001
+          runAsNonRoot: true
+          allowPrivilegeEscalation: false
+          readOnlyRootFilesystem: true
+          capabilities:
+            drop: ["ALL"]
+        containerPorts:
+          metrics: 5556
+        resources:
+          limits: {}
+          requests: {}
+        service:
+          ports:
+            metrics: 5556
+          clusterIP: ""
+          sessionAffinity: None
+          annotations:
+            prometheus.io/scrape: "true"
+            prometheus.io/port: "{{ .Values.metrics.jmx.service.ports.metrics }}"
+            prometheus.io/path: "/"
+        whitelistObjectNames:
+          - kafka.controller:*
+          - kafka.server:*
+          - java.lang:*
+          - kafka.network:*
+          - kafka.log:*
+        config: |-
+          jmxUrl: service:jmx:rmi:///jndi/rmi://127.0.0.1:{{ .Values.metrics.jmx.kafkaJmxPort }}/jmxrmi
+          lowercaseOutputName: true
+          lowercaseOutputLabelNames: true
+          ssl: false
+          {{- if .Values.metrics.jmx.whitelistObjectNames }}
+          whitelistObjectNames: ["{{ join "\",\"" .Values.metrics.jmx.whitelistObjectNames }}"]
+          {{- end }}
+        existingConfigmap: ""
+        extraRules: ""
+      serviceMonitor:
+        enabled: true
+        namespace: ""
+        interval: ""
+        scrapeTimeout: ""
+        labels: {}
+        selector: {}
+        relabelings: []
+        metricRelabelings: []
+        honorLabels: false
+        jobLabel: ""
+    
+      prometheusRule:
+        enabled: false
+        namespace: ""
+        labels: {}
+        groups: []
+    
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NTgyMzEyNzYsMTk3NzUxMzUyMSwtMT
-YwNjI5OTY1LDk0MzIwMjg4NCwtNjA0NzEwMjAyLC05MDMzMTk5
-MTUsLTQwNTEwNDkyOSwtMjA4ODc0NjYxMiwtNzk3MDk2MjA5LC
-0zMzI0NTUzNjNdfQ==
+eyJoaXN0b3J5IjpbOTQ1MTMzNDAxLDE5Nzc1MTM1MjEsLTE2MD
+YyOTk2NSw5NDMyMDI4ODQsLTYwNDcxMDIwMiwtOTAzMzE5OTE1
+LC00MDUxMDQ5MjksLTIwODg3NDY2MTIsLTc5NzA5NjIwOSwtMz
+MyNDU1MzYzXX0=
 -->
