@@ -5,10 +5,11 @@ A simplified configuration of Bitnami kafka helm chart to quickly create a clust
 ### Get the chart
 $ helm repo add bitnami https://charts.bitnami.com/bitnami
 $ helm repo update
-$ 
+$ helm pull bitnami/kafka
+
 ### Configure
 ###
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkwODk3MzMzMCwtNDA1MTA0OTI5LC0yMD
-g4NzQ2NjEyLC03OTcwOTYyMDksLTMzMjQ1NTM2M119
+eyJoaXN0b3J5IjpbLTE0MjkyNjg2MzQsLTQwNTEwNDkyOSwtMj
+A4ODc0NjYxMiwtNzk3MDk2MjA5LC0zMzI0NTUzNjNdfQ==
 -->
