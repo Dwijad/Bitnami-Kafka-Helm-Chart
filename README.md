@@ -108,8 +108,122 @@ Make sure to create Kubernetes secret out of these JKS keystore and truststore c
 
 #### Broker
 
+Broker configuration
+broker:
+  replicaCount: 3
+  minId: 100
+  zookeeperMigrationMode: false
+  config: ""
+  existingConfigmap: ""
+  extraConfig: ""
+  secretConfig: ""
+  existingSecretConfig: ""
+  heapOpts: -Xmx512m -Xms512m
+  command: []
+  args: []
+  extraEnvVars: []
+  extraEnvVarsCM: ""
+  extraEnvVarsSecret: ""
+  extraContainerPorts: []
+  livenessProbe:
+    enabled: true
+    initialDelaySeconds: 10
+    timeoutSeconds: 5
+    failureThreshold: 3
+    periodSeconds: 10
+    successThreshold: 1
+  readinessProbe:
+    enabled: true
+    initialDelaySeconds: 5
+    failureThreshold: 6
+    timeoutSeconds: 5
+    periodSeconds: 10
+    successThreshold: 1
+  startupProbe:
+    enabled: false
+    initialDelaySeconds: 30
+    periodSeconds: 10
+    timeoutSeconds: 1
+    failureThreshold: 15
+    successThreshold: 1
+  customLivenessProbe: {}
+  customReadinessProbe: {}
+  customStartupProbe: {}
+  lifecycleHooks: {}
+  initContainerResources:
+    limits: {}
+    requests: {}
+  resources:
+    limits: {}
+    requests: {}
+  podSecurityContext:
+    enabled: true
+    fsGroup: 1001
+    seccompProfile:
+      type: "RuntimeDefault"
+  containerSecurityContext:
+    enabled: true
+    runAsUser: 1001
+    runAsNonRoot: true
+    allowPrivilegeEscalation: false
+    readOnlyRootFilesystem: true
+    capabilities:
+      drop: ["ALL"]
+  hostAliases: []
+  hostNetwork: false
+  hostIPC: false
+  podLabels: {}
+  podAnnotations: {}
+  podAffinityPreset: ""
+  podAntiAffinityPreset: soft
+  nodeAffinityPreset:
+    type: ""
+    key: ""
+    values: []
+  affinity: {}
+  nodeSelector: {}
+  tolerations: []
+  topologySpreadConstraints: []
+  terminationGracePeriodSeconds: ""
+  podManagementPolicy: Parallel
+  minReadySeconds: 0
+  priorityClassName: ""
+  runtimeClassName: ""
+  enableServiceLinks: true
+  schedulerName: ""
+  updateStrategy:
+    type: RollingUpdate
+  extraVolumes: []
+  extraVolumeMounts: []
+  sidecars: []
+  initContainers: []
+  pdb:
+    create: false
+    minAvailable: ""
+    maxUnavailable: 1
+  persistence:
+    enabled: true
+    existingClaim: ""
+    storageClass: ""
+    accessModes:
+      - ReadWriteOnce
+    size: 1Gi
+    annotations: {}
+    labels: {}
+    selector: {}
+    mountPath: /bitnami/kafka
+  logPersistence:
+    enabled: false
+    existingClaim: ""
+    storageClass: ""
+    accessModes:
+      - ReadWriteOnce
+    size: 1Gi
+    annotations: {}
+    selector: {}
+    mountPath: /opt/bitnami/kafka/logs
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIyNTAzMjYwLDk0MzIwMjg4NCwtNjA0Nz
+eyJoaXN0b3J5IjpbMzY4OTc2NzU4LDk0MzIwMjg4NCwtNjA0Nz
 EwMjAyLC05MDMzMTk5MTUsLTQwNTEwNDkyOSwtMjA4ODc0NjYx
 MiwtNzk3MDk2MjA5LC0zMzI0NTUzNjNdfQ==
 -->
