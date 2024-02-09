@@ -12,11 +12,63 @@ A simplified configuration of Bitnami kafka helm chart to quickly create a clust
 
 ### Configure
 #### Zookeeper
-The bitnami kafka helm chart comes with number of options. Kafka cluster can be configured with freshly minted Kraft/zookeeper service or a existing  zookeeper service.
-A Kafka cluster with 
+The bitnami kafka helm chart comes with number of options. Kafka cluster can be configured with freshly minted Kraft/zookeeper service or with a existing  zookeeper service.
+A Kafka cluster where a fresh zookeeper service is desired can be configured with following parameters in values.yaml
+
+kraft:
+
+enabled: false
+
+existingClusterIdSecret: ""
+
+clusterId: ""
+
+controllerQuorumVoters: ""
+
+  
+
+zookeeperChrootPath: ""
+
+zookeeper:
+
+enabled: true
+
+replicaCount: 3
+
+auth:
+
+client:
+
+enabled: false
+
+clientUser: ""
+
+clientPassword: ""
+
+serverUsers: ""
+
+serverPasswords: ""
+
+persistence:
+
+enabled: true
+
+storageClass: ""
+
+accessModes:
+
+- ReadWriteOnce
+
+size: 1Gi
+
+  
+
+externalZookeeper:
+
+servers: []
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU3Njc3NzkyNCwtOTAzMzE5OTE1LC00MD
+eyJoaXN0b3J5IjpbMTEzODU4OTAyMSwtOTAzMzE5OTE1LC00MD
 UxMDQ5MjksLTIwODg3NDY2MTIsLTc5NzA5NjIwOSwtMzMyNDU1
 MzYzXX0=
 -->
