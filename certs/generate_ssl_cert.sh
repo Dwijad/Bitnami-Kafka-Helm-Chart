@@ -2,14 +2,17 @@
 
 set -e
 
+echo 'Enter the helm release name of kafka cluster ?'
+read release_name
+
 openssl req -new -x509 -subj "/C=IN/ST=assam/L=guwahati/O=company/OU=unit/CN=ca" -keyout ca-key -out ca-cert -days 3650
 
 keytool -noprompt -keystore ./kafka.truststore.jks -alias ca -import -file ca-cert -storepass password
 #rm -f ca-cert
 
-keytool -keystore ./kafka-broker-0.keystore.jks  -alias broker-0 -dname "CN=test-kafka-broker-0.test-kafka-broker-headless.default.svc.cluster.local,OU=unit,O=company,L=guwahati,S=assam,C=IN" -validity 3650 -genkey -keyalg RSA -storepass password
-keytool -keystore ./kafka-broker-1.keystore.jks  -alias broker-1 -dname "CN=test-kafka-broker-1.test-kafka-broker-headless.default.svc.cluster.local,OU=unit,O=company,L=guwahati,S=assam,C=IN" -validity 3650 -genkey -keyalg RSA -storepass password
-keytool -keystore ./kafka-broker-2.keystore.jks  -alias broker-2 -dname "CN=test-kafka-broker-2.test-kafka-broker-headless.default.svc.cluster.local,OU=unit,O=company,L=guwahati,S=assam,C=IN" -validity 3650 -genkey -keyalg RSA -storepass password
+keytool -keystore ./kafka-broker-0.keystore.jks  -alias broker-0 -dname "CN=$release_name-kafka-broker-0.test-kafka-broker-headless.default.svc.cluster.local,OU=unit,O=company,L=guwahati,S=assam,C=IN" -validity 3650 -genkey -keyalg RSA -storepass password
+keytool -keystore ./kafka-broker-1.keystore.jks  -alias broker-1 -dname "CN=$release_name-kafka-broker-1.test-kafka-broker-headless.default.svc.cluster.local,OU=unit,O=company,L=guwahati,S=assam,C=IN" -validity 3650 -genkey -keyalg RSA -storepass password
+keytool -keystore ./kafka-broker-2.keystore.jks  -alias broker-2 -dname "CN=$release_name-kafka-broker-2.test-kafka-broker-headless.default.svc.cluster.local,OU=unit,O=company,L=guwahati,S=assam,C=IN" -validity 3650 -genkey -keyalg RSA -storepass password
 
 
 keytool -keystore ./kafka-broker-0.keystore.jks -alias broker-0 -certreq -file cert-file.broker-0 -storepass password
