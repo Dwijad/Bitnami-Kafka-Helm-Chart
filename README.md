@@ -126,21 +126,21 @@ Broker configuration
       extraEnvVarsCM: ""
       extraEnvVarsSecret: ""
       extraContainerPorts: []
-      livenessProbe: <--- Liveness prob
+      livenessProbe: <--- Liveness probe
         enabled: true
         initialDelaySeconds: 10
         timeoutSeconds: 5
         failureThreshold: 3
         periodSeconds: 10
         successThreshold: 1
-      readinessProbe:
+      readinessProbe: <--- Readiness probe
         enabled: true
         initialDelaySeconds: 5
         failureThreshold: 6
         timeoutSeconds: 5
         periodSeconds: 10
         successThreshold: 1
-      startupProbe:
+      startupProbe: <--- Startup probe
         enabled: false
         initialDelaySeconds: 30
         periodSeconds: 10
@@ -157,12 +157,12 @@ Broker configuration
       resources:
         limits: {}
         requests: {}
-      podSecurityContext:
+      podSecurityContext: <--- Pod security context
         enabled: true
         fsGroup: 1001
         seccompProfile:
           type: "RuntimeDefault"
-      containerSecurityContext:
+      containerSecurityContext: <--- Container security
         enabled: true
         runAsUser: 1001
         runAsNonRoot: true
@@ -202,7 +202,7 @@ Broker configuration
         create: false
         minAvailable: ""
         maxUnavailable: 1
-      persistence:
+      persistence: <--- Data persistence
         enabled: true
         existingClaim: ""
         storageClass: ""
@@ -213,7 +213,7 @@ Broker configuration
         labels: {}
         selector: {}
         mountPath: /bitnami/kafka
-      logPersistence:
+      logPersistence: <--- Log persistence
         enabled: false
         existingClaim: ""
         storageClass: ""
@@ -225,7 +225,7 @@ Broker configuration
         mountPath: /opt/bitnami/kafka/logs
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzA4NzYzOTM4LDk0MzIwMjg4NCwtNjA0Nz
-EwMjAyLC05MDMzMTk5MTUsLTQwNTEwNDkyOSwtMjA4ODc0NjYx
-MiwtNzk3MDk2MjA5LC0zMzI0NTUzNjNdfQ==
+eyJoaXN0b3J5IjpbLTE2MDYyOTk2NSw5NDMyMDI4ODQsLTYwND
+cxMDIwMiwtOTAzMzE5OTE1LC00MDUxMDQ5MjksLTIwODg3NDY2
+MTIsLTc5NzA5NjIwOSwtMzMyNDU1MzYzXX0=
 -->
