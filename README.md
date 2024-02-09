@@ -327,10 +327,24 @@ Kafka metrics
           tls.insecure-skip-tls-verify: ""
         command: []
     
-Certificate c
+Certificate creation procedure for above Kafka 
+
+    # Convert JKS into PEM      
+    # keytool -importkeystore -srckeystore kafka-broker-0.keystore.jks -destkeystore kafka-broker-0.p12 -srcstoretype jks -deststoretype pkcs12
+    # Extract tls cert/ca cert and private keys
+    # openssl pkcs12 -in kafka-broker-0.p12 -out kafka-broker-0.pem
+    
+    # extract only tls cert 
+    # $ keytool -exportcert -alias broker-0 -keystore kafka-broker-0.keystore.jks -rfc -file kafka-broker-0-cert.pem
+    # extract only private key
+    # $ openssl pkey -in kafka-broker-0.pem -out kafka-broker-0-key.pem
+    # Fetch/Copy the tls ca cert from file kafka-broker-0.pem to kafka-broker-0-ca-cert.pem
+    # Create secret
+    # kubectl create secret generic kafka-exporter --from-file=ca-cert=kafka-broker-0-cert.pem --from-file=ca-key=kafka-broker-0-key.pem --from-file=tls-ca-cert=kafka-broker-0-ca-cert.pem
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTI5ODM0MTQyLDE5Nzc1MTM1MjEsLTE2MD
-YyOTk2NSw5NDMyMDI4ODQsLTYwNDcxMDIwMiwtOTAzMzE5OTE1
-LC00MDUxMDQ5MjksLTIwODg3NDY2MTIsLTc5NzA5NjIwOSwtMz
-MyNDU1MzYzXX0=
+eyJoaXN0b3J5IjpbLTE3NTgyMzEyNzYsMTk3NzUxMzUyMSwtMT
+YwNjI5OTY1LDk0MzIwMjg4NCwtNjA0NzEwMjAyLC05MDMzMTk5
+MTUsLTQwNTEwNDkyOSwtMjA4ODc0NjYxMiwtNzk3MDk2MjA5LC
+0zMzI0NTUzNjNdfQ==
 -->
