@@ -256,9 +256,38 @@ External access
             #- 192.168.49.2
             #- 192.168.49.2
             #- 192.168.49.2
+#### Service
+Service
+
+    service:
+      type: LoadBalancer
+      ports:
+        client: 9092
+        controller: 9093
+        interbroker: 9094
+        external: 9095
+      extraPorts: []
+      nodePorts:
+        client: ""
+        external: ""
+      sessionAffinity: None
+      sessionAffinityConfig: {}
+      clusterIP: ""
+      loadBalancerIP: ""
+      loadBalancerSourceRanges: []
+      externalTrafficPolicy: Cluster
+      annotations: {}
+      headless:
+        controller:
+          annotations: {}
+          labels: {}
+        broker:
+          annotations: {}
+          labels: {}
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTAyNzY3OTkzLC0xNjA2Mjk5NjUsOTQzMj
-AyODg0LC02MDQ3MTAyMDIsLTkwMzMxOTkxNSwtNDA1MTA0OTI5
-LC0yMDg4NzQ2NjEyLC03OTcwOTYyMDksLTMzMjQ1NTM2M119
+eyJoaXN0b3J5IjpbMTUxMzc4MDk4MCwtMTYwNjI5OTY1LDk0Mz
+IwMjg4NCwtNjA0NzEwMjAyLC05MDMzMTk5MTUsLTQwNTEwNDky
+OSwtMjA4ODc0NjYxMiwtNzk3MDk2MjA5LC0zMzI0NTUzNjNdfQ
+==
 -->
