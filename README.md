@@ -224,9 +224,41 @@ Broker only statefulset parameters.
         selector: {}
         mountPath: /opt/bitnami/kafka/logs
 
+#### External access
+External access
+
+    externalAccess:
+      enabled: true
+      autoDiscovery:
+        enabled: true
+        image:
+          registry: docker.io
+          repository: bitnami/kubectl
+          tag: 1.25.8-debian-11-r2
+          pullPolicy: IfNotPresent
+        resources:
+          limits:
+            cpu: 100m
+            memory: 128Mi
+          requests:
+            cpu: 100m
+            memory: 128Mi
+      broker:
+        service:
+          type: NodePort
+          ports:
+            external: 9095
+          nodePorts:
+            - 31090
+            - 31091
+            - 31092
+          #externalIPs:
+            #- 192.168.49.2
+            #- 192.168.49.2
+            #- 192.168.49.2
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY2NzY2NDcxOSwtMTYwNjI5OTY1LDk0Mz
-IwMjg4NCwtNjA0NzEwMjAyLC05MDMzMTk5MTUsLTQwNTEwNDky
-OSwtMjA4ODc0NjYxMiwtNzk3MDk2MjA5LC0zMzI0NTUzNjNdfQ
-==
+eyJoaXN0b3J5IjpbOTAyNzY3OTkzLC0xNjA2Mjk5NjUsOTQzMj
+AyODg0LC02MDQ3MTAyMDIsLTkwMzMxOTkxNSwtNDA1MTA0OTI5
+LC0yMDg4NzQ2NjEyLC03OTcwOTYyMDksLTMzMjQ1NTM2M119
 -->
