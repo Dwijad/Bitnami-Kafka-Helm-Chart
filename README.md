@@ -73,9 +73,24 @@ Configure listener properties for client, external, interbroker and controller. 
         sslClientAuth: ""
 
 #### SASL
-SASL authentication for interbroker, client and controller can be controlled 
+SASL authentication for interbroker, client and controller communication can be controlled in SASL section.
+
+    sasl:
+      interBrokerMechanism: PLAIN
+      controllerMechanism: PLAIN
+      interbroker:
+        user: broker
+        password: "password"
+      controller:
+        user: controller
+        password: "password"
+      client:
+        users:
+        - user1
+        passwords: "password"
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjI3NTA4ODkzLDk0MzIwMjg4NCwtNjA0Nz
+eyJoaXN0b3J5IjpbOTk4MzY1NjM5LDk0MzIwMjg4NCwtNjA0Nz
 EwMjAyLC05MDMzMTk5MTUsLTQwNTEwNDkyOSwtMjA4ODc0NjYx
 MiwtNzk3MDk2MjA5LC0zMzI0NTUzNjNdfQ==
 -->
