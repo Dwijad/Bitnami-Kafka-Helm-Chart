@@ -13,7 +13,10 @@ A simplified configuration of Bitnami kafka helm chart to quickly create a clust
 ### Configure
 #### Zookeeper
 The bitnami kafka helm chart comes with number of options. Kafka cluster can be configured with freshly minted Kraft/zookeeper service or a existing  zookeeper service.
+A Kafka cluster with 
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkwMzMxOTkxNSwtNDA1MTA0OTI5LC0yMD
-g4NzQ2NjEyLC03OTcwOTYyMDksLTMzMjQ1NTM2M119
+eyJoaXN0b3J5IjpbMTU3Njc3NzkyNCwtOTAzMzE5OTE1LC00MD
+UxMDQ5MjksLTIwODg3NDY2MTIsLTc5NzA5NjIwOSwtMzMyNDU1
+MzYzXX0=
 -->
