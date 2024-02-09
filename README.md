@@ -44,7 +44,8 @@ A Kafka cluster where a fresh zookeeper service is desired can be configured wit
       servers: []
 
 #### Listener
-Configure listener properties for client, external, interbroker and controller. If Kraft is disabled,  
+
+Configure listener properties for client, external, interbroker and controller. If Kraft is disabled, controller listener properties does not need to be configured.
 
     listeners:
       client:
@@ -72,7 +73,7 @@ Configure listener properties for client, external, interbroker and controller. 
         sslClientAuth: ""
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5ODA4MzUxMjMsLTYwNDcxMDIwMiwtOT
-AzMzE5OTE1LC00MDUxMDQ5MjksLTIwODg3NDY2MTIsLTc5NzA5
-NjIwOSwtMzMyNDU1MzYzXX0=
+eyJoaXN0b3J5IjpbOTQzMjAyODg0LC02MDQ3MTAyMDIsLTkwMz
+MxOTkxNSwtNDA1MTA0OTI5LC0yMDg4NzQ2NjEyLC03OTcwOTYy
+MDksLTMzMjQ1NTM2M119
 -->
