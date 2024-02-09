@@ -305,9 +305,32 @@ Service
     rbac:
       create: true 
 
+#### Kafka metrics
+Kafka metrics
+
+    metrics:
+      kafka:
+        enabled: true
+        image:
+          registry: docker.io
+          repository: bitnami/kafka-exporter
+          tag: 1.7.0-debian-11-r134
+          digest: ""
+          pullPolicy: IfNotPresent
+          pullSecrets: []
+        certificatesSecret: "kafka-exporter"
+        tlsCert: ca-cert
+        tlsKey: ca-key
+        tlsCaSecret: "kafka-exporter"
+        tlsCaCert: "tls-ca-cert"
+        extraFlags: 
+          tls.insecure-skip-tls-verify: ""
+        command: []
+    
+Certificate c
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkzNDg5MzU4OSwxOTc3NTEzNTIxLC0xNj
-A2Mjk5NjUsOTQzMjAyODg0LC02MDQ3MTAyMDIsLTkwMzMxOTkx
-NSwtNDA1MTA0OTI5LC0yMDg4NzQ2NjEyLC03OTcwOTYyMDksLT
-MzMjQ1NTM2M119
+eyJoaXN0b3J5IjpbOTI5ODM0MTQyLDE5Nzc1MTM1MjEsLTE2MD
+YyOTk2NSw5NDMyMDI4ODQsLTYwNDcxMDIwMiwtOTAzMzE5OTE1
+LC00MDUxMDQ5MjksLTIwODg3NDY2MTIsLTc5NzA5NjIwOSwtMz
+MyNDU1MzYzXX0=
 -->
