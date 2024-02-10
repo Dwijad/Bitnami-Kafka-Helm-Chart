@@ -330,17 +330,17 @@ Kafka metrics
 Certificate creation procedure for above Kafka 
 
     # Convert JKS into PEM      
-    # keytool -importkeystore -srckeystore kafka-broker-0.keystore.jks -destkeystore kafka-broker-0.p12 -srcstoretype jks -deststoretype pkcs12
+    $ keytool -importkeystore -srckeystore kafka-broker-0.keystore.jks -destkeystore kafka-broker-0.p12 -srcstoretype jks -deststoretype pkcs12
     # Extract tls cert/ca cert and private keys
-    # openssl pkcs12 -in kafka-broker-0.p12 -out kafka-broker-0.pem
+    $ openssl pkcs12 -in kafka-broker-0.p12 -out kafka-broker-0.pem
     
-    # extract only tls cert 
-    # $ keytool -exportcert -alias broker-0 -keystore kafka-broker-0.keystore.jks -rfc -file kafka-broker-0-cert.pem
-    # extract only private key
-    # $ openssl pkey -in kafka-broker-0.pem -out kafka-broker-0-key.pem
+    # extract tls cert 
+    $ keytool -exportcert -alias broker-0 -keystore kafka-broker-0.keystore.jks -rfc -file kafka-broker-0-cert.pem
+    # extract private key
+    $ openssl pkey -in kafka-broker-0.pem -out kafka-broker-0-key.pem
     # Fetch/Copy the tls ca cert from file kafka-broker-0.pem to kafka-broker-0-ca-cert.pem
     # Create secret
-    # kubectl create secret generic kafka-exporter --from-file=ca-cert=kafka-broker-0-cert.pem --from-file=ca-key=kafka-broker-0-key.pem --from-file=tls-ca-cert=kafka-broker-0-ca-cert.pem
+    $ kubectl create secret generic kafka-exporter --from-file=ca-cert=kafka-broker-0-cert.pem --from-file=ca-key=kafka-broker-0-key.pem --from-file=tls-ca-cert=kafka-broker-0-ca-cert.pem
 
 #### JMX
 
@@ -411,9 +411,9 @@ Certificate creation procedure for above Kafka
         groups: []
     
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE4ODQwNTA0MiwtMTIwNzQzMzcyNywxMD
-Q1MDQyMzEyLDQ0NTUyNzkwNSw5NDUxMzM0MDEsMTk3NzUxMzUy
-MSwtMTYwNjI5OTY1LDk0MzIwMjg4NCwtNjA0NzEwMjAyLC05MD
-MzMTk5MTUsLTQwNTEwNDkyOSwtMjA4ODc0NjYxMiwtNzk3MDk2
-MjA5LC0zMzI0NTUzNjNdfQ==
+eyJoaXN0b3J5IjpbNDQzNjIyODUxLC0xMjA3NDMzNzI3LDEwND
+UwNDIzMTIsNDQ1NTI3OTA1LDk0NTEzMzQwMSwxOTc3NTEzNTIx
+LC0xNjA2Mjk5NjUsOTQzMjAyODg0LC02MDQ3MTAyMDIsLTkwMz
+MxOTkxNSwtNDA1MTA0OTI5LC0yMDg4NzQ2NjEyLC03OTcwOTYy
+MDksLTMzMjQ1NTM2M119
 -->
