@@ -247,7 +247,7 @@ External access
         service:
           type: NodePort <--- External access service
           ports:
-            external: 9095 <--- 
+            external: 9095 <--- External access port
           nodePorts:
             - 31090
             - 31091
@@ -411,9 +411,9 @@ Certificate creation procedure for above Kafka
         groups: []
     
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjgyNzIzNjQ0LDEwNDUwNDIzMTIsNDQ1NT
-I3OTA1LDk0NTEzMzQwMSwxOTc3NTEzNTIxLC0xNjA2Mjk5NjUs
-OTQzMjAyODg0LC02MDQ3MTAyMDIsLTkwMzMxOTkxNSwtNDA1MT
-A0OTI5LC0yMDg4NzQ2NjEyLC03OTcwOTYyMDksLTMzMjQ1NTM2
-M119
+eyJoaXN0b3J5IjpbMTE0NjA3NDU0OCwxMDQ1MDQyMzEyLDQ0NT
+UyNzkwNSw5NDUxMzM0MDEsMTk3NzUxMzUyMSwtMTYwNjI5OTY1
+LDk0MzIwMjg4NCwtNjA0NzEwMjAyLC05MDMzMTk5MTUsLTQwNT
+EwNDkyOSwtMjA4ODc0NjYxMiwtNzk3MDk2MjA5LC0zMzI0NTUz
+NjNdfQ==
 -->
