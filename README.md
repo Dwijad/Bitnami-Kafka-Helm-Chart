@@ -11,7 +11,7 @@ A simplified configuration of Bitnami kafka helm chart to quickly create a clust
 
 ### SSL
 
-Create SSL certificates if the broker is intended to listen on SSL.  This [shell script](https://github.com/Dwijad/Bitnami-Kafka-Helm-Chart/blob/main/certs/generate_ssl_cert.sh) along with other configuration file will automate the process of creating SSL certs.  The certification generation script 
+Create SSL certificates if the broker is intended to listen on SSL.  This [shell script](https://github.com/Dwijad/Bitnami-Kafka-Helm-Chart/blob/main/certs/generate_ssl_cert.sh) along with other configuration file will automate the process of creating SSL certs.  
 
     $ mkdir -p kafka/certs && cd kafka/certs
     $ Get/Place generate_ssl_cert.sh, broker-{n}.conf in kafka/certs
@@ -28,6 +28,7 @@ Generate SSL certificates.
 
     $ ./generate_ssl_cert.sh
 
+Another certification generation [shell script](https://github.com/confluentinc/confluent-platform-security-tools/blob/master/kafka-generate-ssl.sh) from confluent. 
  
 ### Configure chart
 #### Zookeeper
@@ -430,11 +431,11 @@ Convert kafka broker's JKS keystore file into PEM format and then extract CA cer
     
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc3MDc5OTgwNCwtNTk3OTgyNTE3LC03Mz
-k2ODUzMTgsNDYyNDU0NTU1LC03NTQ1NjA2MTcsLTE5MjAxMTkw
-MTAsNDQzNjIyODUxLC0xMjA3NDMzNzI3LDEwNDUwNDIzMTIsND
-Q1NTI3OTA1LDk0NTEzMzQwMSwxOTc3NTEzNTIxLC0xNjA2Mjk5
-NjUsOTQzMjAyODg0LC02MDQ3MTAyMDIsLTkwMzMxOTkxNSwtND
-A1MTA0OTI5LC0yMDg4NzQ2NjEyLC03OTcwOTYyMDksLTMzMjQ1
-NTM2M119
+eyJoaXN0b3J5IjpbLTIxMDcyMTUyMTUsLTU5Nzk4MjUxNywtNz
+M5Njg1MzE4LDQ2MjQ1NDU1NSwtNzU0NTYwNjE3LC0xOTIwMTE5
+MDEwLDQ0MzYyMjg1MSwtMTIwNzQzMzcyNywxMDQ1MDQyMzEyLD
+Q0NTUyNzkwNSw5NDUxMzM0MDEsMTk3NzUxMzUyMSwtMTYwNjI5
+OTY1LDk0MzIwMjg4NCwtNjA0NzEwMjAyLC05MDMzMTk5MTUsLT
+QwNTEwNDkyOSwtMjA4ODc0NjYxMiwtNzk3MDk2MjA5LC0zMzI0
+NTUzNjNdfQ==
 -->
