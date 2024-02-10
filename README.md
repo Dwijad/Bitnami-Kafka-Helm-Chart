@@ -92,7 +92,8 @@ Configure listener properties for client, external, interbroker and controller. 
         sslClientAuth: ""
 
 #### SASL
-SASL authentication for interbroker, client and controller communication can be controlled in SASL section.
+
+Configure SASL authentication for interbroker, client and controller communication in SASL section.
 
     sasl:
       enabledMechanisms: PLAIN,SCRAM-SHA-256,SCRAM-SHA-512
@@ -429,10 +430,10 @@ Convert kafka broker's JKS keystore file into PEM format and then extract CA cer
     
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTczOTY4NTMxOCw0NjI0NTQ1NTUsLTc1ND
-U2MDYxNywtMTkyMDExOTAxMCw0NDM2MjI4NTEsLTEyMDc0MzM3
-MjcsMTA0NTA0MjMxMiw0NDU1Mjc5MDUsOTQ1MTMzNDAxLDE5Nz
-c1MTM1MjEsLTE2MDYyOTk2NSw5NDMyMDI4ODQsLTYwNDcxMDIw
-MiwtOTAzMzE5OTE1LC00MDUxMDQ5MjksLTIwODg3NDY2MTIsLT
-c5NzA5NjIwOSwtMzMyNDU1MzYzXX0=
+eyJoaXN0b3J5IjpbLTU5Nzk4MjUxNywtNzM5Njg1MzE4LDQ2Mj
+Q1NDU1NSwtNzU0NTYwNjE3LC0xOTIwMTE5MDEwLDQ0MzYyMjg1
+MSwtMTIwNzQzMzcyNywxMDQ1MDQyMzEyLDQ0NTUyNzkwNSw5ND
+UxMzM0MDEsMTk3NzUxMzUyMSwtMTYwNjI5OTY1LDk0MzIwMjg4
+NCwtNjA0NzEwMjAyLC05MDMzMTk5MTUsLTQwNTEwNDkyOSwtMj
+A4ODc0NjYxMiwtNzk3MDk2MjA5LC0zMzI0NTUzNjNdfQ==
 -->
