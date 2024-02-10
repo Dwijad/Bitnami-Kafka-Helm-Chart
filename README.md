@@ -286,7 +286,7 @@ Service
           labels: {}
 #### Auth
 
-    auth: 
+    auth: <--- TLS configuration for kafka
       interBrokerProtocol: tls
       clientProtocol: tls
       tls:
@@ -411,9 +411,9 @@ Certificate creation procedure for above Kafka
         groups: []
     
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMDc0MzM3MjcsMTA0NTA0MjMxMiw0ND
-U1Mjc5MDUsOTQ1MTMzNDAxLDE5Nzc1MTM1MjEsLTE2MDYyOTk2
-NSw5NDMyMDI4ODQsLTYwNDcxMDIwMiwtOTAzMzE5OTE1LC00MD
-UxMDQ5MjksLTIwODg3NDY2MTIsLTc5NzA5NjIwOSwtMzMyNDU1
-MzYzXX0=
+eyJoaXN0b3J5IjpbLTE3Mzk4OTczMjgsLTEyMDc0MzM3MjcsMT
+A0NTA0MjMxMiw0NDU1Mjc5MDUsOTQ1MTMzNDAxLDE5Nzc1MTM1
+MjEsLTE2MDYyOTk2NSw5NDMyMDI4ODQsLTYwNDcxMDIwMiwtOT
+AzMzE5OTE1LC00MDUxMDQ5MjksLTIwODg3NDY2MTIsLTc5NzA5
+NjIwOSwtMzMyNDU1MzYzXX0=
 -->
