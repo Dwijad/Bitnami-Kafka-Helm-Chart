@@ -246,7 +246,7 @@ Broker only statefulset parameters.
         mountPath: /opt/bitnami/kafka/logs
 
 #### External access
-External access
+External access of Kafka broker through NodePort.
 
     externalAccess:
       enabled: true <--- External access 
@@ -270,7 +270,7 @@ External access
           ports:
             external: 9095 <--- External access port
           nodePorts:
-            - 31090
+            - 31090 
             - 31091
             - 31092
           #externalIPs:
@@ -431,11 +431,11 @@ Convert kafka broker's JKS keystore file into PEM format and then extract CA cer
     
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMDcyMTUyMTUsLTU5Nzk4MjUxNywtNz
-M5Njg1MzE4LDQ2MjQ1NDU1NSwtNzU0NTYwNjE3LC0xOTIwMTE5
-MDEwLDQ0MzYyMjg1MSwtMTIwNzQzMzcyNywxMDQ1MDQyMzEyLD
-Q0NTUyNzkwNSw5NDUxMzM0MDEsMTk3NzUxMzUyMSwtMTYwNjI5
-OTY1LDk0MzIwMjg4NCwtNjA0NzEwMjAyLC05MDMzMTk5MTUsLT
-QwNTEwNDkyOSwtMjA4ODc0NjYxMiwtNzk3MDk2MjA5LC0zMzI0
-NTUzNjNdfQ==
+eyJoaXN0b3J5IjpbMjAwNDg3Mjc0NSwtMjEwNzIxNTIxNSwtNT
+k3OTgyNTE3LC03Mzk2ODUzMTgsNDYyNDU0NTU1LC03NTQ1NjA2
+MTcsLTE5MjAxMTkwMTAsNDQzNjIyODUxLC0xMjA3NDMzNzI3LD
+EwNDUwNDIzMTIsNDQ1NTI3OTA1LDk0NTEzMzQwMSwxOTc3NTEz
+NTIxLC0xNjA2Mjk5NjUsOTQzMjAyODg0LC02MDQ3MTAyMDIsLT
+kwMzMxOTkxNSwtNDA1MTA0OTI5LC0yMDg4NzQ2NjEyLC03OTcw
+OTYyMDldfQ==
 -->
