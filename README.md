@@ -47,26 +47,26 @@ A Kafka cluster where a fresh zookeeper service is desired can be configured wit
 
 Configure listener properties for client, external, interbroker and controller. If Kraft is disabled, controller listener properties does not need to be configured.
 
-    listeners:
-      client:
+    listeners: <--- Listener section
+      client: <--- Client
         containerPort: 9092
         protocol: SASL_SSL
         name: CLIENT
         sslClientAuth: "required"
     
-      external:
+      external: <--- External
         containerPort: 9095
         protocol: SASL_SSL
         name: EXTERNAL
         sslClientAuth: ""
     
-      interbroker:
+      interbroker: <--- Interbroker
         containerPort: 9093
         protocol: PLAINTEXT
         name: INTERNAL
         sslClientAuth: ""
     
-      controller:
+      controller: <--- Controller
         containerPort: 9094
         protocol: SASL_PLAINTEXT
         name: CONTROLLER
@@ -411,8 +411,8 @@ Certificate creation procedure for above Kafka
         groups: []
     
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDQ1NTI3OTA1LDk0NTEzMzQwMSwxOTc3NT
-EzNTIxLC0xNjA2Mjk5NjUsOTQzMjAyODg0LC02MDQ3MTAyMDIs
-LTkwMzMxOTkxNSwtNDA1MTA0OTI5LC0yMDg4NzQ2NjEyLC03OT
-cwOTYyMDksLTMzMjQ1NTM2M119
+eyJoaXN0b3J5IjpbMTA0NTA0MjMxMiw0NDU1Mjc5MDUsOTQ1MT
+MzNDAxLDE5Nzc1MTM1MjEsLTE2MDYyOTk2NSw5NDMyMDI4ODQs
+LTYwNDcxMDIwMiwtOTAzMzE5OTE1LC00MDUxMDQ5MjksLTIwOD
+g3NDY2MTIsLTc5NzA5NjIwOSwtMzMyNDU1MzYzXX0=
 -->
