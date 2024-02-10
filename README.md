@@ -11,7 +11,7 @@ A simplified configuration of Bitnami kafka helm chart to quickly create a clust
 
 ### SSL
 
-Create SSL certificates if the broker is intended to listen on SSL.  This [shell script](https://github.com/Dwijad/Bitnami-Kafka-Helm-Chart/blob/main/certs/generate_ssl_cert.sh) along with other configuration file will automate the process of creating SSL certs.  
+Create SSL certificates if the broker is intended to listen on SSL.  This [shell script](https://github.com/Dwijad/Bitnami-Kafka-Helm-Chart/blob/main/certs/generate_ssl_cert.sh) along with other configuration file will automate the process of creating SSL certs.  The certification generation script 
 
     $ mkdir -p kafka/certs && cd kafka/certs
     $ Get/Place generate_ssl_cert.sh, broker-{n}.conf in kafka/certs
@@ -430,7 +430,7 @@ Convert kafka broker's JKS keystore file into PEM format and then extract CA cer
     
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk5NDM2OTIxOCwtNTk3OTgyNTE3LC03Mz
+eyJoaXN0b3J5IjpbMTc3MDc5OTgwNCwtNTk3OTgyNTE3LC03Mz
 k2ODUzMTgsNDYyNDU0NTU1LC03NTQ1NjA2MTcsLTE5MjAxMTkw
 MTAsNDQzNjIyODUxLC0xMjA3NDMzNzI3LDEwNDUwNDIzMTIsND
 Q1NTI3OTA1LDk0NTEzMzQwMSwxOTc3NTEzNTIxLC0xNjA2Mjk5
