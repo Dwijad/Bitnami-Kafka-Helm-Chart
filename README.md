@@ -298,7 +298,7 @@ Service
 #### Service account
 
     serviceAccount:
-      create: true
+      create: true <--- Enable creation of ServiceAccount
       name: ""
       automountServiceAccountToken: true
       annotations: {}
@@ -310,7 +310,7 @@ Kafka metrics
 
     metrics:
       kafka:
-        enabled: true
+        enabled: true <--- Enables kafka metrics
         image:
           registry: docker.io
           repository: bitnami/kafka-exporter
@@ -318,7 +318,7 @@ Kafka metrics
           digest: ""
           pullPolicy: IfNotPresent
           pullSecrets: []
-        certificatesSecret: "kafka-exporter"
+        certificatesSecret: "kafka-exporter" <--- Secret name
         tlsCert: ca-cert
         tlsKey: ca-key
         tlsCaSecret: "kafka-exporter"
@@ -411,9 +411,9 @@ Certificate creation procedure for above Kafka
         groups: []
     
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3Mzk4OTczMjgsLTEyMDc0MzM3MjcsMT
-A0NTA0MjMxMiw0NDU1Mjc5MDUsOTQ1MTMzNDAxLDE5Nzc1MTM1
-MjEsLTE2MDYyOTk2NSw5NDMyMDI4ODQsLTYwNDcxMDIwMiwtOT
-AzMzE5OTE1LC00MDUxMDQ5MjksLTIwODg3NDY2MTIsLTc5NzA5
-NjIwOSwtMzMyNDU1MzYzXX0=
+eyJoaXN0b3J5IjpbMTE4ODQwNTA0MiwtMTIwNzQzMzcyNywxMD
+Q1MDQyMzEyLDQ0NTUyNzkwNSw5NDUxMzM0MDEsMTk3NzUxMzUy
+MSwtMTYwNjI5OTY1LDk0MzIwMjg4NCwtNjA0NzEwMjAyLC05MD
+MzMTk5MTUsLTQwNTEwNDkyOSwtMjA4ODc0NjYxMiwtNzk3MDk2
+MjA5LC0zMzI0NTUzNjNdfQ==
 -->
