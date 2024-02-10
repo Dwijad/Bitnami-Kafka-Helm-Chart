@@ -11,6 +11,7 @@ A simplified configuration of Bitnami kafka helm chart to quickly create a clust
     $ cd kafka
 
 ### SSL
+Create SSL certificate if the broker is 
 
 ### Configure
 #### Zookeeper
@@ -411,10 +412,10 @@ Convert kafka broker's JKS keystore file into PEM format and then extract CA cer
         groups: []
     
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc1NDU2MDYxNywtMTkyMDExOTAxMCw0ND
-M2MjI4NTEsLTEyMDc0MzM3MjcsMTA0NTA0MjMxMiw0NDU1Mjc5
-MDUsOTQ1MTMzNDAxLDE5Nzc1MTM1MjEsLTE2MDYyOTk2NSw5ND
-MyMDI4ODQsLTYwNDcxMDIwMiwtOTAzMzE5OTE1LC00MDUxMDQ5
-MjksLTIwODg3NDY2MTIsLTc5NzA5NjIwOSwtMzMyNDU1MzYzXX
-0=
+eyJoaXN0b3J5IjpbMTU2MTcxMjkwNSwtNzU0NTYwNjE3LC0xOT
+IwMTE5MDEwLDQ0MzYyMjg1MSwtMTIwNzQzMzcyNywxMDQ1MDQy
+MzEyLDQ0NTUyNzkwNSw5NDUxMzM0MDEsMTk3NzUxMzUyMSwtMT
+YwNjI5OTY1LDk0MzIwMjg4NCwtNjA0NzEwMjAyLC05MDMzMTk5
+MTUsLTQwNTEwNDkyOSwtMjA4ODc0NjYxMiwtNzk3MDk2MjA5LC
+0zMzI0NTUzNjNdfQ==
 -->
