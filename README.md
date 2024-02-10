@@ -95,7 +95,7 @@ SASL authentication for interbroker, client and controller communication can be 
 Kafka broker with SSL supports can be configured in `tls` section.
 
     tls:
-      type: JKS
+      type: JKS <--- TLS type
       existingSecret: "kafka-jks"
       keystorePassword: "password"
       truststorePassword: "password"
@@ -228,7 +228,7 @@ Broker only statefulset parameters.
 External access
 
     externalAccess:
-      enabled: true
+      enabled: true <--- External access 
       autoDiscovery:
         enabled: true
         image:
@@ -245,9 +245,9 @@ External access
             memory: 128Mi
       broker:
         service:
-          type: NodePort
+          type: NodePort <--- External access service
           ports:
-            external: 9095
+            external: 9095 <--- 
           nodePorts:
             - 31090
             - 31091
@@ -411,8 +411,9 @@ Certificate creation procedure for above Kafka
         groups: []
     
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA0NTA0MjMxMiw0NDU1Mjc5MDUsOTQ1MT
-MzNDAxLDE5Nzc1MTM1MjEsLTE2MDYyOTk2NSw5NDMyMDI4ODQs
-LTYwNDcxMDIwMiwtOTAzMzE5OTE1LC00MDUxMDQ5MjksLTIwOD
-g3NDY2MTIsLTc5NzA5NjIwOSwtMzMyNDU1MzYzXX0=
+eyJoaXN0b3J5IjpbNjgyNzIzNjQ0LDEwNDUwNDIzMTIsNDQ1NT
+I3OTA1LDk0NTEzMzQwMSwxOTc3NTEzNTIxLC0xNjA2Mjk5NjUs
+OTQzMjAyODg0LC02MDQ3MTAyMDIsLTkwMzMxOTkxNSwtNDA1MT
+A0OTI5LC0yMDg4NzQ2NjEyLC03OTcwOTYyMDksLTMzMjQ1NTM2
+M119
 -->
