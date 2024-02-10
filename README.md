@@ -24,6 +24,8 @@ Edit `broker-{n}.conf` files to reflect the release name in DNS of each broker.
     DNS.1 = {release_name}-kafka.default.svc.cluster.local
     DNS.2 = {release_name}-kafka-broker-0.test-kafka-broker-headless.default.svc.cluster.local
 
+Generate the certificates.
+
  
 ### Configure
 #### Zookeeper
@@ -425,7 +427,7 @@ Convert kafka broker's JKS keystore file into PEM format and then extract CA cer
     
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDE4ODgwMzc1LC03NTQ1NjA2MTcsLTE5Mj
+eyJoaXN0b3J5IjpbNDYyNDU0NTU1LC03NTQ1NjA2MTcsLTE5Mj
 AxMTkwMTAsNDQzNjIyODUxLC0xMjA3NDMzNzI3LDEwNDUwNDIz
 MTIsNDQ1NTI3OTA1LDk0NTEzMzQwMSwxOTc3NTEzNTIxLC0xNj
 A2Mjk5NjUsOTQzMjAyODg0LC02MDQ3MTAyMDIsLTkwMzMxOTkx
