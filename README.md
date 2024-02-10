@@ -10,12 +10,12 @@ A simplified configuration of Bitnami kafka helm chart to quickly create a clust
     $ tar xf kafka-26.8.5.tgz
 
 ### SSL
+
 Create SSL certificates if the broker is intended to listen on SSL.  This [shell script](https://github.com/Dwijad/Bitnami-Kafka-Helm-Chart/blob/main/certs/generate_ssl_cert.sh) along with other configuration file will automate the process of creating SSL certs.  
 
     $ mkdir -p kafka/certs && cd kafka/certs
-    $ Get/Place generate_ssl_cert.sh, broker-{n}.conf 
-    $  
-
+    $ Get/Place generate_ssl_cert.sh, broker-{n}.conf in kafka/certs
+Edit the broker-{n}
 ### Configure
 #### Zookeeper
 The bitnami kafka helm chart comes with number of options. Kafka cluster can be configured with freshly minted Kraft/zookeeper service or with a existing  zookeeper service.
@@ -416,10 +416,10 @@ Convert kafka broker's JKS keystore file into PEM format and then extract CA cer
     
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA0NDIwNjIxNCwtNzU0NTYwNjE3LC0xOT
-IwMTE5MDEwLDQ0MzYyMjg1MSwtMTIwNzQzMzcyNywxMDQ1MDQy
-MzEyLDQ0NTUyNzkwNSw5NDUxMzM0MDEsMTk3NzUxMzUyMSwtMT
-YwNjI5OTY1LDk0MzIwMjg4NCwtNjA0NzEwMjAyLC05MDMzMTk5
-MTUsLTQwNTEwNDkyOSwtMjA4ODc0NjYxMiwtNzk3MDk2MjA5LC
-0zMzI0NTUzNjNdfQ==
+eyJoaXN0b3J5IjpbMzIxNjA0MDQ2LC03NTQ1NjA2MTcsLTE5Mj
+AxMTkwMTAsNDQzNjIyODUxLC0xMjA3NDMzNzI3LDEwNDUwNDIz
+MTIsNDQ1NTI3OTA1LDk0NTEzMzQwMSwxOTc3NTEzNTIxLC0xNj
+A2Mjk5NjUsOTQzMjAyODg0LC02MDQ3MTAyMDIsLTkwMzMxOTkx
+NSwtNDA1MTA0OTI5LC0yMDg4NzQ2NjEyLC03OTcwOTYyMDksLT
+MzMjQ1NTM2M119
 -->
