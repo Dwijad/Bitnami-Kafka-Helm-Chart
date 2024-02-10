@@ -26,8 +26,10 @@ Edit `broker-{n}.conf` files to reflect the release name in DNS of each broker.
 
 Generate the certificates.
 
+    $ ./generate_ssl_cert.sh
+
  
-### Configure
+### Configure chart
 #### Zookeeper
 The bitnami kafka helm chart comes with number of options. Kafka cluster can be configured with freshly minted Kraft/zookeeper service or with a existing  zookeeper service.
 
@@ -427,10 +429,10 @@ Convert kafka broker's JKS keystore file into PEM format and then extract CA cer
     
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDYyNDU0NTU1LC03NTQ1NjA2MTcsLTE5Mj
-AxMTkwMTAsNDQzNjIyODUxLC0xMjA3NDMzNzI3LDEwNDUwNDIz
-MTIsNDQ1NTI3OTA1LDk0NTEzMzQwMSwxOTc3NTEzNTIxLC0xNj
-A2Mjk5NjUsOTQzMjAyODg0LC02MDQ3MTAyMDIsLTkwMzMxOTkx
-NSwtNDA1MTA0OTI5LC0yMDg4NzQ2NjEyLC03OTcwOTYyMDksLT
-MzMjQ1NTM2M119
+eyJoaXN0b3J5IjpbLTczOTY4NTMxOCw0NjI0NTQ1NTUsLTc1ND
+U2MDYxNywtMTkyMDExOTAxMCw0NDM2MjI4NTEsLTEyMDc0MzM3
+MjcsMTA0NTA0MjMxMiw0NDU1Mjc5MDUsOTQ1MTMzNDAxLDE5Nz
+c1MTM1MjEsLTE2MDYyOTk2NSw5NDMyMDI4ODQsLTYwNDcxMDIw
+MiwtOTAzMzE5OTE1LC00MDUxMDQ5MjksLTIwODg3NDY2MTIsLT
+c5NzA5NjIwOSwtMzMyNDU1MzYzXX0=
 -->
