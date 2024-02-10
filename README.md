@@ -260,7 +260,7 @@ External access
 Service
 
     service:
-      type: LoadBalancer
+      type: LoadBalancer <--- Broker service type
       ports:
         client: 9092
         controller: 9093
@@ -286,7 +286,7 @@ Service
           labels: {}
 #### Auth
 
-    auth:
+    auth: 
       interBrokerProtocol: tls
       clientProtocol: tls
       tls:
@@ -411,9 +411,9 @@ Certificate creation procedure for above Kafka
         groups: []
     
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE0NjA3NDU0OCwxMDQ1MDQyMzEyLDQ0NT
-UyNzkwNSw5NDUxMzM0MDEsMTk3NzUxMzUyMSwtMTYwNjI5OTY1
-LDk0MzIwMjg4NCwtNjA0NzEwMjAyLC05MDMzMTk5MTUsLTQwNT
-EwNDkyOSwtMjA4ODc0NjYxMiwtNzk3MDk2MjA5LC0zMzI0NTUz
-NjNdfQ==
+eyJoaXN0b3J5IjpbLTEyMDc0MzM3MjcsMTA0NTA0MjMxMiw0ND
+U1Mjc5MDUsOTQ1MTMzNDAxLDE5Nzc1MTM1MjEsLTE2MDYyOTk2
+NSw5NDMyMDI4ODQsLTYwNDcxMDIwMiwtOTAzMzE5OTE1LC00MD
+UxMDQ5MjksLTIwODg3NDY2MTIsLTc5NzA5NjIwOSwtMzMyNDU1
+MzYzXX0=
 -->
