@@ -16,10 +16,13 @@ Create SSL certificates if the broker is intended to listen on SSL.  This [shell
     $ mkdir -p kafka/certs && cd kafka/certs
     $ Get/Place generate_ssl_cert.sh, broker-{n}.conf in kafka/certs
 
-Edit broker-{n}.conf files to reflect the release name in DNS of broker.
-[ alt_names ]
-DNS.1 = release_name-kafka.default.svc.cluster.local
-DNS.2 = kubefluent-kafka-broker-0.test-kafka-broker-headless.default.svc.cluster.local
+Edit `broker-{n}.conf` files to reflect the release name in DNS of each broker.
+
+    ...
+    ...
+    [ alt_names ]
+    DNS.1 = {release_name}-kafka.default.svc.cluster.local
+    DNS.2 = {release_name}-kafka-broker-0.test-kafka-broker-headless.default.svc.cluster.local
 
  
 ### Configure
@@ -422,10 +425,10 @@ Convert kafka broker's JKS keystore file into PEM format and then extract CA cer
     
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMDY2MjMyOTYsLTc1NDU2MDYxNywtMT
-kyMDExOTAxMCw0NDM2MjI4NTEsLTEyMDc0MzM3MjcsMTA0NTA0
-MjMxMiw0NDU1Mjc5MDUsOTQ1MTMzNDAxLDE5Nzc1MTM1MjEsLT
-E2MDYyOTk2NSw5NDMyMDI4ODQsLTYwNDcxMDIwMiwtOTAzMzE5
-OTE1LC00MDUxMDQ5MjksLTIwODg3NDY2MTIsLTc5NzA5NjIwOS
-wtMzMyNDU1MzYzXX0=
+eyJoaXN0b3J5IjpbNDE4ODgwMzc1LC03NTQ1NjA2MTcsLTE5Mj
+AxMTkwMTAsNDQzNjIyODUxLC0xMjA3NDMzNzI3LDEwNDUwNDIz
+MTIsNDQ1NTI3OTA1LDk0NTEzMzQwMSwxOTc3NTEzNTIxLC0xNj
+A2Mjk5NjUsOTQzMjAyODg0LC02MDQ3MTAyMDIsLTkwMzMxOTkx
+NSwtNDA1MTA0OTI5LC0yMDg4NzQ2NjEyLC03OTcwOTYyMDksLT
+MzMjQ1NTM2M119
 -->
