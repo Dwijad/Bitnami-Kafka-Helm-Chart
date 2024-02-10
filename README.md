@@ -1,6 +1,6 @@
 ## Configure Bitnami Helm Chart
 
-A simplified configuration of Bitnami kafka helm chart to quickly create a cluster in Kubernetes. It simplifies configuring kafka cluster from scratch and avoids manually managing the complex service configuration from scratch.
+A simplified configuration of Bitnami kafka helm chart to quickly create a cluster in Kubernetes. It simplifies configuring kafka cluster  and avoids manually managing the complex service configuration from scratch.
 
 ### Get the chart
 
@@ -319,26 +319,24 @@ Kafka metrics
           pullPolicy: IfNotPresent
           pullSecrets: []
         certificatesSecret: "kafka-exporter" <--- Secret name
-        tlsCert: ca-cert
-        tlsKey: ca-key
-        tlsCaSecret: "kafka-exporter"
-        tlsCaCert: "tls-ca-cert"
+        tlsCert: ca-cert <--- tls cert name in the secret
+        tlsKey: ca-key <--- tls key name in the secret
+        tlsCaSecret: "kafka-exporter" <--- CA secret
+        tlsCaCert: "tls-ca-cert" <--- tls CA cert name in the secret
         extraFlags: 
           tls.insecure-skip-tls-verify: ""
         command: []
     
-Certificate creation procedure for above Kafka 
+Convert kafka broker's JKS keystore file into PEM format and then extract CA cert and private key. Create a secret based on these cert and key and configure them in metrics:kafka section as described above.
 
     # Convert JKS into PEM      
     $ keytool -importkeystore -srckeystore kafka-broker-0.keystore.jks -destkeystore kafka-broker-0.p12 -srcstoretype jks -deststoretype pkcs12
     # Extract tls cert/ca cert and private keys
-    $ openssl pkcs12 -in kafka-broker-0.p12 -out kafka-broker-0.pem
-    
-    # extract tls cert 
+    $ openssl pkcs12 -in kafka-broker-0.p12 -out kafka-broker-0.pem    
+    # Extract tls cert 
     $ keytool -exportcert -alias broker-0 -keystore kafka-broker-0.keystore.jks -rfc -file kafka-broker-0-cert.pem
-    # extract private key
+    # Extract private key
     $ openssl pkey -in kafka-broker-0.pem -out kafka-broker-0-key.pem
-    # Fetch/Copy the tls ca cert from file kafka-broker-0.pem to kafka-broker-0-ca-cert.pem
     # Create secret
     $ kubectl create secret generic kafka-exporter --from-file=ca-cert=kafka-broker-0-cert.pem --from-file=ca-key=kafka-broker-0-key.pem --from-file=tls-ca-cert=kafka-broker-0-ca-cert.pem
 
@@ -346,7 +344,7 @@ Certificate creation procedure for above Kafka
 
     jmx:
         enabled: false
-        kafkaJmxPort: 5555
+        kafkaJmxPort: 5555 <--- Kafka JMX port
         image:
           registry: docker.io
           repository: bitnami/jmx-exporter
@@ -393,7 +391,7 @@ Certificate creation procedure for above Kafka
         existingConfigmap: ""
         extraRules: ""
       serviceMonitor:
-        enabled: true
+        enabled: true <--- Enables service monitor for Prometheus
         namespace: ""
         interval: ""
         scrapeTimeout: ""
@@ -411,9 +409,9 @@ Certificate creation procedure for above Kafka
         groups: []
     
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDQzNjIyODUxLC0xMjA3NDMzNzI3LDEwND
-UwNDIzMTIsNDQ1NTI3OTA1LDk0NTEzMzQwMSwxOTc3NTEzNTIx
-LC0xNjA2Mjk5NjUsOTQzMjAyODg0LC02MDQ3MTAyMDIsLTkwMz
-MxOTkxNSwtNDA1MTA0OTI5LC0yMDg4NzQ2NjEyLC03OTcwOTYy
-MDksLTMzMjQ1NTM2M119
+eyJoaXN0b3J5IjpbLTE5MjAxMTkwMTAsNDQzNjIyODUxLC0xMj
+A3NDMzNzI3LDEwNDUwNDIzMTIsNDQ1NTI3OTA1LDk0NTEzMzQw
+MSwxOTc3NTEzNTIxLC0xNjA2Mjk5NjUsOTQzMjAyODg0LC02MD
+Q3MTAyMDIsLTkwMzMxOTkxNSwtNDA1MTA0OTI5LC0yMDg4NzQ2
+NjEyLC03OTcwOTYyMDksLTMzMjQ1NTM2M119
 -->
