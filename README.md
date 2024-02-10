@@ -278,7 +278,7 @@ External access of Kafka broker through NodePort.
             #- 192.168.49.2
             #- 192.168.49.2
 #### Service
-Service
+Configure Service for broker 
 
     service:
       type: LoadBalancer <--- Broker service type
@@ -431,7 +431,7 @@ Convert kafka broker's JKS keystore file into PEM format and then extract CA cer
     
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAwNDg3Mjc0NSwtMjEwNzIxNTIxNSwtNT
+eyJoaXN0b3J5IjpbLTk5MTkyODg5NywtMjEwNzIxNTIxNSwtNT
 k3OTgyNTE3LC03Mzk2ODUzMTgsNDYyNDU0NTU1LC03NTQ1NjA2
 MTcsLTE5MjAxMTkwMTAsNDQzNjIyODUxLC0xMjA3NDMzNzI3LD
 EwNDUwNDIzMTIsNDQ1NTI3OTA1LDk0NTEzMzQwMSwxOTc3NTEz
