@@ -246,7 +246,7 @@ Broker only statefulset parameters.
         mountPath: /opt/bitnami/kafka/logs
 
 #### External access
-Configure external access of Kafka broker  through NodePort.
+Configure external access to Kafka broker  through NodePort.
 
     externalAccess:
       enabled: true <--- External access 
@@ -328,6 +328,8 @@ Enable ServiceAccount for Kafka pods
       annotations: {}
     rbac:
       create: true 
+
+#### Insta
 
 #### Kafka metrics
 
@@ -436,11 +438,11 @@ JMX exporter, to expose JMX metrics on port 5556.
     
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExODQ5NTUyNjIsLTI5MTE0MDQ1NywtMT
-E0NTE3MTEwNCwtNjIyNTc5MjM3LDE0MzI5Njc2MTEsLTk5MTky
-ODg5NywtMjEwNzIxNTIxNSwtNTk3OTgyNTE3LC03Mzk2ODUzMT
-gsNDYyNDU0NTU1LC03NTQ1NjA2MTcsLTE5MjAxMTkwMTAsNDQz
-NjIyODUxLC0xMjA3NDMzNzI3LDEwNDUwNDIzMTIsNDQ1NTI3OT
-A1LDk0NTEzMzQwMSwxOTc3NTEzNTIxLC0xNjA2Mjk5NjUsOTQz
-MjAyODg0XX0=
+eyJoaXN0b3J5IjpbLTUzNTI5NzU2MywtMTE4NDk1NTI2MiwtMj
+kxMTQwNDU3LC0xMTQ1MTcxMTA0LC02MjI1NzkyMzcsMTQzMjk2
+NzYxMSwtOTkxOTI4ODk3LC0yMTA3MjE1MjE1LC01OTc5ODI1MT
+csLTczOTY4NTMxOCw0NjI0NTQ1NTUsLTc1NDU2MDYxNywtMTky
+MDExOTAxMCw0NDM2MjI4NTEsLTEyMDc0MzM3MjcsMTA0NTA0Mj
+MxMiw0NDU1Mjc5MDUsOTQ1MTMzNDAxLDE5Nzc1MTM1MjEsLTE2
+MDYyOTk2NV19
 -->
