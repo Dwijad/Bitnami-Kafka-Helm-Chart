@@ -331,8 +331,8 @@ Enable ServiceAccount for Kafka pods
 
 #### Kafka metrics
 
-Kafka exporter, to expose Kafka metrics. By default, it uses port 9308
-JMX exporter, to expose JMX metrics. By default, it uses port 5556.
+Kafka exporter, to expose Kafka metrics on port 9308
+
 
     metrics:
       kafka:
@@ -367,6 +367,7 @@ Convert kafka broker's JKS keystore file into PEM format and then extract CA cer
     $ kubectl create secret generic kafka-exporter --from-file=ca-cert=kafka-broker-0-cert.pem --from-file=ca-key=kafka-broker-0-key.pem --from-file=tls-ca-cert=kafka-broker-0-ca-cert.pem
 
 #### JMX
+JMX exporter, to expose JMX metrics on port 5556.
 
     jmx:
         enabled: false
@@ -406,7 +407,7 @@ Convert kafka broker's JKS keystore file into PEM format and then extract CA cer
           - java.lang:*
           - kafka.network:*
           - kafka.log:*
-        config: |-
+        config: |- <--- JMX configuration section
           jmxUrl: service:jmx:rmi:///jndi/rmi://127.0.0.1:{{ .Values.metrics.jmx.kafkaJmxPort }}/jmxrmi
           lowercaseOutputName: true
           lowercaseOutputLabelNames: true
@@ -436,11 +437,11 @@ Convert kafka broker's JKS keystore file into PEM format and then extract CA cer
     
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY0NjgwMjUzNCwtMTE0NTE3MTEwNCwtNj
-IyNTc5MjM3LDE0MzI5Njc2MTEsLTk5MTkyODg5NywtMjEwNzIx
-NTIxNSwtNTk3OTgyNTE3LC03Mzk2ODUzMTgsNDYyNDU0NTU1LC
-03NTQ1NjA2MTcsLTE5MjAxMTkwMTAsNDQzNjIyODUxLC0xMjA3
-NDMzNzI3LDEwNDUwNDIzMTIsNDQ1NTI3OTA1LDk0NTEzMzQwMS
-wxOTc3NTEzNTIxLC0xNjA2Mjk5NjUsOTQzMjAyODg0LC02MDQ3
-MTAyMDJdfQ==
+eyJoaXN0b3J5IjpbLTEwNzY0NTQyNjEsLTExNDUxNzExMDQsLT
+YyMjU3OTIzNywxNDMyOTY3NjExLC05OTE5Mjg4OTcsLTIxMDcy
+MTUyMTUsLTU5Nzk4MjUxNywtNzM5Njg1MzE4LDQ2MjQ1NDU1NS
+wtNzU0NTYwNjE3LC0xOTIwMTE5MDEwLDQ0MzYyMjg1MSwtMTIw
+NzQzMzcyNywxMDQ1MDQyMzEyLDQ0NTUyNzkwNSw5NDUxMzM0MD
+EsMTk3NzUxMzUyMSwtMTYwNjI5OTY1LDk0MzIwMjg4NCwtNjA0
+NzEwMjAyXX0=
 -->
