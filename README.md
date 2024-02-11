@@ -467,12 +467,18 @@ Expose prometheus operator on Nodeport and access prometheus UI.
 
 ![Screenshot from 2024-02-11 19-05-27](https://github.com/Dwijad/Bitnami-Kafka-Helm-Chart/assets/12824049/559aa621-167e-4811-bdfe-5216bc1c97bc)
 
+#### Alertmanager
+
+    ~/kube-prometheus$ kubectl port-forward --namespace default svc/kube-prometheus-operator-alertmanager 9093:9093
+
+Browse [http://127.0.0.1:9093/#/alerts](http://127.0.0.1:9093/#/alerts)
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTEwMzkzMTI4LDY3ODI5OTk0LDEzNzE1OD
-MzMDIsLTExNDg4NTg5OTEsLTExODQ5NTUyNjIsLTI5MTE0MDQ1
-NywtMTE0NTE3MTEwNCwtNjIyNTc5MjM3LDE0MzI5Njc2MTEsLT
-k5MTkyODg5NywtMjEwNzIxNTIxNSwtNTk3OTgyNTE3LC03Mzk2
-ODUzMTgsNDYyNDU0NTU1LC03NTQ1NjA2MTcsLTE5MjAxMTkwMT
-AsNDQzNjIyODUxLC0xMjA3NDMzNzI3LDEwNDUwNDIzMTIsNDQ1
-NTI3OTA1XX0=
+eyJoaXN0b3J5IjpbLTEzMjcyNTY3NDMsNTEwMzkzMTI4LDY3OD
+I5OTk0LDEzNzE1ODMzMDIsLTExNDg4NTg5OTEsLTExODQ5NTUy
+NjIsLTI5MTE0MDQ1NywtMTE0NTE3MTEwNCwtNjIyNTc5MjM3LD
+E0MzI5Njc2MTEsLTk5MTkyODg5NywtMjEwNzIxNTIxNSwtNTk3
+OTgyNTE3LC03Mzk2ODUzMTgsNDYyNDU0NTU1LC03NTQ1NjA2MT
+csLTE5MjAxMTkwMTAsNDQzNjIyODUxLC0xMjA3NDMzNzI3LDEw
+NDUwNDIzMTJdfQ==
 -->
