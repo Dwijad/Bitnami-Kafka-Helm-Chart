@@ -499,13 +499,14 @@ It will dislay a menu.
 -   On the menu, click `Dashboards`
 -   Click `New`  > Import
 -   Add the Grafana ID: You will add the Grafana ID that you have copied and click `Load`. Import Kafka dashboard from [Grafana](https://grafana.com/grafana/dashboards/11962-kafka-metrics/).
-You may have to adjust 
+
+You may have to adjust query field a little bit
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI2NjE3MTcyMyw4MTY1NzE2MDMsNDIyNz
-I0MiwtNDczOTExNjc2LDE5NzM2NjcxMzIsNTEwMzkzMTI4LDY3
-ODI5OTk0LDEzNzE1ODMzMDIsLTExNDg4NTg5OTEsLTExODQ5NT
-UyNjIsLTI5MTE0MDQ1NywtMTE0NTE3MTEwNCwtNjIyNTc5MjM3
-LDE0MzI5Njc2MTEsLTk5MTkyODg5NywtMjEwNzIxNTIxNSwtNT
-k3OTgyNTE3LC03Mzk2ODUzMTgsNDYyNDU0NTU1LC03NTQ1NjA2
-MTddfQ==
+eyJoaXN0b3J5IjpbLTE3MjM0MjA5NjMsODE2NTcxNjAzLDQyMj
+cyNDIsLTQ3MzkxMTY3NiwxOTczNjY3MTMyLDUxMDM5MzEyOCw2
+NzgyOTk5NCwxMzcxNTgzMzAyLC0xMTQ4ODU4OTkxLC0xMTg0OT
+U1MjYyLC0yOTExNDA0NTcsLTExNDUxNzExMDQsLTYyMjU3OTIz
+NywxNDMyOTY3NjExLC05OTE5Mjg4OTcsLTIxMDcyMTUyMTUsLT
+U5Nzk4MjUxNywtNzM5Njg1MzE4LDQ2MjQ1NDU1NSwtNzU0NTYw
+NjE3XX0=
 -->
