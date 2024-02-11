@@ -340,7 +340,11 @@ Prometheus Operator is a tool that provides monitoring definitions for Kubernete
 
 Download the [kube-prometheus](https://github.com/bitnami/charts/tree/main/bitnami/kube-prometheus) operator and install the chart.
 
-$ helm insta
+    $ cd kube-prometheus
+    $ helm install kube-prometheus-operator .
+    $ **kubectl port-forward --namespace default svc/kube-prometheus-operator-alertmanager 9093:9093**
+
+
 
 
 #### Kafka metrics
@@ -450,7 +454,7 @@ JMX exporter, to expose JMX metrics on port 5556.
     
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE2OTI1OTI3MiwxMzcxNTgzMzAyLC0xMT
+eyJoaXN0b3J5IjpbMTg0MDgwNTkxNSwxMzcxNTgzMzAyLC0xMT
 Q4ODU4OTkxLC0xMTg0OTU1MjYyLC0yOTExNDA0NTcsLTExNDUx
 NzExMDQsLTYyMjU3OTIzNywxNDMyOTY3NjExLC05OTE5Mjg4OT
 csLTIxMDcyMTUyMTUsLTU5Nzk4MjUxNywtNzM5Njg1MzE4LDQ2
