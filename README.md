@@ -329,7 +329,12 @@ Enable ServiceAccount for Kafka pods
     rbac:
       create: true 
 
-#### Insta
+#### Install
+
+    $ cd kafka
+    $ helm install test . --values=values_r01_nodeport_external_access_metrics.yaml
+
+#### Prometheus operator
 
 #### Kafka metrics
 
@@ -438,11 +443,11 @@ JMX exporter, to expose JMX metrics on port 5556.
     
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUzNTI5NzU2MywtMTE4NDk1NTI2MiwtMj
-kxMTQwNDU3LC0xMTQ1MTcxMTA0LC02MjI1NzkyMzcsMTQzMjk2
-NzYxMSwtOTkxOTI4ODk3LC0yMTA3MjE1MjE1LC01OTc5ODI1MT
-csLTczOTY4NTMxOCw0NjI0NTQ1NTUsLTc1NDU2MDYxNywtMTky
-MDExOTAxMCw0NDM2MjI4NTEsLTEyMDc0MzM3MjcsMTA0NTA0Mj
-MxMiw0NDU1Mjc5MDUsOTQ1MTMzNDAxLDE5Nzc1MTM1MjEsLTE2
-MDYyOTk2NV19
+eyJoaXN0b3J5IjpbNDg0NTYzODY2LC0xMTg0OTU1MjYyLC0yOT
+ExNDA0NTcsLTExNDUxNzExMDQsLTYyMjU3OTIzNywxNDMyOTY3
+NjExLC05OTE5Mjg4OTcsLTIxMDcyMTUyMTUsLTU5Nzk4MjUxNy
+wtNzM5Njg1MzE4LDQ2MjQ1NDU1NSwtNzU0NTYwNjE3LC0xOTIw
+MTE5MDEwLDQ0MzYyMjg1MSwtMTIwNzQzMzcyNywxMDQ1MDQyMz
+EyLDQ0NTUyNzkwNSw5NDUxMzM0MDEsMTk3NzUxMzUyMSwtMTYw
+NjI5OTY1XX0=
 -->
