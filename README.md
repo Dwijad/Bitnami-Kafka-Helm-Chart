@@ -486,7 +486,7 @@ Browse [http://127.0.0.1:9093/#/alerts](http://127.0.0.1:9093/#/alerts) for Aler
     $ k expose deploy grafana --type=NodePort --target-port=3000 --name=grafana-nodeport-svc
     $ minikube service grafana-nodeport-svc
 
-#Add Prometheus as the data source
+#### Add Prometheus as the data source
 
 -   On the Welcome to Grafana Home page, click `Add your first data source`:
 -   Select `Prometheus` as the data source:
@@ -495,11 +495,11 @@ Browse [http://127.0.0.1:9093/#/alerts](http://127.0.0.1:9093/#/alerts) for Aler
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjczMTM0Mjc5LC00NzM5MTE2NzYsMTk3Mz
-Y2NzEzMiw1MTAzOTMxMjgsNjc4Mjk5OTQsMTM3MTU4MzMwMiwt
-MTE0ODg1ODk5MSwtMTE4NDk1NTI2MiwtMjkxMTQwNDU3LC0xMT
-Q1MTcxMTA0LC02MjI1NzkyMzcsMTQzMjk2NzYxMSwtOTkxOTI4
-ODk3LC0yMTA3MjE1MjE1LC01OTc5ODI1MTcsLTczOTY4NTMxOC
-w0NjI0NTQ1NTUsLTc1NDU2MDYxNywtMTkyMDExOTAxMCw0NDM2
-MjI4NTFdfQ==
+eyJoaXN0b3J5IjpbNDIyNzI0MiwtNDczOTExNjc2LDE5NzM2Nj
+cxMzIsNTEwMzkzMTI4LDY3ODI5OTk0LDEzNzE1ODMzMDIsLTEx
+NDg4NTg5OTEsLTExODQ5NTUyNjIsLTI5MTE0MDQ1NywtMTE0NT
+E3MTEwNCwtNjIyNTc5MjM3LDE0MzI5Njc2MTEsLTk5MTkyODg5
+NywtMjEwNzIxNTIxNSwtNTk3OTgyNTE3LC03Mzk2ODUzMTgsND
+YyNDU0NTU1LC03NTQ1NjA2MTcsLTE5MjAxMTkwMTAsNDQzNjIy
+ODUxXX0=
 -->
