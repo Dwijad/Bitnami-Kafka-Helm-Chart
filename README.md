@@ -465,6 +465,7 @@ Expose prometheus operator on Nodeport and access prometheus UI.
     $ k expose pod prometheus-kube-prometheus-operator-prometheus-0 --type=NodePort --target-port=9090
     $ minikube service prometheus-kube-prometheus-operator-prometheus-0
 
+![Screenshot from 2024-02-11 19-05-27](https://github.com/Dwijad/Bitnami-Kafka-Helm-Chart/assets/12824049/559aa621-167e-4811-bdfe-5216bc1c97bc)
 
 <!--stackedit_data:
 eyJoaXN0b3J5IjpbNTEwMzkzMTI4LDY3ODI5OTk0LDEzNzE1OD
