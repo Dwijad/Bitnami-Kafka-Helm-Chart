@@ -387,10 +387,11 @@ Convert kafka broker's JKS keystore file into PEM format and then extract CA cer
     $ kubectl create secret generic kafka-exporter --from-file=ca-cert=kafka-broker-0-cert.pem --from-file=ca-key=kafka-broker-0-key.pem --from-file=tls-ca-cert=kafka-broker-0-cert.pem
 
 #### JMX
-JMX exporter, to expose JMX metrics on port 5556.
+
+Enable JMX exporter to expose JMX metrics on port 5556.
 
     jmx:
-        enabled: false
+        enabled: true
         kafkaJmxPort: 5555 <--- Kafka JMX port
         image:
           registry: docker.io
@@ -460,11 +461,11 @@ Upgrade kafka release
 
     ~/kafka$ helm upgrade test . --values=values.yaml
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5Nzk2MDY0MjAsMTM3MTU4MzMwMiwtMT
-E0ODg1ODk5MSwtMTE4NDk1NTI2MiwtMjkxMTQwNDU3LC0xMTQ1
-MTcxMTA0LC02MjI1NzkyMzcsMTQzMjk2NzYxMSwtOTkxOTI4OD
-k3LC0yMTA3MjE1MjE1LC01OTc5ODI1MTcsLTczOTY4NTMxOCw0
-NjI0NTQ1NTUsLTc1NDU2MDYxNywtMTkyMDExOTAxMCw0NDM2Mj
-I4NTEsLTEyMDc0MzM3MjcsMTA0NTA0MjMxMiw0NDU1Mjc5MDUs
-OTQ1MTMzNDAxXX0=
+eyJoaXN0b3J5IjpbNjc4Mjk5OTQsMTM3MTU4MzMwMiwtMTE0OD
+g1ODk5MSwtMTE4NDk1NTI2MiwtMjkxMTQwNDU3LC0xMTQ1MTcx
+MTA0LC02MjI1NzkyMzcsMTQzMjk2NzYxMSwtOTkxOTI4ODk3LC
+0yMTA3MjE1MjE1LC01OTc5ODI1MTcsLTczOTY4NTMxOCw0NjI0
+NTQ1NTUsLTc1NDU2MDYxNywtMTkyMDExOTAxMCw0NDM2MjI4NT
+EsLTEyMDc0MzM3MjcsMTA0NTA0MjMxMiw0NDU1Mjc5MDUsOTQ1
+MTMzNDAxXX0=
 -->
