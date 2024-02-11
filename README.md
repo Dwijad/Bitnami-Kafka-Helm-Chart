@@ -477,11 +477,7 @@ Browse [http://127.0.0.1:9093/#/alerts](http://127.0.0.1:9093/#/alerts) for Aler
 
 ![Screenshot from 2024-02-11 19-12-20](https://github.com/Dwijad/Bitnami-Kafka-Helm-Chart/assets/12824049/10f4cb69-1df2-4c07-b4f8-1a3ce757756c)
 
-#### Grafana
-
-
-
-  
+#### Grafana  
 
     $ cd ~/grafana
     $ helm dependency build
@@ -491,11 +487,11 @@ Browse [http://127.0.0.1:9093/#/alerts](http://127.0.0.1:9093/#/alerts) for Aler
     $ minikube service grafana-nodeport-svc
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc4MTQxMDY2OSwxOTczNjY3MTMyLDUxMD
-M5MzEyOCw2NzgyOTk5NCwxMzcxNTgzMzAyLC0xMTQ4ODU4OTkx
-LC0xMTg0OTU1MjYyLC0yOTExNDA0NTcsLTExNDUxNzExMDQsLT
-YyMjU3OTIzNywxNDMyOTY3NjExLC05OTE5Mjg4OTcsLTIxMDcy
-MTUyMTUsLTU5Nzk4MjUxNywtNzM5Njg1MzE4LDQ2MjQ1NDU1NS
-wtNzU0NTYwNjE3LC0xOTIwMTE5MDEwLDQ0MzYyMjg1MSwtMTIw
-NzQzMzcyN119
+eyJoaXN0b3J5IjpbNjYwNzM4ODUzLDE5NzM2NjcxMzIsNTEwMz
+kzMTI4LDY3ODI5OTk0LDEzNzE1ODMzMDIsLTExNDg4NTg5OTEs
+LTExODQ5NTUyNjIsLTI5MTE0MDQ1NywtMTE0NTE3MTEwNCwtNj
+IyNTc5MjM3LDE0MzI5Njc2MTEsLTk5MTkyODg5NywtMjEwNzIx
+NTIxNSwtNTk3OTgyNTE3LC03Mzk2ODUzMTgsNDYyNDU0NTU1LC
+03NTQ1NjA2MTcsLTE5MjAxMTkwMTAsNDQzNjIyODUxLC0xMjA3
+NDMzNzI3XX0=
 -->
