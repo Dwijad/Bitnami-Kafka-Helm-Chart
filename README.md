@@ -465,20 +465,20 @@ Expose prometheus operator on Nodeport and access prometheus UI.
     $ k expose pod prometheus-kube-prometheus-operator-prometheus-0 --type=NodePort --target-port=9090
     $ minikube service prometheus-kube-prometheus-operator-prometheus-0
 
+#### Prometheuse UI
+
 ![Screenshot from 2024-02-11 19-05-27](https://github.com/Dwijad/Bitnami-Kafka-Helm-Chart/assets/12824049/559aa621-167e-4811-bdfe-5216bc1c97bc)
 
-#### Alertmanager
-
-    ~/kube-prometheus$ kubectl port-forward --namespace default svc/kube-prometheus-operator-alertmanager 9093:9093
+#### Alertmanager UI
 
 Browse [http://127.0.0.1:9093/#/alerts](http://127.0.0.1:9093/#/alerts)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMjcyNTY3NDMsNTEwMzkzMTI4LDY3OD
-I5OTk0LDEzNzE1ODMzMDIsLTExNDg4NTg5OTEsLTExODQ5NTUy
-NjIsLTI5MTE0MDQ1NywtMTE0NTE3MTEwNCwtNjIyNTc5MjM3LD
-E0MzI5Njc2MTEsLTk5MTkyODg5NywtMjEwNzIxNTIxNSwtNTk3
-OTgyNTE3LC03Mzk2ODUzMTgsNDYyNDU0NTU1LC03NTQ1NjA2MT
-csLTE5MjAxMTkwMTAsNDQzNjIyODUxLC0xMjA3NDMzNzI3LDEw
-NDUwNDIzMTJdfQ==
+eyJoaXN0b3J5IjpbLTI2Mjc3NDg4Niw1MTAzOTMxMjgsNjc4Mj
+k5OTQsMTM3MTU4MzMwMiwtMTE0ODg1ODk5MSwtMTE4NDk1NTI2
+MiwtMjkxMTQwNDU3LC0xMTQ1MTcxMTA0LC02MjI1NzkyMzcsMT
+QzMjk2NzYxMSwtOTkxOTI4ODk3LC0yMTA3MjE1MjE1LC01OTc5
+ODI1MTcsLTczOTY4NTMxOCw0NjI0NTQ1NTUsLTc1NDU2MDYxNy
+wtMTkyMDExOTAxMCw0NDM2MjI4NTEsLTEyMDc0MzM3MjcsMTA0
+NTA0MjMxMl19
 -->
