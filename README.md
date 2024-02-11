@@ -320,6 +320,7 @@ TLS configuration for client and interbroker communication.
 
 #### Service account
 
+
     serviceAccount:
       create: true <--- Enable creation of ServiceAccount
       name: ""
@@ -433,11 +434,11 @@ Convert kafka broker's JKS keystore file into PEM format and then extract CA cer
     
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNDUxNzExMDQsLTYyMjU3OTIzNywxND
-MyOTY3NjExLC05OTE5Mjg4OTcsLTIxMDcyMTUyMTUsLTU5Nzk4
-MjUxNywtNzM5Njg1MzE4LDQ2MjQ1NDU1NSwtNzU0NTYwNjE3LC
-0xOTIwMTE5MDEwLDQ0MzYyMjg1MSwtMTIwNzQzMzcyNywxMDQ1
-MDQyMzEyLDQ0NTUyNzkwNSw5NDUxMzM0MDEsMTk3NzUxMzUyMS
-wtMTYwNjI5OTY1LDk0MzIwMjg4NCwtNjA0NzEwMjAyLC05MDMz
-MTk5MTVdfQ==
+eyJoaXN0b3J5IjpbNjI2NTMzMDA2LC0xMTQ1MTcxMTA0LC02Mj
+I1NzkyMzcsMTQzMjk2NzYxMSwtOTkxOTI4ODk3LC0yMTA3MjE1
+MjE1LC01OTc5ODI1MTcsLTczOTY4NTMxOCw0NjI0NTQ1NTUsLT
+c1NDU2MDYxNywtMTkyMDExOTAxMCw0NDM2MjI4NTEsLTEyMDc0
+MzM3MjcsMTA0NTA0MjMxMiw0NDU1Mjc5MDUsOTQ1MTMzNDAxLD
+E5Nzc1MTM1MjEsLTE2MDYyOTk2NSw5NDMyMDI4ODQsLTYwNDcx
+MDIwMl19
 -->
