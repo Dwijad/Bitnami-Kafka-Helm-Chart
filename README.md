@@ -347,6 +347,8 @@ Download the [kube-prometheus](https://github.com/bitnami/charts/tree/main/bitna
 
 
 ### Upgrade kafka release
+Upgrade kafka release to include kafka metrics and JMX metrics. 
+
 #### Kafka metrics
 
 Kafka exporter, to expose Kafka metrics on port 9308
@@ -454,11 +456,11 @@ JMX exporter, to expose JMX metrics on port 5556.
     
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE3ODg1OTk5LDEzNzE1ODMzMDIsLTExND
-g4NTg5OTEsLTExODQ5NTUyNjIsLTI5MTE0MDQ1NywtMTE0NTE3
-MTEwNCwtNjIyNTc5MjM3LDE0MzI5Njc2MTEsLTk5MTkyODg5Ny
-wtMjEwNzIxNTIxNSwtNTk3OTgyNTE3LC03Mzk2ODUzMTgsNDYy
-NDU0NTU1LC03NTQ1NjA2MTcsLTE5MjAxMTkwMTAsNDQzNjIyOD
-UxLC0xMjA3NDMzNzI3LDEwNDUwNDIzMTIsNDQ1NTI3OTA1LDk0
-NTEzMzQwMV19
+eyJoaXN0b3J5IjpbMTQ0MjMwNDg4NywxMzcxNTgzMzAyLC0xMT
+Q4ODU4OTkxLC0xMTg0OTU1MjYyLC0yOTExNDA0NTcsLTExNDUx
+NzExMDQsLTYyMjU3OTIzNywxNDMyOTY3NjExLC05OTE5Mjg4OT
+csLTIxMDcyMTUyMTUsLTU5Nzk4MjUxNywtNzM5Njg1MzE4LDQ2
+MjQ1NDU1NSwtNzU0NTYwNjE3LC0xOTIwMTE5MDEwLDQ0MzYyMj
+g1MSwtMTIwNzQzMzcyNywxMDQ1MDQyMzEyLDQ0NTUyNzkwNSw5
+NDUxMzM0MDFdfQ==
 -->
