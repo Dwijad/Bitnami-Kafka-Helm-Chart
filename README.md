@@ -500,6 +500,8 @@ It will dislay a menu.
 -   Click `New`  > Import
 -   Add the Grafana ID: You will add the Grafana ID that you have copied and click `Load`. Import Kafka dashboard from [Grafana](https://grafana.com/grafana/dashboards/11962-kafka-metrics/).
 
+![Screenshot from 2024-02-11 20-05-12](https://github.com/Dwijad/Bitnami-Kafka-Helm-Chart/assets/12824049/9e4f060a-3097-407b-9960-afa3eb95c596)
+
 You may have to adjust query field a little bit
 <!--stackedit_data:
 eyJoaXN0b3J5IjpbLTE3MjM0MjA5NjMsODE2NTcxNjAzLDQyMj
