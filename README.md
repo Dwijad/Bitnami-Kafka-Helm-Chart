@@ -456,16 +456,18 @@ Enable JMX exporter to expose JMX metrics on port 5556.
         labels: {}
         groups: []
     
-
 Upgrade kafka release
 
     ~/kafka$ helm upgrade test . --values=values.yaml
+
+Expose prometheus operator on Nodeport and access prometheus UI 
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjc4Mjk5OTQsMTM3MTU4MzMwMiwtMTE0OD
-g1ODk5MSwtMTE4NDk1NTI2MiwtMjkxMTQwNDU3LC0xMTQ1MTcx
-MTA0LC02MjI1NzkyMzcsMTQzMjk2NzYxMSwtOTkxOTI4ODk3LC
-0yMTA3MjE1MjE1LC01OTc5ODI1MTcsLTczOTY4NTMxOCw0NjI0
-NTQ1NTUsLTc1NDU2MDYxNywtMTkyMDExOTAxMCw0NDM2MjI4NT
-EsLTEyMDc0MzM3MjcsMTA0NTA0MjMxMiw0NDU1Mjc5MDUsOTQ1
-MTMzNDAxXX0=
+eyJoaXN0b3J5IjpbLTQwNzQyNzU4OSw2NzgyOTk5NCwxMzcxNT
+gzMzAyLC0xMTQ4ODU4OTkxLC0xMTg0OTU1MjYyLC0yOTExNDA0
+NTcsLTExNDUxNzExMDQsLTYyMjU3OTIzNywxNDMyOTY3NjExLC
+05OTE5Mjg4OTcsLTIxMDcyMTUyMTUsLTU5Nzk4MjUxNywtNzM5
+Njg1MzE4LDQ2MjQ1NDU1NSwtNzU0NTYwNjE3LC0xOTIwMTE5MD
+EwLDQ0MzYyMjg1MSwtMTIwNzQzMzcyNywxMDQ1MDQyMzEyLDQ0
+NTUyNzkwNV19
 -->
