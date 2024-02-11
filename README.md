@@ -460,14 +460,18 @@ Upgrade kafka release
 
     ~/kafka$ helm upgrade test . --values=values.yaml
 
-Expose prometheus operator on Nodeport and access prometheus UI 
+Expose prometheus operator on Nodeport and access prometheus UI. 
+
+    $ k expose pod prometheus-kube-prometheus-operator-prometheus-0 --type=NodePort --target-port=9090
+    $ minikube service prometheus-kube-prometheus-operator-prometheus-0
+
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQwNzQyNzU4OSw2NzgyOTk5NCwxMzcxNT
-gzMzAyLC0xMTQ4ODU4OTkxLC0xMTg0OTU1MjYyLC0yOTExNDA0
-NTcsLTExNDUxNzExMDQsLTYyMjU3OTIzNywxNDMyOTY3NjExLC
-05OTE5Mjg4OTcsLTIxMDcyMTUyMTUsLTU5Nzk4MjUxNywtNzM5
-Njg1MzE4LDQ2MjQ1NDU1NSwtNzU0NTYwNjE3LC0xOTIwMTE5MD
-EwLDQ0MzYyMjg1MSwtMTIwNzQzMzcyNywxMDQ1MDQyMzEyLDQ0
-NTUyNzkwNV19
+eyJoaXN0b3J5IjpbNTEwMzkzMTI4LDY3ODI5OTk0LDEzNzE1OD
+MzMDIsLTExNDg4NTg5OTEsLTExODQ5NTUyNjIsLTI5MTE0MDQ1
+NywtMTE0NTE3MTEwNCwtNjIyNTc5MjM3LDE0MzI5Njc2MTEsLT
+k5MTkyODg5NywtMjEwNzIxNTIxNSwtNTk3OTgyNTE3LC03Mzk2
+ODUzMTgsNDYyNDU0NTU1LC03NTQ1NjA2MTcsLTE5MjAxMTkwMT
+AsNDQzNjIyODUxLC0xMjA3NDMzNzI3LDEwNDUwNDIzMTIsNDQ1
+NTI3OTA1XX0=
 -->
