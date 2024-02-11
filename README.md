@@ -278,7 +278,7 @@ Configure external access of Kafka broker  through NodePort.
             #- 192.168.49.2
             #- 192.168.49.2
 #### Service
-Configure Service for broker 
+Configure Service for kafka broker 
 
     service:
       type: LoadBalancer <--- Broker service type
@@ -332,7 +332,6 @@ Enable ServiceAccount for Kafka pods
 #### Kafka metrics
 
 Kafka exporter, to expose Kafka metrics on port 9308
-
 
     metrics:
       kafka:
@@ -437,11 +436,11 @@ JMX exporter, to expose JMX metrics on port 5556.
     
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNzY0NTQyNjEsLTExNDUxNzExMDQsLT
-YyMjU3OTIzNywxNDMyOTY3NjExLC05OTE5Mjg4OTcsLTIxMDcy
-MTUyMTUsLTU5Nzk4MjUxNywtNzM5Njg1MzE4LDQ2MjQ1NDU1NS
-wtNzU0NTYwNjE3LC0xOTIwMTE5MDEwLDQ0MzYyMjg1MSwtMTIw
-NzQzMzcyNywxMDQ1MDQyMzEyLDQ0NTUyNzkwNSw5NDUxMzM0MD
-EsMTk3NzUxMzUyMSwtMTYwNjI5OTY1LDk0MzIwMjg4NCwtNjA0
-NzEwMjAyXX0=
+eyJoaXN0b3J5IjpbLTI5MTE0MDQ1NywtMTE0NTE3MTEwNCwtNj
+IyNTc5MjM3LDE0MzI5Njc2MTEsLTk5MTkyODg5NywtMjEwNzIx
+NTIxNSwtNTk3OTgyNTE3LC03Mzk2ODUzMTgsNDYyNDU0NTU1LC
+03NTQ1NjA2MTcsLTE5MjAxMTkwMTAsNDQzNjIyODUxLC0xMjA3
+NDMzNzI3LDEwNDUwNDIzMTIsNDQ1NTI3OTA1LDk0NTEzMzQwMS
+wxOTc3NTEzNTIxLC0xNjA2Mjk5NjUsOTQzMjAyODg0LC02MDQ3
+MTAyMDJdfQ==
 -->
