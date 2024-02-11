@@ -477,13 +477,25 @@ Browse [http://127.0.0.1:9093/#/alerts](http://127.0.0.1:9093/#/alerts) for Aler
 
 ![Screenshot from 2024-02-11 19-12-20](https://github.com/Dwijad/Bitnami-Kafka-Helm-Chart/assets/12824049/10f4cb69-1df2-4c07-b4f8-1a3ce757756c)
 
+#### Grafana
+
+
+
+  
+
+    $ cd ~/grafana
+    $ helm dependency build
+    $ helm install grafana .
+    $ kubectl get secret grafana-admin --namespace default -o jsonpath="{.data.GF_SECURITY_ADMIN_PASSWORD}" | base64 -d
+    $ k expose deploy grafana --type=NodePort --target-port=3000 --name=grafana-nodeport-svc
+    $ minikube service grafana-nodeport-svc
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk3MzY2NzEzMiw1MTAzOTMxMjgsNjc4Mj
-k5OTQsMTM3MTU4MzMwMiwtMTE0ODg1ODk5MSwtMTE4NDk1NTI2
-MiwtMjkxMTQwNDU3LC0xMTQ1MTcxMTA0LC02MjI1NzkyMzcsMT
-QzMjk2NzYxMSwtOTkxOTI4ODk3LC0yMTA3MjE1MjE1LC01OTc5
-ODI1MTcsLTczOTY4NTMxOCw0NjI0NTQ1NTUsLTc1NDU2MDYxNy
-wtMTkyMDExOTAxMCw0NDM2MjI4NTEsLTEyMDc0MzM3MjcsMTA0
-NTA0MjMxMl19
+eyJoaXN0b3J5IjpbMTc4MTQxMDY2OSwxOTczNjY3MTMyLDUxMD
+M5MzEyOCw2NzgyOTk5NCwxMzcxNTgzMzAyLC0xMTQ4ODU4OTkx
+LC0xMTg0OTU1MjYyLC0yOTExNDA0NTcsLTExNDUxNzExMDQsLT
+YyMjU3OTIzNywxNDMyOTY3NjExLC05OTE5Mjg4OTcsLTIxMDcy
+MTUyMTUsLTU5Nzk4MjUxNywtNzM5Njg1MzE4LDQ2MjQ1NDU1NS
+wtNzU0NTYwNjE3LC0xOTIwMTE5MDEwLDQ0MzYyMjg1MSwtMTIw
+NzQzMzcyN119
 -->
