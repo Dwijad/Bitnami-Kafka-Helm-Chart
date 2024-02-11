@@ -363,7 +363,7 @@ Convert kafka broker's JKS keystore file into PEM format and then extract CA cer
     # Extract private key
     $ openssl pkey -in kafka-broker-0.pem -out kafka-broker-0-key.pem
     # Create secret
-    $ kubectl create secret generic kafka-exporter --from-file=ca-cert=kafka-broker-0-cert.pem --from-file=ca-key=kafka-broker-0-key.pem --from-file=tls-ca-cert=kafka-broker-0-ca-cert.pem
+    $ kubectl create secret generic kafka-exporter --from-file=ca-cert=kafka-broker-0-cert.pem --from-file=ca-key=kafka-broker-0-key.pem --from-file=tls-ca-cert=kafka-broker-0-cert.pem
 
 #### JMX
 JMX exporter, to expose JMX metrics on port 5556.
@@ -436,11 +436,11 @@ JMX exporter, to expose JMX metrics on port 5556.
     
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI5MTE0MDQ1NywtMTE0NTE3MTEwNCwtNj
-IyNTc5MjM3LDE0MzI5Njc2MTEsLTk5MTkyODg5NywtMjEwNzIx
-NTIxNSwtNTk3OTgyNTE3LC03Mzk2ODUzMTgsNDYyNDU0NTU1LC
-03NTQ1NjA2MTcsLTE5MjAxMTkwMTAsNDQzNjIyODUxLC0xMjA3
-NDMzNzI3LDEwNDUwNDIzMTIsNDQ1NTI3OTA1LDk0NTEzMzQwMS
-wxOTc3NTEzNTIxLC0xNjA2Mjk5NjUsOTQzMjAyODg0LC02MDQ3
-MTAyMDJdfQ==
+eyJoaXN0b3J5IjpbLTExODQ5NTUyNjIsLTI5MTE0MDQ1NywtMT
+E0NTE3MTEwNCwtNjIyNTc5MjM3LDE0MzI5Njc2MTEsLTk5MTky
+ODg5NywtMjEwNzIxNTIxNSwtNTk3OTgyNTE3LC03Mzk2ODUzMT
+gsNDYyNDU0NTU1LC03NTQ1NjA2MTcsLTE5MjAxMTkwMTAsNDQz
+NjIyODUxLC0xMjA3NDMzNzI3LDEwNDUwNDIzMTIsNDQ1NTI3OT
+A1LDk0NTEzMzQwMSwxOTc3NTEzNTIxLC0xNjA2Mjk5NjUsOTQz
+MjAyODg0XX0=
 -->
