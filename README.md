@@ -319,7 +319,7 @@ TLS configuration for client and interbroker communication.
         password: "password"
 
 #### Service account
-
+Enable ServiceAccount for Kafka pods
 
     serviceAccount:
       create: true <--- Enable creation of ServiceAccount
@@ -330,7 +330,9 @@ TLS configuration for client and interbroker communication.
       create: true 
 
 #### Kafka metrics
-Kafka metrics
+
+Kafka exporter, to expose Kafka metrics. By default, it uses port 9308
+JMX exporter, to expose JMX metrics. By default, it uses port 5556.
 
     metrics:
       kafka:
@@ -434,11 +436,11 @@ Convert kafka broker's JKS keystore file into PEM format and then extract CA cer
     
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjI2NTMzMDA2LC0xMTQ1MTcxMTA0LC02Mj
-I1NzkyMzcsMTQzMjk2NzYxMSwtOTkxOTI4ODk3LC0yMTA3MjE1
-MjE1LC01OTc5ODI1MTcsLTczOTY4NTMxOCw0NjI0NTQ1NTUsLT
-c1NDU2MDYxNywtMTkyMDExOTAxMCw0NDM2MjI4NTEsLTEyMDc0
-MzM3MjcsMTA0NTA0MjMxMiw0NDU1Mjc5MDUsOTQ1MTMzNDAxLD
-E5Nzc1MTM1MjEsLTE2MDYyOTk2NSw5NDMyMDI4ODQsLTYwNDcx
-MDIwMl19
+eyJoaXN0b3J5IjpbMTY0NjgwMjUzNCwtMTE0NTE3MTEwNCwtNj
+IyNTc5MjM3LDE0MzI5Njc2MTEsLTk5MTkyODg5NywtMjEwNzIx
+NTIxNSwtNTk3OTgyNTE3LC03Mzk2ODUzMTgsNDYyNDU0NTU1LC
+03NTQ1NjA2MTcsLTE5MjAxMTkwMTAsNDQzNjIyODUxLC0xMjA3
+NDMzNzI3LDEwNDUwNDIzMTIsNDQ1NTI3OTA1LDk0NTEzMzQwMS
+wxOTc3NTEzNTIxLC0xNjA2Mjk5NjUsOTQzMjAyODg0LC02MDQ3
+MTAyMDJdfQ==
 -->
