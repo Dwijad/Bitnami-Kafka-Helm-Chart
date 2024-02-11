@@ -307,7 +307,7 @@ Configure Service for broker
           labels: {}
 #### Auth
 
-TLS configuration for c
+TLS configuration for client and interbroker communication.
 
     auth: <--- TLS authentication section
       interBrokerProtocol: tls
@@ -433,11 +433,11 @@ Convert kafka broker's JKS keystore file into PEM format and then extract CA cer
     
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkzNjQyMTExOCwtNjIyNTc5MjM3LDE0Mz
-I5Njc2MTEsLTk5MTkyODg5NywtMjEwNzIxNTIxNSwtNTk3OTgy
-NTE3LC03Mzk2ODUzMTgsNDYyNDU0NTU1LC03NTQ1NjA2MTcsLT
-E5MjAxMTkwMTAsNDQzNjIyODUxLC0xMjA3NDMzNzI3LDEwNDUw
-NDIzMTIsNDQ1NTI3OTA1LDk0NTEzMzQwMSwxOTc3NTEzNTIxLC
-0xNjA2Mjk5NjUsOTQzMjAyODg0LC02MDQ3MTAyMDIsLTkwMzMx
-OTkxNV19
+eyJoaXN0b3J5IjpbLTExNDUxNzExMDQsLTYyMjU3OTIzNywxND
+MyOTY3NjExLC05OTE5Mjg4OTcsLTIxMDcyMTUyMTUsLTU5Nzk4
+MjUxNywtNzM5Njg1MzE4LDQ2MjQ1NDU1NSwtNzU0NTYwNjE3LC
+0xOTIwMTE5MDEwLDQ0MzYyMjg1MSwtMTIwNzQzMzcyNywxMDQ1
+MDQyMzEyLDQ0NTUyNzkwNSw5NDUxMzM0MDEsMTk3NzUxMzUyMS
+wtMTYwNjI5OTY1LDk0MzIwMjg4NCwtNjA0NzEwMjAyLC05MDMz
+MTk5MTVdfQ==
 -->
