@@ -493,13 +493,20 @@ Browse [http://127.0.0.1:9093/#/alerts](http://127.0.0.1:9093/#/alerts) for Aler
 -   You will then add the URL where your Prometheus application is running. This is the first URL (internal to the cluster) shown when we ran `minikube service prometheus-server-ext` earlier.
 - Click on “Save & test” to save your changes. 
 
+Go Back to Grafana and click `Home` on the top left corner:
+It will dislay a menu.
 
+-   On the menu, click `Dashboards`
+-   Click `New`  > Import
+-   Add the Grafana ID: You will add the Grafana ID that you have copied and click `Load`. Import Kafka dashboard from
+
+[https://grafana.com/grafana/dashboards/11962-kafka-metrics/](https://grafana.com/grafana/dashboards/11962-kafka-metrics/) 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDIyNzI0MiwtNDczOTExNjc2LDE5NzM2Nj
-cxMzIsNTEwMzkzMTI4LDY3ODI5OTk0LDEzNzE1ODMzMDIsLTEx
-NDg4NTg5OTEsLTExODQ5NTUyNjIsLTI5MTE0MDQ1NywtMTE0NT
-E3MTEwNCwtNjIyNTc5MjM3LDE0MzI5Njc2MTEsLTk5MTkyODg5
-NywtMjEwNzIxNTIxNSwtNTk3OTgyNTE3LC03Mzk2ODUzMTgsND
-YyNDU0NTU1LC03NTQ1NjA2MTcsLTE5MjAxMTkwMTAsNDQzNjIy
-ODUxXX0=
+eyJoaXN0b3J5IjpbNDQ5Mzk0NTk2LDQyMjcyNDIsLTQ3MzkxMT
+Y3NiwxOTczNjY3MTMyLDUxMDM5MzEyOCw2NzgyOTk5NCwxMzcx
+NTgzMzAyLC0xMTQ4ODU4OTkxLC0xMTg0OTU1MjYyLC0yOTExND
+A0NTcsLTExNDUxNzExMDQsLTYyMjU3OTIzNywxNDMyOTY3NjEx
+LC05OTE5Mjg4OTcsLTIxMDcyMTUyMTUsLTU5Nzk4MjUxNywtNz
+M5Njg1MzE4LDQ2MjQ1NDU1NSwtNzU0NTYwNjE3LC0xOTIwMTE5
+MDEwXX0=
 -->
