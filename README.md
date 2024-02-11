@@ -336,6 +336,8 @@ Enable ServiceAccount for Kafka pods
 
 #### Prometheus operator
 
+Prometheus Operator is a tool that provides monitoring definitions for Kubernetes services and the management of Prometheus instances. 
+
 #### Kafka metrics
 
 Kafka exporter, to expose Kafka metrics on port 9308
@@ -443,11 +445,11 @@ JMX exporter, to expose JMX metrics on port 5556.
     
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDg0NTYzODY2LC0xMTg0OTU1MjYyLC0yOT
-ExNDA0NTcsLTExNDUxNzExMDQsLTYyMjU3OTIzNywxNDMyOTY3
-NjExLC05OTE5Mjg4OTcsLTIxMDcyMTUyMTUsLTU5Nzk4MjUxNy
-wtNzM5Njg1MzE4LDQ2MjQ1NDU1NSwtNzU0NTYwNjE3LC0xOTIw
-MTE5MDEwLDQ0MzYyMjg1MSwtMTIwNzQzMzcyNywxMDQ1MDQyMz
-EyLDQ0NTUyNzkwNSw5NDUxMzM0MDEsMTk3NzUxMzUyMSwtMTYw
-NjI5OTY1XX0=
+eyJoaXN0b3J5IjpbLTExNDg4NTg5OTEsLTExODQ5NTUyNjIsLT
+I5MTE0MDQ1NywtMTE0NTE3MTEwNCwtNjIyNTc5MjM3LDE0MzI5
+Njc2MTEsLTk5MTkyODg5NywtMjEwNzIxNTIxNSwtNTk3OTgyNT
+E3LC03Mzk2ODUzMTgsNDYyNDU0NTU1LC03NTQ1NjA2MTcsLTE5
+MjAxMTkwMTAsNDQzNjIyODUxLC0xMjA3NDMzNzI3LDEwNDUwND
+IzMTIsNDQ1NTI3OTA1LDk0NTEzMzQwMSwxOTc3NTEzNTIxLC0x
+NjA2Mjk5NjVdfQ==
 -->
