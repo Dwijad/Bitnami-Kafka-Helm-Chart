@@ -475,6 +475,9 @@ Browse http://192.168.49.2:30885/ for Prometheus UI.
 
 Browse [http://127.0.0.1:9093/#/alerts](http://127.0.0.1:9093/#/alerts) for Alert manager UI.
 
+![Screenshot from 2024-02-11 19-12-20](https://github.com/Dwijad/Bitnami-Kafka-Helm-Chart/assets/12824049/10f4cb69-1df2-4c07-b4f8-1a3ce757756c)
+
+
 <!--stackedit_data:
 eyJoaXN0b3J5IjpbMTk3MzY2NzEzMiw1MTAzOTMxMjgsNjc4Mj
 k5OTQsMTM3MTU4MzMwMiwtMTE0ODg1ODk5MSwtMTE4NDk1NTI2
