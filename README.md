@@ -338,7 +338,7 @@ Enable ServiceAccount for Kafka pods
 
 Prometheus Operator is a tool that provides monitoring definitions for Kubernetes services and the management of Prometheus instances. Using prometheus operator, kafka cluster data can be scrapped in a automated way by setting up exporters(data) pod.
 
-Download the [kube-prometheus](https://github.com/bitnami/charts/tree/main/bitnami/kube-prometheus) operator and install the chart.
+Download  [kube-prometheus](https://github.com/bitnami/charts/tree/main/bitnami/kube-prometheus) operator and install the chart.
 
     $ cd kube-prometheus
     $ helm install kube-prometheus-operator .
@@ -460,11 +460,11 @@ Upgrade kafka release
 
     ~/kafka$ helm upgrade test . --values=values.yaml
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTMzODg1ODU3LDEzNzE1ODMzMDIsLTExND
-g4NTg5OTEsLTExODQ5NTUyNjIsLTI5MTE0MDQ1NywtMTE0NTE3
-MTEwNCwtNjIyNTc5MjM3LDE0MzI5Njc2MTEsLTk5MTkyODg5Ny
-wtMjEwNzIxNTIxNSwtNTk3OTgyNTE3LC03Mzk2ODUzMTgsNDYy
-NDU0NTU1LC03NTQ1NjA2MTcsLTE5MjAxMTkwMTAsNDQzNjIyOD
-UxLC0xMjA3NDMzNzI3LDEwNDUwNDIzMTIsNDQ1NTI3OTA1LDk0
-NTEzMzQwMV19
+eyJoaXN0b3J5IjpbLTE5Nzk2MDY0MjAsMTM3MTU4MzMwMiwtMT
+E0ODg1ODk5MSwtMTE4NDk1NTI2MiwtMjkxMTQwNDU3LC0xMTQ1
+MTcxMTA0LC02MjI1NzkyMzcsMTQzMjk2NzYxMSwtOTkxOTI4OD
+k3LC0yMTA3MjE1MjE1LC01OTc5ODI1MTcsLTczOTY4NTMxOCw0
+NjI0NTQ1NTUsLTc1NDU2MDYxNywtMTkyMDExOTAxMCw0NDM2Mj
+I4NTEsLTEyMDc0MzM3MjcsMTA0NTA0MjMxMiw0NDU1Mjc5MDUs
+OTQ1MTMzNDAxXX0=
 -->
