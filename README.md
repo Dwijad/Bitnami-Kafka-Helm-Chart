@@ -467,14 +467,16 @@ Expose prometheus operator on Nodeport and access prometheus UI.
 
 #### Prometheuse UI
 
+Browse http://192.168.49.2:30885/ for Prometheus UI.
+
 ![Screenshot from 2024-02-11 19-05-27](https://github.com/Dwijad/Bitnami-Kafka-Helm-Chart/assets/12824049/559aa621-167e-4811-bdfe-5216bc1c97bc)
 
 #### Alertmanager UI
 
-Browse [http://127.0.0.1:9093/#/alerts](http://127.0.0.1:9093/#/alerts)
+Browse [http://127.0.0.1:9093/#/alerts](http://127.0.0.1:9093/#/alerts) for Alert manager UI.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI2Mjc3NDg4Niw1MTAzOTMxMjgsNjc4Mj
+eyJoaXN0b3J5IjpbMTk3MzY2NzEzMiw1MTAzOTMxMjgsNjc4Mj
 k5OTQsMTM3MTU4MzMwMiwtMTE0ODg1ODk5MSwtMTE4NDk1NTI2
 MiwtMjkxMTQwNDU3LC0xMTQ1MTcxMTA0LC02MjI1NzkyMzcsMT
 QzMjk2NzYxMSwtOTkxOTI4ODk3LC0yMTA3MjE1MjE1LC01OTc5
