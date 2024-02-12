@@ -1,6 +1,6 @@
 ## Configure Bitnami Helm Chart
 
-A simplified configuration of Bitnami kafka helm chart to quickly create a cluster in Kubernetes. It simplifies configuring kafka cluster  and avoids manually managing the complex service configuration from scratch.
+A simplified configuration of Bitnami kafka helm chart to quickly create a cluster in Kubernetes. It simplifies configuring kafka cluster  and avoids manually managing the complex service configuration from scratch. 
 
 ### Get the chart
 
@@ -507,11 +507,11 @@ It will dislay a menu.
 
 You may have to adjust query field a little bit
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MTQxOTc4MDMsMTM1NTI0OTI4MCwtMT
-cyMzQyMDk2Myw4MTY1NzE2MDMsNDIyNzI0MiwtNDczOTExNjc2
-LDE5NzM2NjcxMzIsNTEwMzkzMTI4LDY3ODI5OTk0LDEzNzE1OD
-MzMDIsLTExNDg4NTg5OTEsLTExODQ5NTUyNjIsLTI5MTE0MDQ1
-NywtMTE0NTE3MTEwNCwtNjIyNTc5MjM3LDE0MzI5Njc2MTEsLT
-k5MTkyODg5NywtMjEwNzIxNTIxNSwtNTk3OTgyNTE3LC03Mzk2
-ODUzMThdfQ==
+eyJoaXN0b3J5IjpbMjEwODkwNDc0NSwxMzU1MjQ5MjgwLC0xNz
+IzNDIwOTYzLDgxNjU3MTYwMyw0MjI3MjQyLC00NzM5MTE2NzYs
+MTk3MzY2NzEzMiw1MTAzOTMxMjgsNjc4Mjk5OTQsMTM3MTU4Mz
+MwMiwtMTE0ODg1ODk5MSwtMTE4NDk1NTI2MiwtMjkxMTQwNDU3
+LC0xMTQ1MTcxMTA0LC02MjI1NzkyMzcsMTQzMjk2NzYxMSwtOT
+kxOTI4ODk3LC0yMTA3MjE1MjE1LC01OTc5ODI1MTcsLTczOTY4
+NTMxOF19
 -->
