@@ -246,7 +246,7 @@ Broker only statefulset parameters.
         mountPath: /opt/bitnami/kafka/logs
 
 #### External access
-Configure external access to Kafka broker  through NodePort.
+Configure external access to Kafka broker  through `NodePort`.
 
     externalAccess:
       enabled: true <--- External access 
@@ -307,7 +307,7 @@ Configure Service for kafka broker
           labels: {}
 #### Auth
 
-TLS configuration for client and inter broker communication.
+`TLS` configuration for client and inter broker communication.
 
     auth: <--- TLS authentication section
       interBrokerProtocol: tls
@@ -319,7 +319,7 @@ TLS configuration for client and inter broker communication.
         password: "password"
 
 #### Service account
-Enable ServiceAccount for Kafka pods
+Enable `ServiceAccount` for Kafka pods
 
     serviceAccount:
       create: true <--- Enable creation of ServiceAccount
@@ -388,7 +388,7 @@ Convert kafka broker's JKS keystore file into PEM format and then extract CA cer
 
 #### JMX
 
-Enable JMX exporter to expose JMX metrics on port 5556.
+Enable `JMX` exporter to expose `JMX` metrics on port 5556.
 
     jmx:
         enabled: true
@@ -460,7 +460,7 @@ Upgrade kafka release
 
     ~/kafka$ helm upgrade test . --values=values.yaml
 
-Expose prometheus operator on Nodeport and access prometheus UI. 
+Expose prometheus operator on `NodePort` and access prometheus UI. 
 
     $ kubectl expose pod prometheus-kube-prometheus-operator-prometheus-0 --type=NodePort --target-port=9090
     $ minikube service prometheus-kube-prometheus-operator-prometheus-0
@@ -523,7 +523,7 @@ Explore kafka and JMX metrics from Prometheus UI and adjust the field name  in t
  - https://github.com/bitnami/charts/tree/main/bitnami/kube-prometheus
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY0MDY3MDMwOCwtMTM5MjgzMjIyMiwtOD
+eyJoaXN0b3J5IjpbMjE0MDM0NzU4NiwtMTM5MjgzMjIyMiwtOD
 E3MjYxODQ5LDE5ODc1ODA4ODYsLTcwNDkzMDE4NSwxNzcxNjE4
 MTY4LDE3MjAxMDU4NzAsLTExMzM4NjU2OTYsLTIwNjEwNDc0Nj
 gsLTEwNTk4MDY1NzIsMTQwMzQxMzM5MywxMzU1MjQ5MjgwLC0x
