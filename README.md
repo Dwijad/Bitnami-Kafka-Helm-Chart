@@ -469,19 +469,18 @@ Expose prometheus operator on Nodeport and access prometheus UI.
 
 #### Prometheus UI
 
-Prometheus UI URL:  http://<NODE_IP>:30885/
+Prometheus UI URL:  `http://<NODE_IP>:30885/`
 
 ![Screenshot from 2024-02-11 19-44-10](https://github.com/Dwijad/Bitnami-Kafka-Helm-Chart/assets/12824049/37a6b1d9-fb9a-4dd6-837e-894304e8b92e)
 
-
 #### Alertmanager UI
 
-Alert manager UI:  [http://<NODE_IP>:9093/#/alerts
+Alert manager UI:  `http://<NODE_IP>:9093/#/alerts`
 
 ![Screenshot from 2024-02-11 19-12-20](https://github.com/Dwijad/Bitnami-Kafka-Helm-Chart/assets/12824049/10f4cb69-1df2-4c07-b4f8-1a3ce757756c)
 
 ### Grafana  
-
+Graf
     $ cd ~/grafana
     $ helm dependency build
     $ helm install grafana .
@@ -507,11 +506,11 @@ It will dislay a menu.
 
 You may have to adjust query field a little bit
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTcwODM0ODU3NiwtMjA2MTA0NzQ2OCwtMT
-A1OTgwNjU3MiwxNDAzNDEzMzkzLDEzNTUyNDkyODAsLTE3MjM0
-MjA5NjMsODE2NTcxNjAzLDQyMjcyNDIsLTQ3MzkxMTY3NiwxOT
-czNjY3MTMyLDUxMDM5MzEyOCw2NzgyOTk5NCwxMzcxNTgzMzAy
-LC0xMTQ4ODU4OTkxLC0xMTg0OTU1MjYyLC0yOTExNDA0NTcsLT
-ExNDUxNzExMDQsLTYyMjU3OTIzNywxNDMyOTY3NjExLC05OTE5
-Mjg4OTddfQ==
+eyJoaXN0b3J5IjpbMzM0MTM2ODgxLC0yMDYxMDQ3NDY4LC0xMD
+U5ODA2NTcyLDE0MDM0MTMzOTMsMTM1NTI0OTI4MCwtMTcyMzQy
+MDk2Myw4MTY1NzE2MDMsNDIyNzI0MiwtNDczOTExNjc2LDE5Nz
+M2NjcxMzIsNTEwMzkzMTI4LDY3ODI5OTk0LDEzNzE1ODMzMDIs
+LTExNDg4NTg5OTEsLTExODQ5NTUyNjIsLTI5MTE0MDQ1NywtMT
+E0NTE3MTEwNCwtNjIyNTc5MjM3LDE0MzI5Njc2MTEsLTk5MTky
+ODg5N119
 -->
