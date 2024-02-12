@@ -1,6 +1,6 @@
 ## Configure Bitnami Helm Chart
 
-A simplified configuration of Bitnami kafka helm chart to quickly create a cluster in Kubernetes. It simplifies configuring kafka cluster  and avoids manually managing the complex service configuration from scratch. 
+A simplified configuration of Bitnami kafka helm chart to quickly create a cluster in Kubernetes. It simplifies configuring kafka cluster  and avoids manually managing the complex service configuration from scratch. The following configuration steps have been tested on a single node minikube cluster.
 
 ### Get the chart
 
@@ -507,7 +507,7 @@ It will dislay a menu.
 
 You may have to adjust query field a little bit
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjEwODkwNDc0NSwxMzU1MjQ5MjgwLC0xNz
+eyJoaXN0b3J5IjpbMTQwMzQxMzM5MywxMzU1MjQ5MjgwLC0xNz
 IzNDIwOTYzLDgxNjU3MTYwMyw0MjI3MjQyLC00NzM5MTE2NzYs
 MTk3MzY2NzEzMiw1MTAzOTMxMjgsNjc4Mjk5OTQsMTM3MTU4Mz
 MwMiwtMTE0ODg1ODk5MSwtMTE4NDk1NTI2MiwtMjkxMTQwNDU3
