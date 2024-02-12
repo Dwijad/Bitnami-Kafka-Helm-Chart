@@ -510,6 +510,9 @@ It will dislay a menu.
 
 Explore kafka and JMX metrics from Prometheus UI and adjust the fields in the Grafana dashboard's metrics browser section.
 
+![Screenshot from 2024-02-12 11-17-05](https://github.com/Dwijad/Bitnami-Kafka-Helm-Chart/assets/12824049/aabe844a-7a34-4509-bb99-dc719f0ddb91)
+
+
 ![Screenshot from 2024-02-11 20-05-12](https://github.com/Dwijad/Bitnami-Kafka-Helm-Chart/assets/12824049/9e4f060a-3097-407b-9960-afa3eb95c596)
 
 You may have to adjust query field a little bit
