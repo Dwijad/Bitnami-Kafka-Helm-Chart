@@ -483,6 +483,9 @@ Alert manager UI:  http://<NODE_IP>:9093/#/alerts
 
 Grafana dashboard for Kafka running on Kubernetes.
 
+
+#### Install Grafana chart
+
     $ cd ~/grafana
     $ helm dependency build
     $ helm install grafana .
@@ -508,11 +511,11 @@ It will dislay a menu.
 
 You may have to adjust query field a little bit
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzA2MjMzNTMyLC0yMDYxMDQ3NDY4LC0xMD
-U5ODA2NTcyLDE0MDM0MTMzOTMsMTM1NTI0OTI4MCwtMTcyMzQy
-MDk2Myw4MTY1NzE2MDMsNDIyNzI0MiwtNDczOTExNjc2LDE5Nz
-M2NjcxMzIsNTEwMzkzMTI4LDY3ODI5OTk0LDEzNzE1ODMzMDIs
-LTExNDg4NTg5OTEsLTExODQ5NTUyNjIsLTI5MTE0MDQ1NywtMT
-E0NTE3MTEwNCwtNjIyNTc5MjM3LDE0MzI5Njc2MTEsLTk5MTky
-ODg5N119
+eyJoaXN0b3J5IjpbLTE0ODc3OTQ3MzcsLTIwNjEwNDc0NjgsLT
+EwNTk4MDY1NzIsMTQwMzQxMzM5MywxMzU1MjQ5MjgwLC0xNzIz
+NDIwOTYzLDgxNjU3MTYwMyw0MjI3MjQyLC00NzM5MTE2NzYsMT
+k3MzY2NzEzMiw1MTAzOTMxMjgsNjc4Mjk5OTQsMTM3MTU4MzMw
+MiwtMTE0ODg1ODk5MSwtMTE4NDk1NTI2MiwtMjkxMTQwNDU3LC
+0xMTQ1MTcxMTA0LC02MjI1NzkyMzcsMTQzMjk2NzYxMSwtOTkx
+OTI4ODk3XX0=
 -->
