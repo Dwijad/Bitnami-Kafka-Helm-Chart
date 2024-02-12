@@ -336,7 +336,7 @@ Enable ServiceAccount for Kafka pods
 
 ### Prometheus operator
 
-Prometheus Operator is a tool that provides monitoring definitions for Kubernetes services and the management of Prometheus instances. Using prometheus operator, kafka cluster data can be scrapped in a automated way by setting up exporters(data) pod.
+Prometheus Operator is a tool that provides monitoring definitions for Kubernetes services and the management of Prometheus instances. Using prometheus operator, kafka cluster data can be scrapped in a automated way by setting up exporter(data) pod.
 
 Download  [kube-prometheus](https://github.com/bitnami/charts/tree/main/bitnami/kube-prometheus) operator and install the chart.
 
@@ -348,7 +348,7 @@ Download  [kube-prometheus](https://github.com/bitnami/charts/tree/main/bitnami/
 
 ### Upgrade kafka release
 
-Upgrade kafka release to include kafka metrics and JMX metrics. 
+Update chart vaUpgrade kafka release to include kafka metrics and JMX metrics. 
 
 #### Kafka metrics
 
@@ -507,11 +507,11 @@ It will dislay a menu.
 
 You may have to adjust query field a little bit
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM1NTI0OTI4MCwtMTcyMzQyMDk2Myw4MT
-Y1NzE2MDMsNDIyNzI0MiwtNDczOTExNjc2LDE5NzM2NjcxMzIs
-NTEwMzkzMTI4LDY3ODI5OTk0LDEzNzE1ODMzMDIsLTExNDg4NT
-g5OTEsLTExODQ5NTUyNjIsLTI5MTE0MDQ1NywtMTE0NTE3MTEw
-NCwtNjIyNTc5MjM3LDE0MzI5Njc2MTEsLTk5MTkyODg5NywtMj
-EwNzIxNTIxNSwtNTk3OTgyNTE3LC03Mzk2ODUzMTgsNDYyNDU0
-NTU1XX0=
+eyJoaXN0b3J5IjpbMjM1ODE3MzQxLDEzNTUyNDkyODAsLTE3Mj
+M0MjA5NjMsODE2NTcxNjAzLDQyMjcyNDIsLTQ3MzkxMTY3Niwx
+OTczNjY3MTMyLDUxMDM5MzEyOCw2NzgyOTk5NCwxMzcxNTgzMz
+AyLC0xMTQ4ODU4OTkxLC0xMTg0OTU1MjYyLC0yOTExNDA0NTcs
+LTExNDUxNzExMDQsLTYyMjU3OTIzNywxNDMyOTY3NjExLC05OT
+E5Mjg4OTcsLTIxMDcyMTUyMTUsLTU5Nzk4MjUxNywtNzM5Njg1
+MzE4XX0=
 -->
