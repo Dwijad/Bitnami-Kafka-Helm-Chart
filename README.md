@@ -307,7 +307,7 @@ Configure Service for kafka broker
           labels: {}
 #### Auth
 
-TLS configuration for client and interbroker communication.
+TLS configuration for client and inter broker communication.
 
     auth: <--- TLS authentication section
       interBrokerProtocol: tls
@@ -332,11 +332,11 @@ Enable ServiceAccount for Kafka pods
 #### Install
 
     $ cd kafka
-    $ helm install test . --values=values_r01_nodeport_external_access_metrics.yaml
+    $ helm install test . --values=values.yaml
 
 ### Prometheus operator
 
-Prometheus Operator is a tool that provides monitoring definitions for Kubernetes services and the management of Prometheus instances. Using prometheus operator, kafka cluster data can be scrapped in a automated way by setting up exporter(data) pod.
+Prometheus Operator is a tool that provides monitoring definitions for Kubernetes services and the management of Prometheus instances. Using the prometheus operator, kafka cluster data can be scrapped in an automated way by setting up an exporter(data) pod.
 
 Download  [kube-prometheus](https://github.com/bitnami/charts/tree/main/bitnami/kube-prometheus) operator and install the chart.
 
@@ -507,11 +507,11 @@ It will dislay a menu.
 
 You may have to adjust query field a little bit
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE5NjI2MTAzNywtMTA1OTgwNjU3MiwxND
-AzNDEzMzkzLDEzNTUyNDkyODAsLTE3MjM0MjA5NjMsODE2NTcx
-NjAzLDQyMjcyNDIsLTQ3MzkxMTY3NiwxOTczNjY3MTMyLDUxMD
-M5MzEyOCw2NzgyOTk5NCwxMzcxNTgzMzAyLC0xMTQ4ODU4OTkx
-LC0xMTg0OTU1MjYyLC0yOTExNDA0NTcsLTExNDUxNzExMDQsLT
-YyMjU3OTIzNywxNDMyOTY3NjExLC05OTE5Mjg4OTcsLTIxMDcy
-MTUyMTVdfQ==
+eyJoaXN0b3J5IjpbLTIwNjEwNDc0NjgsLTEwNTk4MDY1NzIsMT
+QwMzQxMzM5MywxMzU1MjQ5MjgwLC0xNzIzNDIwOTYzLDgxNjU3
+MTYwMyw0MjI3MjQyLC00NzM5MTE2NzYsMTk3MzY2NzEzMiw1MT
+AzOTMxMjgsNjc4Mjk5OTQsMTM3MTU4MzMwMiwtMTE0ODg1ODk5
+MSwtMTE4NDk1NTI2MiwtMjkxMTQwNDU3LC0xMTQ1MTcxMTA0LC
+02MjI1NzkyMzcsMTQzMjk2NzYxMSwtOTkxOTI4ODk3LC0yMTA3
+MjE1MjE1XX0=
 -->
