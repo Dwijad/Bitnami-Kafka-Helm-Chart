@@ -47,7 +47,7 @@ A Kafka cluster where a fresh zookeeper service is desired can be configured wit
       enabled: true <--- Zookeeper enabled
       replicaCount: 3 <--- Zookeeper Replica count
       auth:
-        client:
+        client: <--- Client authentication
           enabled: false
           clientUser: ""
           clientPassword: ""
@@ -65,7 +65,7 @@ A Kafka cluster where a fresh zookeeper service is desired can be configured wit
 
 #### Listener
 
-Configure listener properties for client, external, interbroker and controller. If Kraft is disabled, controller listener properties does not need to be configured.
+Configure listener properties for client, external, interbroker and controller. If Kraft is disabled, controller listener properties do not need to be configured.
 
     listeners: <--- Listener section
       client: <--- Client
@@ -507,11 +507,11 @@ It will dislay a menu.
 
 You may have to adjust query field a little bit
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNTk4MDY1NzIsMTQwMzQxMzM5MywxMz
-U1MjQ5MjgwLC0xNzIzNDIwOTYzLDgxNjU3MTYwMyw0MjI3MjQy
-LC00NzM5MTE2NzYsMTk3MzY2NzEzMiw1MTAzOTMxMjgsNjc4Mj
-k5OTQsMTM3MTU4MzMwMiwtMTE0ODg1ODk5MSwtMTE4NDk1NTI2
-MiwtMjkxMTQwNDU3LC0xMTQ1MTcxMTA0LC02MjI1NzkyMzcsMT
-QzMjk2NzYxMSwtOTkxOTI4ODk3LC0yMTA3MjE1MjE1LC01OTc5
-ODI1MTddfQ==
+eyJoaXN0b3J5IjpbLTM2NzgwMzIxOCwtMTA1OTgwNjU3MiwxND
+AzNDEzMzkzLDEzNTUyNDkyODAsLTE3MjM0MjA5NjMsODE2NTcx
+NjAzLDQyMjcyNDIsLTQ3MzkxMTY3NiwxOTczNjY3MTMyLDUxMD
+M5MzEyOCw2NzgyOTk5NCwxMzcxNTgzMzAyLC0xMTQ4ODU4OTkx
+LC0xMTg0OTU1MjYyLC0yOTExNDA0NTcsLTExNDUxNzExMDQsLT
+YyMjU3OTIzNywxNDMyOTY3NjExLC05OTE5Mjg4OTcsLTIxMDcy
+MTUyMTVdfQ==
 -->
