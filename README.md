@@ -1,6 +1,6 @@
 ## Configure Bitnami Helm Chart
 
-A simplified configuration of Bitnami kafka helm chart to quickly create a cluster in Kubernetes. It simplifies configuring kafka cluster  and avoids manually managing the complex service configuration from scratch. The following configuration steps have been tested on a single node minikube cluster.
+A simplified configuration of Bitnami kafka helm chart to quickly create a cluster in Kubernetes. It simplifies configuring kafka clusters in kubernetes   and avoids manually managing the complex service configuration from scratch. The following configuration steps have been tested on a single node minikube cluster.
 
 ### Get the chart
 
@@ -11,7 +11,7 @@ A simplified configuration of Bitnami kafka helm chart to quickly create a clust
 
 ### SSL
 
-Create SSL certificates if the broker is intended to listen on SSL.  This [shell script](https://github.com/Dwijad/Bitnami-Kafka-Helm-Chart/blob/main/certs/generate_ssl_cert.sh) along with other configuration file will automate the process of creating SSL certs.  
+Create SSL certificates if the broker is intended to listen on SSL.  This [shell script](https://github.com/Dwijad/Bitnami-Kafka-Helm-Chart/blob/main/certs/generate_ssl_cert.sh) along with other configuration files will automate the process of creating SSL certs.  
 
     $ mkdir -p kafka/certs && cd kafka/certs
     $ Get/Place generate_ssl_cert.sh, broker-{n}.conf in kafka/certs
@@ -507,11 +507,11 @@ It will dislay a menu.
 
 You may have to adjust query field a little bit
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQwMzQxMzM5MywxMzU1MjQ5MjgwLC0xNz
-IzNDIwOTYzLDgxNjU3MTYwMyw0MjI3MjQyLC00NzM5MTE2NzYs
-MTk3MzY2NzEzMiw1MTAzOTMxMjgsNjc4Mjk5OTQsMTM3MTU4Mz
-MwMiwtMTE0ODg1ODk5MSwtMTE4NDk1NTI2MiwtMjkxMTQwNDU3
-LC0xMTQ1MTcxMTA0LC02MjI1NzkyMzcsMTQzMjk2NzYxMSwtOT
-kxOTI4ODk3LC0yMTA3MjE1MjE1LC01OTc5ODI1MTcsLTczOTY4
-NTMxOF19
+eyJoaXN0b3J5IjpbMTE2NzM5MzQ4NCwxNDAzNDEzMzkzLDEzNT
+UyNDkyODAsLTE3MjM0MjA5NjMsODE2NTcxNjAzLDQyMjcyNDIs
+LTQ3MzkxMTY3NiwxOTczNjY3MTMyLDUxMDM5MzEyOCw2NzgyOT
+k5NCwxMzcxNTgzMzAyLC0xMTQ4ODU4OTkxLC0xMTg0OTU1MjYy
+LC0yOTExNDA0NTcsLTExNDUxNzExMDQsLTYyMjU3OTIzNywxND
+MyOTY3NjExLC05OTE5Mjg4OTcsLTIxMDcyMTUyMTUsLTU5Nzk4
+MjUxN119
 -->
