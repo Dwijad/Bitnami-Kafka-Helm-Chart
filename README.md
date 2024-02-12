@@ -11,12 +11,12 @@ A simplified configuration of Bitnami kafka helm chart to quickly create a clust
 
 ### SSL
 
-Create SSL certificates if the broker is intended to listen on SSL.  This [shell script](https://github.com/Dwijad/Bitnami-Kafka-Helm-Chart/blob/main/certs/generate_ssl_cert.sh) along with other configuration files will automate the process of creating SSL certs.  
+Create `SSL` certificates if the broker is intended to listen on `SSL`.  This [shell script](https://github.com/Dwijad/Bitnami-Kafka-Helm-Chart/blob/main/certs/generate_ssl_cert.sh) along with other configuration files will automate the process of creating `SSL` certs.  
 
     $ mkdir -p kafka/certs && cd kafka/certs
     $ Get/Place generate_ssl_cert.sh, broker-{n}.conf in kafka/certs
 
-Edit `broker-{n}.conf` files to reflect the release name in DNS of each broker where n is the broker number.
+Edit `broker-{n}.conf` files to reflect the release name in `DNS` of each broker where 'n' is the broker number.
 
     ...
     ...
@@ -24,7 +24,7 @@ Edit `broker-{n}.conf` files to reflect the release name in DNS of each broker w
     DNS.1 = {release_name}-kafka.default.svc.cluster.local
     DNS.2 = {release_name}-kafka-broker-0.test-kafka-broker-headless.default.svc.cluster.local
 
-Generate SSL certificates. 
+Generate `SSL` certificates. 
 
     $ ./generate_ssl_cert.sh
 
@@ -65,7 +65,7 @@ A Kafka cluster where a fresh zookeeper service is desired can be configured wit
 
 #### Listener
 
-Configure listener properties for client, external, interbroker and controller. If Kraft is disabled, controller listener properties do not need to be configured.
+Configure listener properties for client, external, interbroker and controller. If `Kraft` is disabled, controller listener properties do not need to be configured.
 
     listeners: <--- Listener section
       client: <--- Client
@@ -94,7 +94,7 @@ Configure listener properties for client, external, interbroker and controller. 
 
 #### SASL
 
-Configure SASL authentication for interbroker, client and controller communication in the SASL section.
+Configure `SASL` authentication for interbroker, client and controller communication in the `SASL` section.
 
     sasl:
       enabledMechanisms: PLAIN,SCRAM-SHA-256,SCRAM-SHA-512
@@ -113,7 +113,7 @@ Configure SASL authentication for interbroker, client and controller communicati
 
 #### SSL
 
-Kafka brokers with SSL support can be configured in the `tls` section.
+Kafka brokers with `SSL` support can be configured in the `tls` section.
 
     tls:
       type: JKS <--- TLS type
@@ -123,7 +123,7 @@ Kafka brokers with SSL support can be configured in the `tls` section.
       jksKeystoreKey: kafka-broker-0.keystore.jks
       jksTruststoreKey: kafka.truststore.jks
 
-Make sure to create Kubernetes secret out of the JKS keystore and truststore certificates.
+Make sure to create Kubernetes secret out of the JKS `keystore` and `truststore` certificates.
 
     $ kubectl create secret generic kafka-jks --from-file=kafka-broker-0.keystore.jks=./kafka-broker-0.keystore.jks --from-file=kafka-broker-1.keystore.jks=./kafka-broker-1.keystore.jks   --from-file=kafka-broker-2.keystore.jks=./kafka-broker-2.keystore.jks   --from-file=kafka.truststore.jks=./kafka.truststore.jks
 
@@ -523,11 +523,11 @@ Explore kafka and JMX metrics from Prometheus UI and adjust the field name  in t
  - https://github.com/bitnami/charts/tree/main/bitnami/kube-prometheus
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzOTI4MzIyMjIsLTgxNzI2MTg0OSwxOT
-g3NTgwODg2LC03MDQ5MzAxODUsMTc3MTYxODE2OCwxNzIwMTA1
-ODcwLC0xMTMzODY1Njk2LC0yMDYxMDQ3NDY4LC0xMDU5ODA2NT
-cyLDE0MDM0MTMzOTMsMTM1NTI0OTI4MCwtMTcyMzQyMDk2Myw4
-MTY1NzE2MDMsNDIyNzI0MiwtNDczOTExNjc2LDE5NzM2NjcxMz
-IsNTEwMzkzMTI4LDY3ODI5OTk0LDEzNzE1ODMzMDIsLTExNDg4
-NTg5OTFdfQ==
+eyJoaXN0b3J5IjpbLTY0MDY3MDMwOCwtMTM5MjgzMjIyMiwtOD
+E3MjYxODQ5LDE5ODc1ODA4ODYsLTcwNDkzMDE4NSwxNzcxNjE4
+MTY4LDE3MjAxMDU4NzAsLTExMzM4NjU2OTYsLTIwNjEwNDc0Nj
+gsLTEwNTk4MDY1NzIsMTQwMzQxMzM5MywxMzU1MjQ5MjgwLC0x
+NzIzNDIwOTYzLDgxNjU3MTYwMyw0MjI3MjQyLC00NzM5MTE2Nz
+YsMTk3MzY2NzEzMiw1MTAzOTMxMjgsNjc4Mjk5OTQsMTM3MTU4
+MzMwMl19
 -->
