@@ -348,7 +348,7 @@ Download  [kube-prometheus](https://github.com/bitnami/charts/tree/main/bitnami/
 
 ### Upgrade kafka
 
-Update chart values for Kafka metrics and JMX metrics and upgrade the release. 
+Update chart values for Kafka metrics/JMX metrics and upgrade the release. 
 
 #### Kafka metrics
 
@@ -365,7 +365,7 @@ Kafka exporter, to expose Kafka metrics on port 9308
           pullPolicy: IfNotPresent
           pullSecrets: []
         certificatesSecret: "kafka-exporter" <--- Secret name
-        tlsCert: ca-cert <--- tls cert name in the secret
+        tlsCert: ca-cert <--- tls CA cert in the secret
         tlsKey: ca-key <--- tls key name in the secret
         tlsCaSecret: "kafka-exporter" <--- CA secret
         tlsCaCert: "tls-ca-cert" <--- tls CA cert name in the secret
@@ -373,7 +373,7 @@ Kafka exporter, to expose Kafka metrics on port 9308
           tls.insecure-skip-tls-verify: ""
         command: []
     
-Convert kafka broker's JKS keystore file into PEM format and then extract CA cert and private key. Create a secret based on these cert and key and configure them in metrics:kafka section as described above.
+Convert kafka broker's JKS keystore file into PEM format and then extract CA cert and private key. Create a secret based on these cert/key and configure them in metrics:kafka section as described above.
 
     # Convert JKS into PEM      
     $ keytool -importkeystore -srckeystore kafka-broker-0.keystore.jks -destkeystore kafka-broker-0.p12 -srcstoretype jks -deststoretype pkcs12
@@ -462,21 +462,21 @@ Upgrade kafka release
 
 Expose prometheus operator on Nodeport and access prometheus UI. 
 
-    $ k expose pod prometheus-kube-prometheus-operator-prometheus-0 --type=NodePort --target-port=9090
+    $ kubectl expose pod prometheus-kube-prometheus-operator-prometheus-0 --type=NodePort --target-port=9090
     $ minikube service prometheus-kube-prometheus-operator-prometheus-0
 
 ### Prometheus
 
 #### Prometheus UI
 
-Browse http://192.168.49.2:30885/ for Prometheus UI.
+Prometheus UI URL:  http://<NODE_IP>:30885/
 
 ![Screenshot from 2024-02-11 19-44-10](https://github.com/Dwijad/Bitnami-Kafka-Helm-Chart/assets/12824049/37a6b1d9-fb9a-4dd6-837e-894304e8b92e)
 
 
 #### Alertmanager UI
 
-Browse [http://127.0.0.1:9093/#/alerts](http://127.0.0.1:9093/#/alerts) for Alert manager UI.
+Alert manager UI:  [http://<NODE_IP>:9093/#/alerts
 
 ![Screenshot from 2024-02-11 19-12-20](https://github.com/Dwijad/Bitnami-Kafka-Helm-Chart/assets/12824049/10f4cb69-1df2-4c07-b4f8-1a3ce757756c)
 
@@ -507,11 +507,11 @@ It will dislay a menu.
 
 You may have to adjust query field a little bit
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNjEwNDc0NjgsLTEwNTk4MDY1NzIsMT
-QwMzQxMzM5MywxMzU1MjQ5MjgwLC0xNzIzNDIwOTYzLDgxNjU3
-MTYwMyw0MjI3MjQyLC00NzM5MTE2NzYsMTk3MzY2NzEzMiw1MT
-AzOTMxMjgsNjc4Mjk5OTQsMTM3MTU4MzMwMiwtMTE0ODg1ODk5
-MSwtMTE4NDk1NTI2MiwtMjkxMTQwNDU3LC0xMTQ1MTcxMTA0LC
-02MjI1NzkyMzcsMTQzMjk2NzYxMSwtOTkxOTI4ODk3LC0yMTA3
-MjE1MjE1XX0=
+eyJoaXN0b3J5IjpbMTcwODM0ODU3NiwtMjA2MTA0NzQ2OCwtMT
+A1OTgwNjU3MiwxNDAzNDEzMzkzLDEzNTUyNDkyODAsLTE3MjM0
+MjA5NjMsODE2NTcxNjAzLDQyMjcyNDIsLTQ3MzkxMTY3NiwxOT
+czNjY3MTMyLDUxMDM5MzEyOCw2NzgyOTk5NCwxMzcxNTgzMzAy
+LC0xMTQ4ODU4OTkxLC0xMTg0OTU1MjYyLC0yOTExNDA0NTcsLT
+ExNDUxNzExMDQsLTYyMjU3OTIzNywxNDMyOTY3NjExLC05OTE5
+Mjg4OTddfQ==
 -->
