@@ -32,7 +32,7 @@ Another certification generation [shell script](https://github.com/confluentinc/
  
 ### Configure chart
 #### Zookeeper
-The bitnami kafka helm chart comes with number of options. Using bitnami helm chart, a kafka cluster can be configured with freshly minted Kraft/zookeeper service or with a existing  zookeeper service.
+The bitnami kafka helm chart comes with a number of options. Using bitnami helm chart, a kafka cluster can be configured with freshly minted Kraft/zookeeper service or with an existing zookeeper service.
 
 A Kafka cluster where a fresh zookeeper service is desired can be configured with the following parameters in `values.yaml` 
 
@@ -507,11 +507,11 @@ It will dislay a menu.
 
 You may have to adjust query field a little bit
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc0OTAzNTU3LDE0MDM0MTMzOTMsMTM1NT
-I0OTI4MCwtMTcyMzQyMDk2Myw4MTY1NzE2MDMsNDIyNzI0Miwt
-NDczOTExNjc2LDE5NzM2NjcxMzIsNTEwMzkzMTI4LDY3ODI5OT
-k0LDEzNzE1ODMzMDIsLTExNDg4NTg5OTEsLTExODQ5NTUyNjIs
-LTI5MTE0MDQ1NywtMTE0NTE3MTEwNCwtNjIyNTc5MjM3LDE0Mz
-I5Njc2MTEsLTk5MTkyODg5NywtMjEwNzIxNTIxNSwtNTk3OTgy
-NTE3XX0=
+eyJoaXN0b3J5IjpbLTEwNTk4MDY1NzIsMTQwMzQxMzM5MywxMz
+U1MjQ5MjgwLC0xNzIzNDIwOTYzLDgxNjU3MTYwMyw0MjI3MjQy
+LC00NzM5MTE2NzYsMTk3MzY2NzEzMiw1MTAzOTMxMjgsNjc4Mj
+k5OTQsMTM3MTU4MzMwMiwtMTE0ODg1ODk5MSwtMTE4NDk1NTI2
+MiwtMjkxMTQwNDU3LC0xMTQ1MTcxMTA0LC02MjI1NzkyMzcsMT
+QzMjk2NzYxMSwtOTkxOTI4ODk3LC0yMTA3MjE1MjE1LC01OTc5
+ODI1MTddfQ==
 -->
