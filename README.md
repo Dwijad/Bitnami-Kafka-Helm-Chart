@@ -346,9 +346,9 @@ Download  [kube-prometheus](https://github.com/bitnami/charts/tree/main/bitnami/
 
 
 
-### Upgrade kafka release
+### Upgrade kafka
 
-Update chart vaUpgrade kafka release to include kafka metrics and JMX metrics. 
+Update chart values for Kafka metrics and JMX metrics and upgrade the release. 
 
 #### Kafka metrics
 
@@ -507,11 +507,11 @@ It will dislay a menu.
 
 You may have to adjust query field a little bit
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjM1ODE3MzQxLDEzNTUyNDkyODAsLTE3Mj
-M0MjA5NjMsODE2NTcxNjAzLDQyMjcyNDIsLTQ3MzkxMTY3Niwx
-OTczNjY3MTMyLDUxMDM5MzEyOCw2NzgyOTk5NCwxMzcxNTgzMz
-AyLC0xMTQ4ODU4OTkxLC0xMTg0OTU1MjYyLC0yOTExNDA0NTcs
-LTExNDUxNzExMDQsLTYyMjU3OTIzNywxNDMyOTY3NjExLC05OT
-E5Mjg4OTcsLTIxMDcyMTUyMTUsLTU5Nzk4MjUxNywtNzM5Njg1
-MzE4XX0=
+eyJoaXN0b3J5IjpbLTE3MTQxOTc4MDMsMTM1NTI0OTI4MCwtMT
+cyMzQyMDk2Myw4MTY1NzE2MDMsNDIyNzI0MiwtNDczOTExNjc2
+LDE5NzM2NjcxMzIsNTEwMzkzMTI4LDY3ODI5OTk0LDEzNzE1OD
+MzMDIsLTExNDg4NTg5OTEsLTExODQ5NTUyNjIsLTI5MTE0MDQ1
+NywtMTE0NTE3MTEwNCwtNjIyNTc5MjM3LDE0MzI5Njc2MTEsLT
+k5MTkyODg5NywtMjEwNzIxNTIxNSwtNTk3OTgyNTE3LC03Mzk2
+ODUzMThdfQ==
 -->
