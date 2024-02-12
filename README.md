@@ -497,7 +497,7 @@ Grafana dashboard for Kafka running on Kubernetes.
 
 -   On  Grafana Home page, click `Add your first data source`
 -   Select `Prometheus` as the data source
--   You will then add the URL where your Prometheus application is running. This is the first URL (internal to the cluster) shown when we ran `minikube service prometheus-server-ext` earlier.
+-   Add the URL where Prometheus application is running. This URL (internal to the cluster) is shown when `minikube service prometheus-server-ext` earlier.
 - Click on “Save & test” to save your changes. 
 
 Go Back to Grafana and click `Home` on the top left corner:
@@ -511,7 +511,7 @@ It will dislay a menu.
 
 You may have to adjust query field a little bit
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE4Njc0NDAxNSwtMjA2MTA0NzQ2OCwtMT
+eyJoaXN0b3J5IjpbLTMwMDkyMDEwNCwtMjA2MTA0NzQ2OCwtMT
 A1OTgwNjU3MiwxNDAzNDEzMzkzLDEzNTUyNDkyODAsLTE3MjM0
 MjA5NjMsODE2NTcxNjAzLDQyMjcyNDIsLTQ3MzkxMTY3NiwxOT
 czNjY3MTMyLDUxMDM5MzEyOCw2NzgyOTk5NCwxMzcxNTgzMzAy
