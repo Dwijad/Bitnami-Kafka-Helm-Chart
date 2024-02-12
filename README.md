@@ -475,12 +475,14 @@ Prometheus UI URL:  `http://<NODE_IP>:30885/`
 
 #### Alertmanager UI
 
-Alert manager UI:  `http://<NODE_IP>:9093/#/alerts`
+Alert manager UI:  http://<NODE_IP>:9093/#/alerts
 
 ![Screenshot from 2024-02-11 19-12-20](https://github.com/Dwijad/Bitnami-Kafka-Helm-Chart/assets/12824049/10f4cb69-1df2-4c07-b4f8-1a3ce757756c)
 
 ### Grafana  
-Graf
+
+Grafana dashboard for Kafka running on Kubernetes.
+
     $ cd ~/grafana
     $ helm dependency build
     $ helm install grafana .
@@ -506,7 +508,7 @@ It will dislay a menu.
 
 You may have to adjust query field a little bit
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzM0MTM2ODgxLC0yMDYxMDQ3NDY4LC0xMD
+eyJoaXN0b3J5IjpbMzA2MjMzNTMyLC0yMDYxMDQ3NDY4LC0xMD
 U5ODA2NTcyLDE0MDM0MTMzOTMsMTM1NTI0OTI4MCwtMTcyMzQy
 MDk2Myw4MTY1NzE2MDMsNDIyNzI0MiwtNDczOTExNjc2LDE5Nz
 M2NjcxMzIsNTEwMzkzMTI4LDY3ODI5OTk0LDEzNzE1ODMzMDIs
