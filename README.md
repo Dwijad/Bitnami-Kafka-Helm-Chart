@@ -513,6 +513,7 @@ Explore kafka and JMX metrics from Prometheus UI and adjust the field name  in t
 ![Screenshot from 2024-02-12 11-17-05](https://github.com/Dwijad/Bitnami-Kafka-Helm-Chart/assets/12824049/aabe844a-7a34-4509-bb99-dc719f0ddb91)
 
 
+![Screenshot from 2024-02-12 11-27-20](https://github.com/Dwijad/Bitnami-Kafka-Helm-Chart/assets/12824049/babcdac8-9a11-48d8-9b1e-0864309e945e)
 
 
 ### References:
