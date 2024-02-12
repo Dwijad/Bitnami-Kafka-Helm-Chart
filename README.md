@@ -460,7 +460,7 @@ Upgrade kafka release
 
     ~/kafka$ helm upgrade test . --values=values.yaml
 
-Expose prometheus operator on `NodePort` and access prometheus UI. 
+Expose prometheus operator on `NodePort` and access `prometheus UI`. 
 
     $ kubectl expose pod prometheus-kube-prometheus-operator-prometheus-0 --type=NodePort --target-port=9090
     $ minikube service prometheus-kube-prometheus-operator-prometheus-0
@@ -523,11 +523,11 @@ Explore kafka and JMX metrics from Prometheus UI and adjust the field name  in t
  - https://github.com/bitnami/charts/tree/main/bitnami/kube-prometheus
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjE0MDM0NzU4NiwtMTM5MjgzMjIyMiwtOD
-E3MjYxODQ5LDE5ODc1ODA4ODYsLTcwNDkzMDE4NSwxNzcxNjE4
-MTY4LDE3MjAxMDU4NzAsLTExMzM4NjU2OTYsLTIwNjEwNDc0Nj
-gsLTEwNTk4MDY1NzIsMTQwMzQxMzM5MywxMzU1MjQ5MjgwLC0x
-NzIzNDIwOTYzLDgxNjU3MTYwMyw0MjI3MjQyLC00NzM5MTE2Nz
-YsMTk3MzY2NzEzMiw1MTAzOTMxMjgsNjc4Mjk5OTQsMTM3MTU4
-MzMwMl19
+eyJoaXN0b3J5IjpbLTEwNzc2ODUwOTgsLTEzOTI4MzIyMjIsLT
+gxNzI2MTg0OSwxOTg3NTgwODg2LC03MDQ5MzAxODUsMTc3MTYx
+ODE2OCwxNzIwMTA1ODcwLC0xMTMzODY1Njk2LC0yMDYxMDQ3ND
+Y4LC0xMDU5ODA2NTcyLDE0MDM0MTMzOTMsMTM1NTI0OTI4MCwt
+MTcyMzQyMDk2Myw4MTY1NzE2MDMsNDIyNzI0MiwtNDczOTExNj
+c2LDE5NzM2NjcxMzIsNTEwMzkzMTI4LDY3ODI5OTk0LDEzNzE1
+ODMzMDJdfQ==
 -->
