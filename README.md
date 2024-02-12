@@ -502,16 +502,15 @@ Grafana dashboard for Kafka running on Kubernetes.
 
 Go Back to Grafana and click `Home` on the top left corner:
 It will dislay a menu.
-
--   On the menu, click `Dashboards`
+-   From the menu, click `Dashboards`
 -   Click `New`  > Import
--   Add the Grafana ID: You will add the Grafana ID that you have copied and click `Load`. Import Kafka dashboard from [Grafana](https://grafana.com/grafana/dashboards/11962-kafka-metrics/).
+-   Add the Grafana ID that you have copied and click `Load`. Import Kafka dashboard from [Grafana](https://grafana.com/grafana/dashboards/11962-kafka-metrics/).
 
 ![Screenshot from 2024-02-11 20-05-12](https://github.com/Dwijad/Bitnami-Kafka-Helm-Chart/assets/12824049/9e4f060a-3097-407b-9960-afa3eb95c596)
 
 You may have to adjust query field a little bit
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NzE4NDg0MjEsLTIwNjEwNDc0NjgsLT
+eyJoaXN0b3J5IjpbLTExMzM4NjU2OTYsLTIwNjEwNDc0NjgsLT
 EwNTk4MDY1NzIsMTQwMzQxMzM5MywxMzU1MjQ5MjgwLC0xNzIz
 NDIwOTYzLDgxNjU3MTYwMyw0MjI3MjQyLC00NzM5MTE2NzYsMT
 k3MzY2NzEzMiw1MTAzOTMxMjgsNjc4Mjk5OTQsMTM3MTU4MzMw
