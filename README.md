@@ -504,17 +504,17 @@ Go Back to Grafana and click `Home` on the top left corner:
 It will dislay a menu.
 -   From the menu, click `Dashboards`
 -   Click `New`  > Import
--   Add the Grafana ID that you have copied and click `Load`. Import Kafka dashboard from [Grafana](https://grafana.com/grafana/dashboards/11962-kafka-metrics/).
+-   Add the Grafana ID 11962 for Kafka dashboard from [Grafana](https://grafana.com/grafana/dashboards/11962-kafka-metrics/).
 
 ![Screenshot from 2024-02-11 20-05-12](https://github.com/Dwijad/Bitnami-Kafka-Helm-Chart/assets/12824049/9e4f060a-3097-407b-9960-afa3eb95c596)
 
 You may have to adjust query field a little bit
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMzM4NjU2OTYsLTIwNjEwNDc0NjgsLT
-EwNTk4MDY1NzIsMTQwMzQxMzM5MywxMzU1MjQ5MjgwLC0xNzIz
-NDIwOTYzLDgxNjU3MTYwMyw0MjI3MjQyLC00NzM5MTE2NzYsMT
-k3MzY2NzEzMiw1MTAzOTMxMjgsNjc4Mjk5OTQsMTM3MTU4MzMw
-MiwtMTE0ODg1ODk5MSwtMTE4NDk1NTI2MiwtMjkxMTQwNDU3LC
-0xMTQ1MTcxMTA0LC02MjI1NzkyMzcsMTQzMjk2NzYxMSwtOTkx
-OTI4ODk3XX0=
+eyJoaXN0b3J5IjpbMTcyMDEwNTg3MCwtMTEzMzg2NTY5NiwtMj
+A2MTA0NzQ2OCwtMTA1OTgwNjU3MiwxNDAzNDEzMzkzLDEzNTUy
+NDkyODAsLTE3MjM0MjA5NjMsODE2NTcxNjAzLDQyMjcyNDIsLT
+Q3MzkxMTY3NiwxOTczNjY3MTMyLDUxMDM5MzEyOCw2NzgyOTk5
+NCwxMzcxNTgzMzAyLC0xMTQ4ODU4OTkxLC0xMTg0OTU1MjYyLC
+0yOTExNDA0NTcsLTExNDUxNzExMDQsLTYyMjU3OTIzNywxNDMy
+OTY3NjExXX0=
 -->
