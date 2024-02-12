@@ -519,14 +519,15 @@ Explore kafka and JMX metrics from Prometheus UI and adjust the field name  in t
 ### References:
 
  - https://github.com/bitnami/charts/tree/main/bitnami/kafka
- - 
+ - https://github.com/bitnami/charts/blob/main/bitnami/grafana/README.md
+ - https://github.com/bitnami/charts/tree/main/bitnami/kube-prometheus
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjIzNzQxMzc4LC04MTcyNjE4NDksMTk4Nz
-U4MDg4NiwtNzA0OTMwMTg1LDE3NzE2MTgxNjgsMTcyMDEwNTg3
-MCwtMTEzMzg2NTY5NiwtMjA2MTA0NzQ2OCwtMTA1OTgwNjU3Mi
-wxNDAzNDEzMzkzLDEzNTUyNDkyODAsLTE3MjM0MjA5NjMsODE2
-NTcxNjAzLDQyMjcyNDIsLTQ3MzkxMTY3NiwxOTczNjY3MTMyLD
-UxMDM5MzEyOCw2NzgyOTk5NCwxMzcxNTgzMzAyLC0xMTQ4ODU4
-OTkxXX0=
+eyJoaXN0b3J5IjpbLTEzOTI4MzIyMjIsLTgxNzI2MTg0OSwxOT
+g3NTgwODg2LC03MDQ5MzAxODUsMTc3MTYxODE2OCwxNzIwMTA1
+ODcwLC0xMTMzODY1Njk2LC0yMDYxMDQ3NDY4LC0xMDU5ODA2NT
+cyLDE0MDM0MTMzOTMsMTM1NTI0OTI4MCwtMTcyMzQyMDk2Myw4
+MTY1NzE2MDMsNDIyNzI0MiwtNDczOTExNjc2LDE5NzM2NjcxMz
+IsNTEwMzkzMTI4LDY3ODI5OTk0LDEzNzE1ODMzMDIsLTExNDg4
+NTg5OTFdfQ==
 -->
