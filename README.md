@@ -1,146 +1,531 @@
-# Welcome to StackEdit!
+## Configure Bitnami Helm Chart
 
-Hi! I'm your first Markdown file in **StackEdit**. If you want to learn about StackEdit, you can read me. If you want to play with Markdown, you can edit me. Once you have finished with me, you can create new files by opening the **file explorer** on the left corner of the navigation bar.
+A simplified configuration of Bitnami kafka helm chart to quickly create a cluster in Kubernetes. It simplifies configuring kafka clusters in kubernetes   and avoids manually managing the complex service configuration from scratch. The following configuration steps have been tested on a single node minikube cluster.
+
+### Get the chart
+
+    $ helm repo add bitnami https://charts.bitnami.com/bitnami
+    $ helm repo update
+    $ helm pull bitnami/kafka
+    $ tar xf kafka-26.8.5.tgz
+
+### SSL
+
+Create SSL certificates if the broker is intended to listen on SSL.  This [shell script](https://github.com/Dwijad/Bitnami-Kafka-Helm-Chart/blob/main/certs/generate_ssl_cert.sh) along with other configuration files will automate the process of creating SSL certs.  
+
+    $ mkdir -p kafka/certs && cd kafka/certs
+    $ Get/Place generate_ssl_cert.sh, broker-{n}.conf in kafka/certs
+
+Edit `broker-{n}.conf` files to reflect the release name in DNS of each broker where n is the broker number.
+
+    ...
+    ...
+    [ alt_names ]
+    DNS.1 = {release_name}-kafka.default.svc.cluster.local
+    DNS.2 = {release_name}-kafka-broker-0.test-kafka-broker-headless.default.svc.cluster.local
+
+Generate SSL certificates. 
+
+    $ ./generate_ssl_cert.sh
+
+Another certification generation [shell script](https://github.com/confluentinc/confluent-platform-security-tools/blob/master/kafka-generate-ssl.sh) from confluent. 
+ 
+### Configure chart
+#### Zookeeper
+The bitnami kafka helm chart comes with a number of options. Using bitnami helm chart, a kafka cluster can be configured with freshly minted Kraft/zookeeper service or with an existing zookeeper service.
+
+A Kafka cluster where a fresh zookeeper service is desired can be configured with the following parameters in `values.yaml` 
+
+    kraft:
+      enabled: false <--- Disabled Kraft
+      existingClusterIdSecret: ""
+      clusterId: ""
+      controllerQuorumVoters: ""
+    
+    zookeeperChrootPath: ""
+    zookeeper:
+      enabled: true <--- Zookeeper enabled
+      replicaCount: 3 <--- Zookeeper Replica count
+      auth:
+        client: <--- Client authentication
+          enabled: false
+          clientUser: ""
+          clientPassword: ""
+          serverUsers: ""
+          serverPasswords: ""
+      persistence:
+        enabled: true <--- Enabled Persistence for zookeeper metadata
+        storageClass: ""
+        accessModes:
+          - ReadWriteOnce
+        size: 1Gi
+    
+    externalZookeeper:
+      servers: []
+
+#### Listener
+
+Configure listener properties for client, external, interbroker and controller. If Kraft is disabled, controller listener properties do not need to be configured.
+
+    listeners: <--- Listener section
+      client: <--- Client
+        containerPort: 9092
+        protocol: SASL_SSL
+        name: CLIENT
+        sslClientAuth: "required"
+    
+      external: <--- External
+        containerPort: 9095
+        protocol: SASL_SSL
+        name: EXTERNAL
+        sslClientAuth: ""
+    
+      interbroker: <--- Interbroker
+        containerPort: 9093
+        protocol: PLAINTEXT
+        name: INTERNAL
+        sslClientAuth: ""
+    
+      controller: <--- Controller
+        containerPort: 9094
+        protocol: SASL_PLAINTEXT
+        name: CONTROLLER
+        sslClientAuth: ""
+
+#### SASL
+
+Configure SASL authentication for interbroker, client and controller communication in the SASL section.
+
+    sasl:
+      enabledMechanisms: PLAIN,SCRAM-SHA-256,SCRAM-SHA-512
+      interBrokerMechanism: PLAIN
+      controllerMechanism: PLAIN
+      interbroker:
+        user: broker
+        password: "password"
+      controller:
+        user: controller
+        password: "password"
+      client:
+        users:
+        - user1
+        passwords: "password"
+
+#### SSL
+
+Kafka brokers with SSL support can be configured in the `tls` section.
+
+    tls:
+      type: JKS <--- TLS type
+      existingSecret: "kafka-jks"
+      keystorePassword: "password"
+      truststorePassword: "password"
+      jksKeystoreKey: kafka-broker-0.keystore.jks
+      jksTruststoreKey: kafka.truststore.jks
+
+Make sure to create Kubernetes secret out of the JKS keystore and truststore certificates.
+
+    $ kubectl create secret generic kafka-jks --from-file=kafka-broker-0.keystore.jks=./kafka-broker-0.keystore.jks --from-file=kafka-broker-1.keystore.jks=./kafka-broker-1.keystore.jks   --from-file=kafka-broker-2.keystore.jks=./kafka-broker-2.keystore.jks   --from-file=kafka.truststore.jks=./kafka.truststore.jks
+
+#### Broker
+
+Broker only statefulset parameters. 
+
+    broker:
+      replicaCount: 3 <--- Replica count
+      minId: 100 <--- Min broker ID 
+      zookeeperMigrationMode: false
+      config: ""
+      existingConfigmap: ""
+      extraConfig: ""
+      secretConfig: ""
+      existingSecretConfig: ""
+      heapOpts: -Xmx512m -Xms512m <--- Kafka Heap option
+      command: []
+      args: []
+      extraEnvVars: []
+      extraEnvVarsCM: ""
+      extraEnvVarsSecret: ""
+      extraContainerPorts: []
+      livenessProbe: <--- Liveness probe
+        enabled: true
+        initialDelaySeconds: 10
+        timeoutSeconds: 5
+        failureThreshold: 3
+        periodSeconds: 10
+        successThreshold: 1
+      readinessProbe: <--- Readiness probe
+        enabled: true
+        initialDelaySeconds: 5
+        failureThreshold: 6
+        timeoutSeconds: 5
+        periodSeconds: 10
+        successThreshold: 1
+      startupProbe: <--- Startup probe
+        enabled: false
+        initialDelaySeconds: 30
+        periodSeconds: 10
+        timeoutSeconds: 1
+        failureThreshold: 15
+        successThreshold: 1
+      customLivenessProbe: {}
+      customReadinessProbe: {}
+      customStartupProbe: {}
+      lifecycleHooks: {}
+      initContainerResources:
+        limits: {}
+        requests: {}
+      resources:
+        limits: {}
+        requests: {}
+      podSecurityContext: <--- Pod security context
+        enabled: true
+        fsGroup: 1001
+        seccompProfile:
+          type: "RuntimeDefault"
+      containerSecurityContext: <--- Container security context
+        enabled: true
+        runAsUser: 1001
+        runAsNonRoot: true
+        allowPrivilegeEscalation: false
+        readOnlyRootFilesystem: true
+        capabilities:
+          drop: ["ALL"]
+      hostAliases: []
+      hostNetwork: false
+      hostIPC: false
+      podLabels: {}
+      podAnnotations: {}
+      podAffinityPreset: ""
+      podAntiAffinityPreset: soft
+      nodeAffinityPreset:
+        type: ""
+        key: ""
+        values: []
+      affinity: {}
+      nodeSelector: {}
+      tolerations: []
+      topologySpreadConstraints: []
+      terminationGracePeriodSeconds: ""
+      podManagementPolicy: Parallel
+      minReadySeconds: 0
+      priorityClassName: ""
+      runtimeClassName: ""
+      enableServiceLinks: true
+      schedulerName: ""
+      updateStrategy:
+        type: RollingUpdate
+      extraVolumes: []
+      extraVolumeMounts: []
+      sidecars: []
+      initContainers: []
+      pdb:
+        create: false
+        minAvailable: ""
+        maxUnavailable: 1
+      persistence: <--- Data persistence
+        enabled: true
+        existingClaim: ""
+        storageClass: ""
+        accessModes:
+          - ReadWriteOnce
+        size: 1Gi <--- PV size
+        annotations: {}
+        labels: {}
+        selector: {}
+        mountPath: /bitnami/kafka
+      logPersistence: <--- Log persistence
+        enabled: false
+        existingClaim: ""
+        storageClass: ""
+        accessModes:
+          - ReadWriteOnce
+        size: 1Gi <--- PV size
+        annotations: {}
+        selector: {}
+        mountPath: /opt/bitnami/kafka/logs
+
+#### External access
+Configure external access to Kafka broker  through NodePort.
+
+    externalAccess:
+      enabled: true <--- External access 
+      autoDiscovery:
+        enabled: true
+        image:
+          registry: docker.io
+          repository: bitnami/kubectl
+          tag: 1.25.8-debian-11-r2
+          pullPolicy: IfNotPresent
+        resources: <--- Resources
+          limits:
+            cpu: 100m
+            memory: 128Mi
+          requests:
+            cpu: 100m
+            memory: 128Mi
+      broker: <--- External access for broker
+        service:
+          type: NodePort <--- External access service type
+          ports:
+            external: 9095 <--- External access port
+          nodePorts:
+            - 31090 
+            - 31091
+            - 31092
+          #externalIPs:
+            #- 192.168.49.2
+            #- 192.168.49.2
+            #- 192.168.49.2
+#### Service
+Configure Service for kafka broker 
+
+    service:
+      type: LoadBalancer <--- Broker service type
+      ports:
+        client: 9092
+        controller: 9093
+        interbroker: 9094
+        external: 9095
+      extraPorts: []
+      nodePorts:
+        client: ""
+        external: ""
+      sessionAffinity: None
+      sessionAffinityConfig: {}
+      clusterIP: ""
+      loadBalancerIP: ""
+      loadBalancerSourceRanges: []
+      externalTrafficPolicy: Cluster
+      annotations: {}
+      headless:
+        controller:
+          annotations: {}
+          labels: {}
+        broker:
+          annotations: {}
+          labels: {}
+#### Auth
+
+TLS configuration for client and inter broker communication.
+
+    auth: <--- TLS authentication section
+      interBrokerProtocol: tls
+      clientProtocol: tls
+      tls:
+        type: jks
+        existingSecrets:
+          - "kafka-jks"
+        password: "password"
+
+#### Service account
+Enable ServiceAccount for Kafka pods
+
+    serviceAccount:
+      create: true <--- Enable creation of ServiceAccount
+      name: ""
+      automountServiceAccountToken: true
+      annotations: {}
+    rbac:
+      create: true 
+
+#### Install
+
+    $ cd kafka
+    $ helm install test . --values=values.yaml
+
+### Prometheus operator
+
+Prometheus Operator is a tool that provides monitoring definitions for Kubernetes services and the management of Prometheus instances. Using the prometheus operator, kafka cluster data can be scrapped in an automated way by setting up an exporter(data) pod.
+
+Download  [kube-prometheus](https://github.com/bitnami/charts/tree/main/bitnami/kube-prometheus) operator and install the chart.
+
+    $ cd kube-prometheus
+    $ helm install kube-prometheus-operator .
+    $ kubectl port-forward --namespace default svc/kube-prometheus-operator-alertmanager 9093:9093 &
 
 
-# Files
 
-StackEdit stores your files in your browser, which means all your files are automatically saved locally and are accessible **offline!**
+### Upgrade kafka
 
-## Create files and folders
+Update chart values for Kafka metrics/JMX metrics and upgrade the release. 
 
-The file explorer is accessible using the button in left corner of the navigation bar. You can create a new file by clicking the **New file** button in the file explorer. You can also create folders by clicking the **New folder** button.
+#### Kafka metrics
 
-## Switch to another file
+Kafka exporter, to expose Kafka metrics on port 9308
 
-All your files and folders are presented as a tree in the file explorer. You can switch from one to another by clicking a file in the tree.
+    metrics:
+      kafka:
+        enabled: true <--- Enables kafka metrics
+        image:
+          registry: docker.io
+          repository: bitnami/kafka-exporter
+          tag: 1.7.0-debian-11-r134
+          digest: ""
+          pullPolicy: IfNotPresent
+          pullSecrets: []
+        certificatesSecret: "kafka-exporter" <--- Secret name
+        tlsCert: ca-cert <--- tls CA cert in the secret
+        tlsKey: ca-key <--- tls key name in the secret
+        tlsCaSecret: "kafka-exporter" <--- CA secret
+        tlsCaCert: "tls-ca-cert" <--- tls CA cert name in the secret
+        extraFlags: 
+          tls.insecure-skip-tls-verify: ""
+        command: []
+    
+Convert kafka broker's JKS keystore file into PEM format and then extract CA cert and private key. Create a secret based on these cert/key and configure them in metrics:kafka section as described above.
 
-## Rename a file
+    # Convert JKS into PEM      
+    $ keytool -importkeystore -srckeystore kafka-broker-0.keystore.jks -destkeystore kafka-broker-0.p12 -srcstoretype jks -deststoretype pkcs12
+    # Extract tls cert/ca cert and private keys
+    $ openssl pkcs12 -in kafka-broker-0.p12 -out kafka-broker-0.pem    
+    # Extract tls cert 
+    $ keytool -exportcert -alias broker-0 -keystore kafka-broker-0.keystore.jks -rfc -file kafka-broker-0-cert.pem
+    # Extract private key
+    $ openssl pkey -in kafka-broker-0.pem -out kafka-broker-0-key.pem
+    # Create secret
+    $ kubectl create secret generic kafka-exporter --from-file=ca-cert=kafka-broker-0-cert.pem --from-file=ca-key=kafka-broker-0-key.pem --from-file=tls-ca-cert=kafka-broker-0-cert.pem
 
-You can rename the current file by clicking the file name in the navigation bar or by clicking the **Rename** button in the file explorer.
+#### JMX
 
-## Delete a file
+Enable JMX exporter to expose JMX metrics on port 5556.
 
-You can delete the current file by clicking the **Remove** button in the file explorer. The file will be moved into the **Trash** folder and automatically deleted after 7 days of inactivity.
+    jmx:
+        enabled: true
+        kafkaJmxPort: 5555 <--- Kafka JMX port
+        image:
+          registry: docker.io
+          repository: bitnami/jmx-exporter
+          tag: 0.20.0-debian-11-r2
+          digest: ""
+          pullPolicy: IfNotPresent
+          pullSecrets: []
+        containerSecurityContext:
+          enabled: true
+          runAsUser: 1001
+          runAsNonRoot: true
+          allowPrivilegeEscalation: false
+          readOnlyRootFilesystem: true
+          capabilities:
+            drop: ["ALL"]
+        containerPorts:
+          metrics: 5556
+        resources:
+          limits: {}
+          requests: {}
+        service:
+          ports:
+            metrics: 5556
+          clusterIP: ""
+          sessionAffinity: None
+          annotations:
+            prometheus.io/scrape: "true"
+            prometheus.io/port: "{{ .Values.metrics.jmx.service.ports.metrics }}"
+            prometheus.io/path: "/"
+        whitelistObjectNames:
+          - kafka.controller:*
+          - kafka.server:*
+          - java.lang:*
+          - kafka.network:*
+          - kafka.log:*
+        config: |- <--- JMX configuration section
+          jmxUrl: service:jmx:rmi:///jndi/rmi://127.0.0.1:{{ .Values.metrics.jmx.kafkaJmxPort }}/jmxrmi
+          lowercaseOutputName: true
+          lowercaseOutputLabelNames: true
+          ssl: false
+          {{- if .Values.metrics.jmx.whitelistObjectNames }}
+          whitelistObjectNames: ["{{ join "\",\"" .Values.metrics.jmx.whitelistObjectNames }}"]
+          {{- end }}
+        existingConfigmap: ""
+        extraRules: ""
+      serviceMonitor:
+        enabled: true <--- Enables service monitor for Prometheus
+        namespace: ""
+        interval: ""
+        scrapeTimeout: ""
+        labels: {}
+        selector: {}
+        relabelings: []
+        metricRelabelings: []
+        honorLabels: false
+        jobLabel: ""
+    
+      prometheusRule:
+        enabled: false
+        namespace: ""
+        labels: {}
+        groups: []
+    
+Upgrade kafka release
 
-## Export a file
+    ~/kafka$ helm upgrade test . --values=values.yaml
 
-You can export the current file by clicking **Export to disk** in the menu. You can choose to export the file as plain Markdown, as HTML using a Handlebars template or as a PDF.
+Expose prometheus operator on Nodeport and access prometheus UI. 
 
+    $ kubectl expose pod prometheus-kube-prometheus-operator-prometheus-0 --type=NodePort --target-port=9090
+    $ minikube service prometheus-kube-prometheus-operator-prometheus-0
 
-# Synchronization
+### Prometheus
 
-Synchronization is one of the biggest features of StackEdit. It enables you to synchronize any file in your workspace with other files stored in your **Google Drive**, your **Dropbox** and your **GitHub** accounts. This allows you to keep writing on other devices, collaborate with people you share the file with, integrate easily into your workflow... The synchronization mechanism takes place every minute in the background, downloading, merging, and uploading file modifications.
+#### Prometheus UI
 
-There are two types of synchronization and they can complement each other:
+Prometheus UI URL:  `http://<NODE_IP>:30885/`
 
-- The workspace synchronization will sync all your files, folders and settings automatically. This will allow you to fetch your workspace on any other device.
-	> To start syncing your workspace, just sign in with Google in the menu.
+![Screenshot from 2024-02-11 19-44-10](https://github.com/Dwijad/Bitnami-Kafka-Helm-Chart/assets/12824049/37a6b1d9-fb9a-4dd6-837e-894304e8b92e)
 
-- The file synchronization will keep one file of the workspace synced with one or multiple files in **Google Drive**, **Dropbox** or **GitHub**.
-	> Before starting to sync files, you must link an account in the **Synchronize** sub-menu.
+#### Alertmanager UI
 
-## Open a file
+Alert manager UI:  `http://<NODE_IP>:9093/#/alerts`
 
-You can open a file from **Google Drive**, **Dropbox** or **GitHub** by opening the **Synchronize** sub-menu and clicking **Open from**. Once opened in the workspace, any modification in the file will be automatically synced.
+![Screenshot from 2024-02-11 19-12-20](https://github.com/Dwijad/Bitnami-Kafka-Helm-Chart/assets/12824049/10f4cb69-1df2-4c07-b4f8-1a3ce757756c)
 
-## Save a file
+### Grafana  
 
-You can save any file of the workspace to **Google Drive**, **Dropbox** or **GitHub** by opening the **Synchronize** sub-menu and clicking **Save on**. Even if a file in the workspace is already synced, you can save it to another location. StackEdit can sync one file with multiple locations and accounts.
-
-## Synchronize a file
-
-Once your file is linked to a synchronized location, StackEdit will periodically synchronize it by downloading/uploading any modification. A merge will be performed if necessary and conflicts will be resolved.
-
-If you just have modified your file and you want to force syncing, click the **Synchronize now** button in the navigation bar.
-
-> **Note:** The **Synchronize now** button is disabled if you have no file to synchronize.
-
-## Manage file synchronization
-
-Since one file can be synced with multiple locations, you can list and manage synchronized locations by clicking **File synchronization** in the **Synchronize** sub-menu. This allows you to list and remove synchronized locations that are linked to your file.
+Grafana dashboard for Kafka running on Kubernetes.
 
 
-# Publication
+#### Install Grafana chart
 
-Publishing in StackEdit makes it simple for you to publish online your files. Once you're happy with a file, you can publish it to different hosting platforms like **Blogger**, **Dropbox**, **Gist**, **GitHub**, **Google Drive**, **WordPress** and **Zendesk**. With [Handlebars templates](http://handlebarsjs.com/), you have full control over what you export.
+    $ cd ~/grafana
+    $ helm dependency build
+    $ helm install grafana .
+    $ kubectl get secret grafana-admin --namespace default -o jsonpath="{.data.GF_SECURITY_ADMIN_PASSWORD}" | base64 -d
+    $ k expose deploy grafana --type=NodePort --target-port=3000 --name=grafana-nodeport-svc
+    $ minikube service grafana-nodeport-svc
 
-> Before starting to publish, you must link an account in the **Publish** sub-menu.
+#### Add Prometheus as the data source
 
-## Publish a File
+-   On  Grafana Home page, click `Add your first data source`
+-   Select `Prometheus` as the data source
+-   Add the URL where Prometheus application is running. This URL (internal to the cluster) is shown when `minikube service prometheus-kube-prometheus-operator-prometheus-0` previously.
+- Click on “Save & test” to save changes. 
 
-You can publish your file by opening the **Publish** sub-menu and by clicking **Publish to**. For some locations, you can choose between the following formats:
+Go Back to Grafana and click `Home` on the top left corner:
+It will dislay a menu.
+-   From the menu, click `Dashboards`
+-   Click `New`  > Import
+-   Add the Grafana ID 11962 for Kafka dashboard from [Grafana](https://grafana.com/grafana/dashboards/11962-kafka-metrics/).
 
-- Markdown: publish the Markdown text on a website that can interpret it (**GitHub** for instance),
-- HTML: publish the file converted to HTML via a Handlebars template (on a blog for example).
+![Screenshot from 2024-02-12 10-53-09](https://github.com/Dwijad/Bitnami-Kafka-Helm-Chart/assets/12824049/cb1b1754-1a37-4183-9565-60413a0bc331)
 
-## Update a publication
+Explore kafka and JMX metrics from Prometheus UI and adjust the field name  in the Grafana dashboard's metrics browser section.
 
-After publishing, StackEdit keeps your file linked to that publication which makes it easy for you to re-publish it. Once you have modified your file and you want to update your publication, click on the **Publish now** button in the navigation bar.
-
-> **Note:** The **Publish now** button is disabled if your file has not been published yet.
-
-## Manage file publication
-
-Since one file can be published to multiple locations, you can list and manage publish locations by clicking **File publication** in the **Publish** sub-menu. This allows you to list and remove publication locations that are linked to your file.
-
-
-# Markdown extensions
-
-StackEdit extends the standard Markdown syntax by adding extra **Markdown extensions**, providing you with some nice features.
-
-> **ProTip:** You can disable any **Markdown extension** in the **File properties** dialog.
+![Screenshot from 2024-02-12 11-17-05](https://github.com/Dwijad/Bitnami-Kafka-Helm-Chart/assets/12824049/aabe844a-7a34-4509-bb99-dc719f0ddb91)
 
 
-## SmartyPants
-
-SmartyPants converts ASCII punctuation characters into "smart" typographic punctuation HTML entities. For example:
-
-|                |ASCII                          |HTML                         |
-|----------------|-------------------------------|-----------------------------|
-|Single backticks|`'Isn't this fun?'`            |'Isn't this fun?'            |
-|Quotes          |`"Isn't this fun?"`            |"Isn't this fun?"            |
-|Dashes          |`-- is en-dash, --- is em-dash`|-- is en-dash, --- is em-dash|
+![Screenshot from 2024-02-12 11-27-20](https://github.com/Dwijad/Bitnami-Kafka-Helm-Chart/assets/12824049/babcdac8-9a11-48d8-9b1e-0864309e945e)
 
 
-## KaTeX
+### References:
 
-You can render LaTeX mathematical expressions using [KaTeX](https://khan.github.io/KaTeX/):
+ - https://github.com/bitnami/charts/tree/main/bitnami/kafka
 
-The *Gamma function* satisfying $\Gamma(n) = (n-1)!\quad\forall n\in\mathbb N$ is via the Euler integral
-
-$$
-\Gamma(z) = \int_0^\infty t^{z-1}e^{-t}dt\,.
-$$
-
-> You can find more information about **LaTeX** mathematical expressions [here](http://meta.math.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference).
-
-
-## UML diagrams
-
-You can render UML diagrams using [Mermaid](https://mermaidjs.github.io/). For example, this will produce a sequence diagram:
-
-```mermaid
-sequenceDiagram
-Alice ->> Bob: Hello Bob, how are you?
-Bob-->>John: How about you John?
-Bob--x Alice: I am good thanks!
-Bob-x John: I am good thanks!
-Note right of John: Bob thinks a long<br/>long time, so long<br/>that the text does<br/>not fit on a row.
-
-Bob-->Alice: Checking with John...
-Alice->John: Yes... John, how are you?
-```
-
-And this will produce a flow chart:
-
-```mermaid
-graph LR
-A[Square Rect] -- Link text --> B((Circle))
-A --> C(Round Rect)
-B --> D{Rhombus}
-C --> D
-```Readme
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc5NzA5NjIwOSwtMzMyNDU1MzYzXX0=
+eyJoaXN0b3J5IjpbLTgxNzI2MTg0OSwxOTg3NTgwODg2LC03MD
+Q5MzAxODUsMTc3MTYxODE2OCwxNzIwMTA1ODcwLC0xMTMzODY1
+Njk2LC0yMDYxMDQ3NDY4LC0xMDU5ODA2NTcyLDE0MDM0MTMzOT
+MsMTM1NTI0OTI4MCwtMTcyMzQyMDk2Myw4MTY1NzE2MDMsNDIy
+NzI0MiwtNDczOTExNjc2LDE5NzM2NjcxMzIsNTEwMzkzMTI4LD
+Y3ODI5OTk0LDEzNzE1ODMzMDIsLTExNDg4NTg5OTEsLTExODQ5
+NTUyNjJdfQ==
 -->
