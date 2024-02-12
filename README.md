@@ -508,13 +508,13 @@ It will dislay a menu.
 
 ![Screenshot from 2024-02-12 10-53-09](https://github.com/Dwijad/Bitnami-Kafka-Helm-Chart/assets/12824049/cb1b1754-1a37-4183-9565-60413a0bc331)
 
-Explore kafka and JMX metrics from Prometheus UI and adjust the fields in the Grafana dashboard.
+Explore kafka and JMX metrics from Prometheus UI and adjust the fields in the Grafana dashboard's metrics browser section.
 
 ![Screenshot from 2024-02-11 20-05-12](https://github.com/Dwijad/Bitnami-Kafka-Helm-Chart/assets/12824049/9e4f060a-3097-407b-9960-afa3eb95c596)
 
 You may have to adjust query field a little bit
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgzODg3OTI2OSwxNzcxNjE4MTY4LDE3Mj
+eyJoaXN0b3J5IjpbLTcwNDkzMDE4NSwxNzcxNjE4MTY4LDE3Mj
 AxMDU4NzAsLTExMzM4NjU2OTYsLTIwNjEwNDc0NjgsLTEwNTk4
 MDY1NzIsMTQwMzQxMzM5MywxMzU1MjQ5MjgwLC0xNzIzNDIwOT
 YzLDgxNjU3MTYwMyw0MjI3MjQyLC00NzM5MTE2NzYsMTk3MzY2
