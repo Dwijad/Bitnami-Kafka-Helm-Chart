@@ -183,7 +183,7 @@ Broker only statefulset parameters.
         fsGroup: 1001
         seccompProfile:
           type: "RuntimeDefault"
-      containerSecurityContext: <--- Container security
+      containerSecurityContext: <--- Container security context
         enabled: true
         runAsUser: 1001
         runAsNonRoot: true
@@ -229,7 +229,7 @@ Broker only statefulset parameters.
         storageClass: ""
         accessModes:
           - ReadWriteOnce
-        size: 1Gi
+        size: 1Gi <--- PV size
         annotations: {}
         labels: {}
         selector: {}
@@ -240,7 +240,7 @@ Broker only statefulset parameters.
         storageClass: ""
         accessModes:
           - ReadWriteOnce
-        size: 1Gi
+        size: 1Gi <--- PV size
         annotations: {}
         selector: {}
         mountPath: /opt/bitnami/kafka/logs
@@ -507,7 +507,7 @@ It will dislay a menu.
 
 You may have to adjust query field a little bit
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTcyNTE0NDgwMCwtMTA1OTgwNjU3MiwxND
+eyJoaXN0b3J5IjpbMTIyMDc1NTk0MywtMTA1OTgwNjU3MiwxND
 AzNDEzMzkzLDEzNTUyNDkyODAsLTE3MjM0MjA5NjMsODE2NTcx
 NjAzLDQyMjcyNDIsLTQ3MzkxMTY3NiwxOTczNjY3MTMyLDUxMD
 M5MzEyOCw2NzgyOTk5NCwxMzcxNTgzMzAyLC0xMTQ4ODU4OTkx
