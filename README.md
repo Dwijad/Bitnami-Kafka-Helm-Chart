@@ -257,16 +257,16 @@ Configure external access to Kafka broker  through NodePort.
           repository: bitnami/kubectl
           tag: 1.25.8-debian-11-r2
           pullPolicy: IfNotPresent
-        resources:
+        resources: <--- Resources
           limits:
             cpu: 100m
             memory: 128Mi
           requests:
             cpu: 100m
             memory: 128Mi
-      broker:
+      broker: <--- External access for broker
         service:
-          type: NodePort <--- External access service
+          type: NodePort <--- External access service type
           ports:
             external: 9095 <--- External access port
           nodePorts:
@@ -507,7 +507,7 @@ It will dislay a menu.
 
 You may have to adjust query field a little bit
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIyMDc1NTk0MywtMTA1OTgwNjU3MiwxND
+eyJoaXN0b3J5IjpbMTE5NjI2MTAzNywtMTA1OTgwNjU3MiwxND
 AzNDEzMzkzLDEzNTUyNDkyODAsLTE3MjM0MjA5NjMsODE2NTcx
 NjAzLDQyMjcyNDIsLTQ3MzkxMTY3NiwxOTczNjY3MTMyLDUxMD
 M5MzEyOCw2NzgyOTk5NCwxMzcxNTgzMzAyLC0xMTQ4ODU4OTkx
