@@ -508,13 +508,13 @@ It will dislay a menu.
 
 ![Screenshot from 2024-02-12 10-53-09](https://github.com/Dwijad/Bitnami-Kafka-Helm-Chart/assets/12824049/cb1b1754-1a37-4183-9565-60413a0bc331)
 
-Explore kafka and JMX metrics fro Prometheus UI and adjust 
+Explore kafka and JMX metrics from Prometheus UI and adjust the fields for 
 
 ![Screenshot from 2024-02-11 20-05-12](https://github.com/Dwijad/Bitnami-Kafka-Helm-Chart/assets/12824049/9e4f060a-3097-407b-9960-afa3eb95c596)
 
 You may have to adjust query field a little bit
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1OTY2MDU4NiwxNzIwMTA1ODcwLC0xMT
+eyJoaXN0b3J5IjpbMTc3MTYxODE2OCwxNzIwMTA1ODcwLC0xMT
 MzODY1Njk2LC0yMDYxMDQ3NDY4LC0xMDU5ODA2NTcyLDE0MDM0
 MTMzOTMsMTM1NTI0OTI4MCwtMTcyMzQyMDk2Myw4MTY1NzE2MD
 MsNDIyNzI0MiwtNDczOTExNjc2LDE5NzM2NjcxMzIsNTEwMzkz
