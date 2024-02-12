@@ -334,7 +334,7 @@ Enable ServiceAccount for Kafka pods
     $ cd kafka
     $ helm install test . --values=values_r01_nodeport_external_access_metrics.yaml
 
-#### Prometheus operator
+### Prometheus operator
 
 Prometheus Operator is a tool that provides monitoring definitions for Kubernetes services and the management of Prometheus instances. Using prometheus operator, kafka cluster data can be scrapped in a automated way by setting up exporters(data) pod.
 
@@ -465,7 +465,9 @@ Expose prometheus operator on Nodeport and access prometheus UI.
     $ k expose pod prometheus-kube-prometheus-operator-prometheus-0 --type=NodePort --target-port=9090
     $ minikube service prometheus-kube-prometheus-operator-prometheus-0
 
-#### Prometheuse UI
+### Prometheus
+
+#### Prometheus UI
 
 Browse http://192.168.49.2:30885/ for Prometheus UI.
 
@@ -478,7 +480,7 @@ Browse [http://127.0.0.1:9093/#/alerts](http://127.0.0.1:9093/#/alerts) for Aler
 
 ![Screenshot from 2024-02-11 19-12-20](https://github.com/Dwijad/Bitnami-Kafka-Helm-Chart/assets/12824049/10f4cb69-1df2-4c07-b4f8-1a3ce757756c)
 
-#### Grafana  
+### Grafana  
 
     $ cd ~/grafana
     $ helm dependency build
@@ -505,11 +507,11 @@ It will dislay a menu.
 
 You may have to adjust query field a little bit
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MjM0MjA5NjMsODE2NTcxNjAzLDQyMj
-cyNDIsLTQ3MzkxMTY3NiwxOTczNjY3MTMyLDUxMDM5MzEyOCw2
-NzgyOTk5NCwxMzcxNTgzMzAyLC0xMTQ4ODU4OTkxLC0xMTg0OT
-U1MjYyLC0yOTExNDA0NTcsLTExNDUxNzExMDQsLTYyMjU3OTIz
-NywxNDMyOTY3NjExLC05OTE5Mjg4OTcsLTIxMDcyMTUyMTUsLT
-U5Nzk4MjUxNywtNzM5Njg1MzE4LDQ2MjQ1NDU1NSwtNzU0NTYw
-NjE3XX0=
+eyJoaXN0b3J5IjpbMTM1NTI0OTI4MCwtMTcyMzQyMDk2Myw4MT
+Y1NzE2MDMsNDIyNzI0MiwtNDczOTExNjc2LDE5NzM2NjcxMzIs
+NTEwMzkzMTI4LDY3ODI5OTk0LDEzNzE1ODMzMDIsLTExNDg4NT
+g5OTEsLTExODQ5NTUyNjIsLTI5MTE0MDQ1NywtMTE0NTE3MTEw
+NCwtNjIyNTc5MjM3LDE0MzI5Njc2MTEsLTk5MTkyODg5NywtMj
+EwNzIxNTIxNSwtNTk3OTgyNTE3LC03Mzk2ODUzMTgsNDYyNDU0
+NTU1XX0=
 -->
