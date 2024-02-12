@@ -515,14 +515,16 @@ Explore kafka and JMX metrics from Prometheus UI and adjust the field name  in t
 
 ![Screenshot from 2024-02-11 20-05-12](https://github.com/Dwijad/Bitnami-Kafka-Helm-Chart/assets/12824049/9e4f060a-3097-407b-9960-afa3eb95c596)
 
-References:
+### References:
+
+ - https://github.com/bitnami/charts/tree/main/bitnami/kafka
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MjQwMTE1MjUsLTcwNDkzMDE4NSwxNz
-cxNjE4MTY4LDE3MjAxMDU4NzAsLTExMzM4NjU2OTYsLTIwNjEw
-NDc0NjgsLTEwNTk4MDY1NzIsMTQwMzQxMzM5MywxMzU1MjQ5Mj
-gwLC0xNzIzNDIwOTYzLDgxNjU3MTYwMyw0MjI3MjQyLC00NzM5
-MTE2NzYsMTk3MzY2NzEzMiw1MTAzOTMxMjgsNjc4Mjk5OTQsMT
-M3MTU4MzMwMiwtMTE0ODg1ODk5MSwtMTE4NDk1NTI2MiwtMjkx
-MTQwNDU3XX0=
+eyJoaXN0b3J5IjpbMTk4NzU4MDg4NiwtNzA0OTMwMTg1LDE3Nz
+E2MTgxNjgsMTcyMDEwNTg3MCwtMTEzMzg2NTY5NiwtMjA2MTA0
+NzQ2OCwtMTA1OTgwNjU3MiwxNDAzNDEzMzkzLDEzNTUyNDkyOD
+AsLTE3MjM0MjA5NjMsODE2NTcxNjAzLDQyMjcyNDIsLTQ3Mzkx
+MTY3NiwxOTczNjY3MTMyLDUxMDM5MzEyOCw2NzgyOTk5NCwxMz
+cxNTgzMzAyLC0xMTQ4ODU4OTkxLC0xMTg0OTU1MjYyLC0yOTEx
+NDA0NTddfQ==
 -->
