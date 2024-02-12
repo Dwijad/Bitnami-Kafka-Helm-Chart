@@ -512,6 +512,7 @@ Explore kafka and JMX metrics from Prometheus UI and adjust the field name  in t
 
 ![Screenshot from 2024-02-12 11-17-05](https://github.com/Dwijad/Bitnami-Kafka-Helm-Chart/assets/12824049/aabe844a-7a34-4509-bb99-dc719f0ddb91)
 
+Grafana Dashboard for Kafka
 
 ![Screenshot from 2024-02-12 11-27-20](https://github.com/Dwijad/Bitnami-Kafka-Helm-Chart/assets/12824049/babcdac8-9a11-48d8-9b1e-0864309e945e)
 
@@ -523,11 +524,11 @@ Explore kafka and JMX metrics from Prometheus UI and adjust the field name  in t
  - https://github.com/bitnami/charts/tree/main/bitnami/kube-prometheus
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNzc2ODUwOTgsLTEzOTI4MzIyMjIsLT
-gxNzI2MTg0OSwxOTg3NTgwODg2LC03MDQ5MzAxODUsMTc3MTYx
-ODE2OCwxNzIwMTA1ODcwLC0xMTMzODY1Njk2LC0yMDYxMDQ3ND
-Y4LC0xMDU5ODA2NTcyLDE0MDM0MTMzOTMsMTM1NTI0OTI4MCwt
-MTcyMzQyMDk2Myw4MTY1NzE2MDMsNDIyNzI0MiwtNDczOTExNj
-c2LDE5NzM2NjcxMzIsNTEwMzkzMTI4LDY3ODI5OTk0LDEzNzE1
-ODMzMDJdfQ==
+eyJoaXN0b3J5IjpbMTg2NzM4ODQzNywtMTA3NzY4NTA5OCwtMT
+M5MjgzMjIyMiwtODE3MjYxODQ5LDE5ODc1ODA4ODYsLTcwNDkz
+MDE4NSwxNzcxNjE4MTY4LDE3MjAxMDU4NzAsLTExMzM4NjU2OT
+YsLTIwNjEwNDc0NjgsLTEwNTk4MDY1NzIsMTQwMzQxMzM5Mywx
+MzU1MjQ5MjgwLC0xNzIzNDIwOTYzLDgxNjU3MTYwMyw0MjI3Mj
+QyLC00NzM5MTE2NzYsMTk3MzY2NzEzMiw1MTAzOTMxMjgsNjc4
+Mjk5OTRdfQ==
 -->
