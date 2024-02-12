@@ -504,19 +504,21 @@ Go Back to Grafana and click `Home` on the top left corner:
 It will dislay a menu.
 -   From the menu, click `Dashboards`
 -   Click `New`  > Import
--   Add the Grafana ID 11962 for Kafka dashboard from [Grafana]
--(https://grafana.com/grafana/dashboards/11962-kafka-metrics/).
+-   Add the Grafana ID 11962 for Kafka dashboard from [Grafana](https://grafana.com/grafana/dashboards/11962-kafka-metrics/).
+
 ![Screenshot from 2024-02-12 10-53-09](https://github.com/Dwijad/Bitnami-Kafka-Helm-Chart/assets/12824049/cb1b1754-1a37-4183-9565-60413a0bc331)
+
+Explore kafka and JMX metrics fro Prometheus UI and adjust 
 
 ![Screenshot from 2024-02-11 20-05-12](https://github.com/Dwijad/Bitnami-Kafka-Helm-Chart/assets/12824049/9e4f060a-3097-407b-9960-afa3eb95c596)
 
 You may have to adjust query field a little bit
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0Mjc0NjM4MDYsMTcyMDEwNTg3MCwtMT
-EzMzg2NTY5NiwtMjA2MTA0NzQ2OCwtMTA1OTgwNjU3MiwxNDAz
-NDEzMzkzLDEzNTUyNDkyODAsLTE3MjM0MjA5NjMsODE2NTcxNj
-AzLDQyMjcyNDIsLTQ3MzkxMTY3NiwxOTczNjY3MTMyLDUxMDM5
-MzEyOCw2NzgyOTk5NCwxMzcxNTgzMzAyLC0xMTQ4ODU4OTkxLC
-0xMTg0OTU1MjYyLC0yOTExNDA0NTcsLTExNDUxNzExMDQsLTYy
-MjU3OTIzN119
+eyJoaXN0b3J5IjpbLTE1OTY2MDU4NiwxNzIwMTA1ODcwLC0xMT
+MzODY1Njk2LC0yMDYxMDQ3NDY4LC0xMDU5ODA2NTcyLDE0MDM0
+MTMzOTMsMTM1NTI0OTI4MCwtMTcyMzQyMDk2Myw4MTY1NzE2MD
+MsNDIyNzI0MiwtNDczOTExNjc2LDE5NzM2NjcxMzIsNTEwMzkz
+MTI4LDY3ODI5OTk0LDEzNzE1ODMzMDIsLTExNDg4NTg5OTEsLT
+ExODQ5NTUyNjIsLTI5MTE0MDQ1NywtMTE0NTE3MTEwNCwtNjIy
+NTc5MjM3XX0=
 -->
