@@ -94,7 +94,7 @@ Configure listener properties for client, external, interbroker and controller. 
 
 #### SASL
 
-Configure SASL authentication for interbroker, client and controller communication in SASL section.
+Configure SASL authentication for interbroker, client and controller communication in the SASL section.
 
     sasl:
       enabledMechanisms: PLAIN,SCRAM-SHA-256,SCRAM-SHA-512
@@ -113,7 +113,7 @@ Configure SASL authentication for interbroker, client and controller communicati
 
 #### SSL
 
-Kafka broker with SSL supports can be configured in `tls` section.
+Kafka brokers with SSL support can be configured in the `tls` section.
 
     tls:
       type: JKS <--- TLS type
@@ -123,7 +123,7 @@ Kafka broker with SSL supports can be configured in `tls` section.
       jksKeystoreKey: kafka-broker-0.keystore.jks
       jksTruststoreKey: kafka.truststore.jks
 
-Make sure to create Kubernetes secret out of these JKS keystore and truststore certificates.
+Make sure to create Kubernetes secret out of the JKS keystore and truststore certificates.
 
     $ kubectl create secret generic kafka-jks --from-file=kafka-broker-0.keystore.jks=./kafka-broker-0.keystore.jks --from-file=kafka-broker-1.keystore.jks=./kafka-broker-1.keystore.jks   --from-file=kafka-broker-2.keystore.jks=./kafka-broker-2.keystore.jks   --from-file=kafka.truststore.jks=./kafka.truststore.jks
 
@@ -507,7 +507,7 @@ It will dislay a menu.
 
 You may have to adjust query field a little bit
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM2NzgwMzIxOCwtMTA1OTgwNjU3MiwxND
+eyJoaXN0b3J5IjpbLTcyNTE0NDgwMCwtMTA1OTgwNjU3MiwxND
 AzNDEzMzkzLDEzNTUyNDkyODAsLTE3MjM0MjA5NjMsODE2NTcx
 NjAzLDQyMjcyNDIsLTQ3MzkxMTY3NiwxOTczNjY3MTMyLDUxMD
 M5MzEyOCw2NzgyOTk5NCwxMzcxNTgzMzAyLC0xMTQ4ODU4OTkx
