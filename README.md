@@ -508,17 +508,17 @@ It will dislay a menu.
 
 ![Screenshot from 2024-02-12 10-53-09](https://github.com/Dwijad/Bitnami-Kafka-Helm-Chart/assets/12824049/cb1b1754-1a37-4183-9565-60413a0bc331)
 
-Explore kafka and JMX metrics from Prometheus UI and adjust the fields for 
+Explore kafka and JMX metrics from Prometheus UI and adjust the fields in the Grafana dashboard.
 
 ![Screenshot from 2024-02-11 20-05-12](https://github.com/Dwijad/Bitnami-Kafka-Helm-Chart/assets/12824049/9e4f060a-3097-407b-9960-afa3eb95c596)
 
 You may have to adjust query field a little bit
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc3MTYxODE2OCwxNzIwMTA1ODcwLC0xMT
-MzODY1Njk2LC0yMDYxMDQ3NDY4LC0xMDU5ODA2NTcyLDE0MDM0
-MTMzOTMsMTM1NTI0OTI4MCwtMTcyMzQyMDk2Myw4MTY1NzE2MD
-MsNDIyNzI0MiwtNDczOTExNjc2LDE5NzM2NjcxMzIsNTEwMzkz
-MTI4LDY3ODI5OTk0LDEzNzE1ODMzMDIsLTExNDg4NTg5OTEsLT
-ExODQ5NTUyNjIsLTI5MTE0MDQ1NywtMTE0NTE3MTEwNCwtNjIy
-NTc5MjM3XX0=
+eyJoaXN0b3J5IjpbLTgzODg3OTI2OSwxNzcxNjE4MTY4LDE3Mj
+AxMDU4NzAsLTExMzM4NjU2OTYsLTIwNjEwNDc0NjgsLTEwNTk4
+MDY1NzIsMTQwMzQxMzM5MywxMzU1MjQ5MjgwLC0xNzIzNDIwOT
+YzLDgxNjU3MTYwMyw0MjI3MjQyLC00NzM5MTE2NzYsMTk3MzY2
+NzEzMiw1MTAzOTMxMjgsNjc4Mjk5OTQsMTM3MTU4MzMwMiwtMT
+E0ODg1ODk5MSwtMTE4NDk1NTI2MiwtMjkxMTQwNDU3LC0xMTQ1
+MTcxMTA0XX0=
 -->
