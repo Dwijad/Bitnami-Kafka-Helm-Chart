@@ -113,7 +113,7 @@ Configure `SASL` authentication for interbroker, client and controller communica
 
 #### SSL
 
-Kafka brokers with `SSL` support can be configured in the `tls` section.
+Configure `SSL` support for kafka brokers in the `tls` section.
 
     tls:
       type: JKS <--- TLS type
@@ -524,11 +524,11 @@ Grafana Dashboard for Kafka
  - https://github.com/bitnami/charts/tree/main/bitnami/kube-prometheus
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg2NzM4ODQzNywtMTA3NzY4NTA5OCwtMT
-M5MjgzMjIyMiwtODE3MjYxODQ5LDE5ODc1ODA4ODYsLTcwNDkz
-MDE4NSwxNzcxNjE4MTY4LDE3MjAxMDU4NzAsLTExMzM4NjU2OT
-YsLTIwNjEwNDc0NjgsLTEwNTk4MDY1NzIsMTQwMzQxMzM5Mywx
-MzU1MjQ5MjgwLC0xNzIzNDIwOTYzLDgxNjU3MTYwMyw0MjI3Mj
-QyLC00NzM5MTE2NzYsMTk3MzY2NzEzMiw1MTAzOTMxMjgsNjc4
-Mjk5OTRdfQ==
+eyJoaXN0b3J5IjpbLTQ2NTAxMzEwMywxODY3Mzg4NDM3LC0xMD
+c3Njg1MDk4LC0xMzkyODMyMjIyLC04MTcyNjE4NDksMTk4NzU4
+MDg4NiwtNzA0OTMwMTg1LDE3NzE2MTgxNjgsMTcyMDEwNTg3MC
+wtMTEzMzg2NTY5NiwtMjA2MTA0NzQ2OCwtMTA1OTgwNjU3Miwx
+NDAzNDEzMzkzLDEzNTUyNDkyODAsLTE3MjM0MjA5NjMsODE2NT
+cxNjAzLDQyMjcyNDIsLTQ3MzkxMTY3NiwxOTczNjY3MTMyLDUx
+MDM5MzEyOF19
 -->
